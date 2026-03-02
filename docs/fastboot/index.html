@@ -215,11 +215,12 @@ select.input{cursor:pointer}
             <select id="single-partition" class="input flex1">
               <option value="">-- 从列表选择 --</option>
               <option value="boot">boot</option><option value="boot_a">boot_a</option><option value="boot_b">boot_b</option>
+              <option value="init_boot">init_boot</option><option value="init_boot_a">init_boot_a</option><option value="init_boot_b">init_boot_b</option>
               <option value="recovery">recovery</option><option value="system">system</option>
               <option value="system_a">system_a</option><option value="system_b">system_b</option>
               <option value="vendor">vendor</option><option value="vendor_a">vendor_a</option><option value="vendor_b">vendor_b</option>
               <option value="vbmeta">vbmeta</option><option value="vbmeta_a">vbmeta_a</option><option value="vbmeta_b">vbmeta_b</option>
-              <option value="dtbo">dtbo</option><option value="product">product</option><option value="odm">odm</option>
+              <option value="dtbo">dtbo</option>
             </select>
             <input id="single-part-custom" type="text" class="input flex1" placeholder="或手动输入分区名">
           </div>
@@ -307,7 +308,7 @@ const S = {
   queue:[],cmdHistory:[],customVIDs:[],chunkSize:1024*1024,
 };
 const DEFAULT_VIDS=[0x18d1,0x2717,0x04e8,0x0fce,0x2a70,0x1f3a,0x22d9,0x0bb4,0x2916];
-const PARTITIONS=['boot','recovery','system','vendor','vbmeta','dtbo','product','odm','super','userdata'];
+const PARTITIONS=['boot','init_boot','recovery','system','vendor','vbmeta','dtbo','super','userdata'];
 const $=id=>document.getElementById(id);
 
 function log(msg,type='info'){
@@ -577,7 +578,7 @@ $('copy-log-btn').addEventListener('click',()=>{navigator.clipboard.writeText($(
 
 if(!navigator.usb){log('浏览器不支持 WebUSB，请使用 Chrome 或 Edge','err');toast('请使用 Chrome/Edge','err');}
 renderVIDs();renderQueue();renderHistory();updateConnUI();
-log('工具就绪 v4.0 — 流式传输 · 完整协议 · 接口自动枚举','ok');
+log('工具就绪 — 流式传输 · 完整协议 · 接口自动枚举','ok');
 </script>
 </body>
 </html>
