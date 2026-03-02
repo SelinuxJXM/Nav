@@ -165,6 +165,9 @@ select.input{cursor:pointer}
         <button id="reboot-btn" class="btn btn-ghost btn-sm flex1" disabled>重启手机</button>
         <button id="reboot-bl-btn" class="btn btn-ghost btn-sm flex1" disabled>重启BL</button>
       </div>
+      <div id="win-driver-tip" style="display:none;margin-top:12px;padding:8px;background:var(--warn-light);border:1px solid #fcd34d;border-radius:var(--radius-sm);font-size:.75rem;color:#92400e;line-height:1.4">
+        Windows 需使用 <a href="https://github.com/pbatard/libwdi/releases" target="_blank" style="color:inherit;font-weight:700;text-decoration:underline">Zadig</a> 安装 WinUSB 驱动才可连接
+      </div>
     </div>
   </aside>
 
@@ -357,6 +360,7 @@ function updateConnUI(){
   $('device-name').textContent=ok?(S.device?.productName||'未知设备'):'未连接';
   $('device-sub').textContent=ok?`${S.device.vendorId.toString(16).toUpperCase()}:${S.device.productId.toString(16).toUpperCase()}`:'请先连接设备';
   [$('reboot-btn'),$('reboot-bl-btn')].forEach(b=>b.disabled=!ok);
+  if(navigator.platform.toLowerCase().includes('win'))$('win-driver-tip').style.display=ok?'none':'block';
 }
 
 $('connect-btn').addEventListener('click',async()=>{
@@ -373,7 +377,13 @@ $('connect-btn').addEventListener('click',async()=>{
     updateConnUI();log(`已连接 ${dev.productName||'设备'}(${dev.vendorId.toString(16)}:${dev.productId.toString(16)})`,'ok');
     toast('设备已连接','ok');
     try{const p=await fbCmd('getvar:product');$('device-sub').textContent='product: '+p;log('product: '+p,'info');}catch(_){}
-  }catch(e){log('连接失败: '+(e.message||e),'err');toast('连接失败: '+(e.message||e),'err');}
+  }catch(e){
+    const msg=String(e.message||e);
+    log('连接失败: '+msg,'err');
+    if(msg.includes('Access denied')||msg.includes('claimed')){
+      toast('连接被拒绝：请检查设备权限或驱动','err');
+    } else toast('连接失败: '+msg,'err');
+  }
 });
 
 async function disconnect(){
