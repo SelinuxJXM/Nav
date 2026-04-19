@@ -21,13 +21,15 @@
     </script>
     <style>
         body { background-color: #f0f2f5; color: #1a1a1a; scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
-        section { content-visibility: auto; contain-intrinsic-size: 1px 500px; scroll-margin-top: 80px; }
+        section { content-visibility: auto; contain-intrinsic-size: 1px 500px; scroll-margin-top: 100px; }
         .brutal-card { background: #fff; border: 1.5px solid #e2e8f0; border-radius: 16px; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
         @media (min-width: 1024px) {
             .brutal-card:hover { transform: translateY(-2px); border-color: #0052cc; box-shadow: 0 10px 15px -3px rgba(0, 82, 204, 0.1); }
         }
-        .nav-item { border-radius: 12px; margin: 2px 8px; transition: all 0.2s; cursor: pointer; }
+        .nav-item { border-radius: 10px; margin: 2px 8px; transition: all 0.2s; cursor: pointer; }
         .nav-item:hover, .nav-item.active { background-color: #0052cc; color: #fff; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .custom-scroll::-webkit-scrollbar { width: 4px; }
         .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         #mobileDrawer { transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -58,12 +60,12 @@
 
     <div class="max-w-[1600px] mx-auto flex gap-6 p-4 md:p-6">
         <aside class="hidden lg:block w-56 shrink-0">
-            <div class="sticky top-24 bg-white border border-slate-200 rounded-2xl overflow-hidden py-4 shadow-sm">
-                <div class="px-5 mb-4 flex justify-between items-center">
+            <div class="sticky top-24 flex flex-col bg-white border border-slate-200 rounded-2xl shadow-sm h-[calc(100vh-120px)] overflow-hidden">
+                <div class="px-5 py-4 border-b border-slate-50 flex justify-between items-center shrink-0">
                     <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">分类索引</span>
                     <span id="category-count" class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-[10px] font-bold">0</span>
                 </div>
-                <div id="categoryMenuList" class="custom-scroll max-h-[calc(100vh-200px)] overflow-y-auto flex flex-col text-slate-600"></div>
+                <div id="categoryMenuList" class="flex-grow overflow-y-auto no-scrollbar py-2 text-slate-600"></div>
             </div>
         </aside>
 
@@ -105,7 +107,6 @@
                 if (entry.isIntersecting) {
                     const img = entry.target;
                     const realSrc = img.dataset.src;
-                    
                     if (realSrc) {
                         const tempImg = new Image();
                         tempImg.src = realSrc;
@@ -157,7 +158,6 @@
                 cat.sites.forEach(site => {
                     const domain = new URL(site.url).hostname;
                     const placeholder = getAvatar(site.name);
-                    // 使用 &default=404 强制让 Google 在找不到图标时返回 404 而不是地球图标
                     const realIcon = `https://www.google.com/s2/favicons?domain=${domain}&sz=128&default=404`;
                     
                     const a = document.createElement('a');
