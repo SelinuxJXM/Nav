@@ -242,7 +242,7 @@
                     ...c, sites: c.sites.filter(s => s.name.toLowerCase().includes(q) || s.url.toLowerCase().includes(q))
                 })).filter(c => c.sites.length > 0);
                 render(filtered);
-            }, 150);
+            }, 300);
         });
 
         window.onload = init;
