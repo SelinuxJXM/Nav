@@ -1,167 +1,73 @@
-## 我的自制工具
-网页在线录屏, https://blog.52013120.xyz/tools/recording
-安卓开发工具, https://blog.52013120.xyz/tools/android
-代码编辑器, https://blog.52013120.xyz/tools/code
-TVBox配置生成器, https://blog.52013120.xyz/tools/tv
-ip配置器, https://blog.52013120.xyz/tools/ip
-md在线编辑器, https://blog.52013120.xyz/tools/md
-HTML文本十进制转码, https://blog.52013120.xyz/tools/htmlenc
-github历程回顾, https://blog.52013120.xyz/tools/github-user-data
-Fastboot工具箱, https://blog.52013120.xyz/tools/fastboot
-Github加速, https://yishijie.gitlab.io/ziyuan/
-在线m3u8播放器, https://blog.52013120.xyz/zhibo
-VIP视频在线播放, https://blog.52013120.xyz/video
-虚拟地址生成器, https://blog.52013120.xyz/geolocation
+## 自建平台
+SelinuxJ Site, https://www.soer.ccwu.cc
+SelinuxJ Zimaos, http://www.zima.ccwu.cc:60023
+SelinuxJ Wiki, http://www.zima.ccwu.cc:60024/blog/#/home
+SelinuxJ Nav, http://www.zima.ccwu.cc:60025
+SelinuxJ OSS, https://www.zima.ccwu.cc:60026
+SelinuxJ TV, http://www.zima.ccwu.cc:60027
+Openwrt, http://www.zima.ccwu.cc:60028
+SelinuxJ DPanel, http://www.zima.ccwu.cc:60029
+ECS服务器, http://123.60.132.209
 
-## 影音娱乐
-FongMi版tvbox下载（支持安卓竖屏）, https://github.com/FongMi/Release
-takagen99黑盒版tvbox下载（安卓TV）, https://github.com/j4Uq/TVBoxOSC/releases
-miraplay（ios版tvbox）, https://apps.apple.com/us/app/miraplay/id6749287494
 
-## 开发社区
-GitHub, https://github.com
-gitea, https://gitea.com
-gitgay, https://git.gay
-gitlab, https://gitlab.com
-Stack Overflow, https://stackoverflow.com
-MDN Web Docs, https://developer.mozilla.org
-全球技术问答社区, https://stackoverflow.com
+## 技术论坛
+黑海洋论坛, https://blog.upx8.com
+Gitcode, https://gitcode.com
+TIDE安全论坛, http://case.tidesec.com
+流影态势感知, https://abyssalfish-os.github.io
+一飞开源论坛, https://code.exmay.com
+恩山无线论坛, https://www.right.com.cn
+Openwrt构建, https://openwrt.ai/
+全球盗版游戏, https://www.gamer520.com
+资源导航网, https://www.chenmoyidaohang.com/
+EW资源论坛, https://www.ewbang.com
+程序员论坛, https://www.cnblogs.com/
+系统迷, https://www.xitmi.com/
+二级域名分发, https://dns.qxnqc.cn
+网站源码论坛, https://www.gerenzhuye.com/
+Hi168云计算平台, https://www.hi168.com/#/desktop
 
-## AI网页
-ChatGPT, https://chatgpt.com/
-Claude, https://claude.ai/new
-Gemini, https://gemini.google.com/app
-Grok-Al, https://grok.com/chat
-DeepSeek, https://chat.deepseek.com/
-豆包, https://www.doubao.com/chat/
-前端Al, https://bolt.new/
-前端AI设计, https://app.visily.ai/projects?type=team
-AI前端, https://v0.dev/
-Readdy前端AI, https://readdy.ai/home
-Manus, https://manus.im/app
-Lovable, https://lovable.dev/?via=typescript
-Stitch-移动app设计, https://stitch.withgoogle.com/
 
-## AI编辑器
-字节Trae, https://www.trae.ai
-Cursor, https://cursor.com
-Claude Code, https://claude.ai/code
-阿里通义灵码, https://lingma.aliyun.com/
-Augment Code, https://www.augmentcode.com/
-亚马逊Kiro, https://kiro.dev/
-腾讯CodeBuddy, https://www.codebuddy.ai
-谷歌antigravity, https://antigravity.google/
+## 技术学习
+棱镜X · 单兵渗透平台, https://prismx.io/
+Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file
+Sec-Tools部署教程, https://www.django.cn/article/show-40.html
+等保测评学习, https://www.modb.pro/u/480195
+密评视频学习, https://space.bilibili.com/3546562967899104
+Linux学习教程, https://www.runoob.com/
+编程开发学习, https://ilovefishc.com/
 
-## AI技能合集
-Skills中文站, https://cc-ai.cn/skills-cn/frontend/index.html
-Agent-Skills-指南, https://github.com/libukai/awesome-agent-skills
-腾讯技能社区, https://skillhub.tencent.com/
 
-## 前端工具
-Tailwind CSS, https://tailwindcss.com
-Shadcn UI, https://ui.shadcn.com
-JSON Formatter, https://jsonformatter.org
-RegExr, https://regexr.com
-前端文档, https://developer.mozilla.org/zh-CN/docs/Web/API
+## 科技小工具
+文件重命名, https://webrename.cn
+开发者工具, https://tools.upx8.com
+网络空间测绘, https://quake.360.net/quake/login#/
+VM破解版, https://www.xitmi.com/2417.html
+网盘解析1, https://kdown.moiu.cn
+网盘解析2, https://kk.wpurl.cc/
+免费域名, https://my.dnshe.com/index.php?m=domain_hub
+一元机场, https://1元机场.org/#/knowledge
+便宜机场, https://便宜机场.co/#/dashboard
+杜卡迪机场, https://sub.dukadi.shop
+机场订阅加速, https://keli.blog
+在线PS平台, https://www.tugaigai.com/online_ps/
 
-## 设计资源
-Figma, https://figma.com
-Excalidraw, https://excalidraw.com
-Canva, https://www.canva.com
-Dribbble, https://dribbble.com
-LottieFiles, https://lottiefiles.com
-IconFont, https://www.iconfont.cn
-Unsplash, https://unsplash.com
 
-## 文件分享
-轻松传, https://easychuan.cn/
-阅后即焚文本分享, https://www.sixin.cc/
-文件分享 (Tmp.link), https://www.tmp.link/
-匿名文件快传 (File.io), https://www.file.io/
-匿名文件快传 (File.kiwi), https://file.kiwi/
-匿名文件快传 (Wormhole), https://wormhole.app/
-匿名文件快传 (Filebin), https://filebin.net
-免登录分享视频 (Streamable), https://streamable.com
-免登录分享视频 (Vidplay), https://vidplay.io
-代码片段分享 (PrivateBin), https://privatebin.support-tools.com
-代码片段分享 (PastBin), https://pastbin.cc/
-代码分享 (PasteOrg), https://paste.org.cn
+## 日常办公
+通问千义, https://www.qianwen.com/
+LogoAI, https://www.uugai.com/
+ChmlFrp, https://panel.chmlfrp.net/home
+数字化平台, https://cqcdidmp.smartccs.cn:8000
+易投资质申请, https://cqccsyt.smartccs.cn:9900
+专用设计AI, https://seede.ai/
+AI自动化视频剪辑, https://caption.flycut.co/zh
+在线工具集, https://inbrowser.app
+PDF在线扫描, https://lookscanned.io
+MoFrp, https://console.mofrp.com/
 
-## 免费短链
-免费短链 (PBS), https://pbs.ink
-免费短链 (Goo), https://goo.su
-免费短链 (DB), https://db.onl
-免费短链 (Is.gd), https://is.gd
-开源短链 (Sink), https://sink.cool/dashboard/links
-在线渲染GitHub (Githack), https://raw.githack.com
-在线渲染GitHub (Preview), https://htmlpreview.github.io
 
-## 临时邮箱
-临时匿名邮箱 (vmail), https://vmail.dev/
-临时匿名邮箱 (temp-mail), https://temp-mail.org/zh/
-临时Gmail邮箱, https://22.do/zh/fake-gmail-generator
-免费邮件api, https://resend.com
-
-## 工具类
-前端在线工具, https://www.strerr.com/cn/tools.html
-在线vscode, https://vscode.dev/?vscode-lang=zh-cn
-在线绘图, https://excalidraw.com/
-各大软件快捷键查询, https://hotkeycheatsheet.com/zh
-直播工具, https://hao.yuenos.com/
-在线制作流光卡片, https://fireflycard.shushiai.com/
-在线临时记事本, https://cn.anotepad.com/
-互联网存档, https://archive.org/
-js代码混淆, https://obfuscator.io/
-运维项目合集, https://github.com/eryajf/awesome-ops
-匿名托管脚本 (Termbin), https://termbin.com
-匿名托管脚本 (0x0), https://0x0.st
-软件搜索和替代推荐, https://alternativeto.net
-在线渲染GitHub (Githack), https://raw.githack.com
-在线渲染GitHub (Preview), https://htmlpreview.github.io
-Tinypng图片工具, https://tinypng.com
-
-## 网络工具
-快速查看位置 (Cloudflare), https://www.cloudflare.com/cdn-cgi/trace
-快速查看位置 (Visa), https://www.visa.cn/cdn-cgi/trace
-IP质量和位置 (IPIP), https://ipip.la
-IP质量和位置 (IPLark), https://iplark.com
-IP位置 (Ping0), https://ping0.cc/geo
-查询IPV6, https://ipw.cn
-扫描UDP端口, https://www.ipvoid.com/udp-port-scan
-在线ping, https://www.itdog.cn/tcping
-IP分流查询, https://ip.skk.moe
-国内IP速查, https://ip.cn
-
-## 域名和礼品卡
-GoDaddy, https://www.godaddy.com/zh-sg/domains
-Spaceship, https://www.spaceship.com/zh/domains
-海外礼品卡购买, https://shop.pockyt.io/pc/brands/all
-
-## 素材类工具
-免费图标下载, https://igoutu.cn/
-网站图标代码, https://fontawesome.com/search
-Youtube视频转文字, https://www.videotoblog.ai/
-图标LOGO, https://www.aigei.com/
-艺术渐变网页背景, https://www.color4bg.com/zh-hans/
-icon图标转换, https://www.aconvert.com/cn/icon/png-to-ico/
-免费LOGO图标设计, https://ray.so/icon
-Youtube视频解析下载, https://ytshorts.savetube.me/
-全平台视频下载, https://www.datatool.vip/
-一键AI抠图, https://www.remove.bg/zh
-在线编辑图片, https://photokit.com/?lang=zh
-在线图片压缩, https://www.iloveimg.com/zh-cn/compress-image/compress-png
-图片工具箱, https://www.iloveimg.com/zh-cn
-emo表情, https://www.emojiall.com/zh-hans/sub-categories/J2
-免费图床, https://lvse.eu.org/
-免费云资源汇总, https://gist.github.com/imba-tjd/d73258f0817255dbe77d64d40d985e76
-
-## APK软件下载
-APKMirror, https://www.apkmirror.com
-APKPure, https://apkpure.com/cn
-
-## OpenWrt
-官方OpenWrt固件, https://firmware-selector.openwrt.org/
-ImmortalWrt固件, https://firmware-selector.immortalwrt.org
-ImmortalWrt软件包, https://downloads.immortalwrt.org/releases/24.10.4/packages/x86_64/luci/index.json
-OpenWrt硬件支持, https://openwrt.org/zh/toh/start
-第三方OpenWrt固件, https://openwrt.ai/
+## 招标投标
+中国等保网, https://www.djbh.net
+标准服务平台, https://std.samr.gov.cn/
+中国法律大全, https://www.justlaws.cn/constitution
+招标资源网, https://www.zhaobiaoziyuan.com/zhaobiao/3-0-897-0-0/网络安全.html
