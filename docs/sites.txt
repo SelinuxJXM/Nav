@@ -52,6 +52,7 @@ Clash工具, https://github.com/clash-verge-rev/clash-verge-rev/releases
 杜卡迪机场, https://sub.dukadi.shop
 机场订阅加速, https://keli.blog
 在线PS平台, https://www.soer.ccwu.cc/Photoshop
+在线绘图工具, https://www.soer.ccwu.cc/draw/src/main/webapp
 TVBox 配置生成器, https://www.soer.ccwu.cc/Nav/tv
 在线录屏工作室, https://www.soer.ccwu.cc/Nav/recording
 Markdown 实时编辑器, https://www.soer.ccwu.cc/Nav/md
