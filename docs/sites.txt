@@ -39,7 +39,7 @@ Linux学习教程, https://www.runoob.com/
 编程开发学习, https://ilovefishc.com/
 
 
-## 科技小工具
+## 常用工具
 文件重命名, https://webrename.cn
 开发者工具, https://tools.upx8.com
 网络空间测绘, https://quake.360.net/quake/login#/
@@ -81,8 +81,13 @@ Logo设计AI, https://www.uugai.com/
 宣传设计AI, https://seede.ai/
 自动化视频剪辑AI, https://caption.flycut.co/zh
 
-## 招标投标
+## 标准学习
 中国等保网, https://www.djbh.net
 标准服务平台, https://std.samr.gov.cn/
 中国法律大全, https://www.justlaws.cn/constitution
 招标资源网, https://www.zhaobiaoziyuan.com/zhaobiao/3-0-897-0-0/网络安全.html
+
+## 招标投标
+中国中煤供应链平台, https://ego.chinacoal.com/
+金蝉招标网, https://caigou.jcebid.com/zonghe/src/views/sys/user/login.html
+煤婆网, https://bidtest.mp12345.com/bidweb/#/login/index
