@@ -1,8 +1,8 @@
 ## 自建平台
 SelinuxJ Site, https://www.soer.ccwu.cc
+SelinuxJ Nav, https://www.soer.ccwu.cc/Nav
 SelinuxJ Zimaos, http://www.zima.ccwu.cc:60023
 SelinuxJ Wiki, http://www.zima.ccwu.cc:60024/blog/#/home
-SelinuxJ Nav, http://www.zima.ccwu.cc:60025
 SelinuxJ OSS, https://www.zima.ccwu.cc:60026
 SelinuxJ TV, http://www.zima.ccwu.cc:60027
 Openwrt, http://www.zima.ccwu.cc:60028
@@ -43,15 +43,20 @@ Linux学习教程, https://www.runoob.com/
 开发者工具, https://tools.upx8.com
 网络空间测绘, https://quake.360.net/quake/login#/
 VM破解版, https://www.xitmi.com/2417.html
-网盘解析1, https://kdown.moiu.cn
-网盘解析2, https://kk.wpurl.cc/
+Kdown网盘解析, https://kdown.moiu.cn
+闪链网盘解析, https://kk.wpurl.cc
 免费域名, https://my.dnshe.com/index.php?m=domain_hub
 一元机场, https://1元机场.org/#/knowledge
 便宜机场, https://便宜机场.co/#/dashboard
 杜卡迪机场, https://sub.dukadi.shop
 机场订阅加速, https://keli.blog
-在线PS平台, https://www.tugaigai.com/online_ps/
-
+在线PS平台, https://www.tugaigai.com/online_ps
+TVBox 配置生成器, https://www.soer.ccwu.cc/tv
+在线录屏工作室, https://www.soer.ccwu.cc/recording
+Markdown 实时编辑器, https://www.soer.ccwu.cc/md
+GitHub 用户历程回顾, https://www.soer.ccwu.cc/github-user-data
+在线代码编辑器, https://www.soer.ccwu.cc/code
+Android 开发工具集, https://www.soer.ccwu.cc/android
 
 ## 日常办公
 通问千义, https://www.qianwen.com/
