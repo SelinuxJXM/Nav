@@ -29,6 +29,7 @@ Hi168云计算平台, https://www.hi168.com/#/desktop
 
 
 ## 技术学习
+Fofa搜索引擎, https://fofa.info/
 棱镜X · 单兵渗透平台, https://prismx.io/
 Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file
 Sec-Tools部署教程, https://www.django.cn/article/show-40.html
@@ -61,17 +62,24 @@ GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data
 Android 开发工具集, https://www.soer.ccwu.cc/Nav/android
 
 ## 日常办公
-通问千义, https://www.qianwen.com/
-LogoAI, https://www.uugai.com/
-ChmlFrp, https://panel.chmlfrp.net/home
+通问千义, https://www.qianwen.com
+文心一言, https://chat.baidu.com/
+豆包, https://www.doubao.com/
 数字化平台, https://cqcdidmp.smartccs.cn:8000
 易投资质申请, https://cqccsyt.smartccs.cn:9900
-专用设计AI, https://seede.ai/
-AI自动化视频剪辑, https://caption.flycut.co/zh
 在线工具集, https://inbrowser.app
 PDF在线扫描, https://lookscanned.io
-MoFrp, https://console.mofrp.com/
+ChmlFrp, https://panel.chmlfrp.net/home
+MoFrp, https://console.mofrp.com
+腾讯会议, https://meeting.tencent.com/user-center/join
 
+## AI新科技
+阿里秒悟编程AI, https://meoo.com/
+CSDN编程AI, https://inscode.net/
+在线IDE环境AI, https://monkeycode-ai.com
+Logo设计AI, https://www.uugai.com/
+宣传设计AI, https://seede.ai/
+自动化视频剪辑AI, https://caption.flycut.co/zh
 
 ## 招标投标
 中国等保网, https://www.djbh.net
