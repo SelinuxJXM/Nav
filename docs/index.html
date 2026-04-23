@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SelinuxJ Nav</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // 启用class模式的暗黑模式
+            theme: {
+                extend: {
+                    colors: { 
+                        paper: '#f0f2f5', 
+                        ink: '#1a1a1a', 
+                        kblue: '#0052cc',
+                        // 暗黑模式配色扩展
+                        dark: {
+                            paper: '#121212',
+                            ink: '#f5f5f5',
+                            card: '#1e1e1e',
+                            border: '#333333',
+                            slate100: '#2a2a2a',
+                            slate200: '#444444',
+                            slate400: '#777777',
+                            slate50: '#1a1a1a'
+                        }
+                    },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'sans-serif'], mono: ['"Space Grotesk"', 'monospace'] },
+                    borderRadius: { 'xl-brutal': '16px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 基础样式 + 暗黑模式适配 */
+        body { 
+            background-color: #f0f2f5; 
+            color: #1a1a1a; 
+            scroll-behavior: smooth; 
+            -webkit-tap-highlight-color: transparent; 
+        }
+        body.dark {
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+
+        section { content-visibility: auto; contain-intrinsic-size: 1px 500px; scroll-margin-top: 100px; }
+        
+        /* 卡片样式暗黑适配 */
+        .brutal-card { 
+            background: #fff; 
+            border: 1.5px solid #e2e8f0; 
+            border-radius: 16px; 
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .dark .brutal-card {
+            background: #1e1e1e;
+            border-color: #333333;
+        }
+        @media (min-width: 1024px) {
+            .brutal-card:hover { transform: translateY(-2px); border-color: #0052cc; box-shadow: 0 10px 15px -3px rgba(0, 82, 204, 0.1); }
+            .dark .brutal-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 82, 204, 0.2); }
+        }
+
+        .nav-item { border-radius: 10px; margin: 2px 8px; transition: all 0.2s; cursor: pointer; }
+        .nav-item:hover, .nav-item.active { background-color: #0052cc; color: #fff; }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .dark .custom-scroll::-webkit-scrollbar-thumb { background: #555555; }
+
+        #mobileDrawer { transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        #mobileDrawer.open { transform: translateY(0); }
+        
+        .icon-loaded { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
+
+        /* 头部/输入框/按钮 暗黑适配 */
+        .dark header {
+            background-color: #1e1e1e/70;
+            border-b-color: #333333;
+        }
+        .dark .bg-slate-100 {
+            background-color: #2a2a2a !important;
+        }
+        .dark .text-slate-400 {
+            color: #888888 !important;
+        }
+        .dark .text-slate-600 {
+            color: #dddddd !important;
+        }
+        .dark .text-slate-800 {
+            color: #f5f5f5 !important;
+        }
+        .dark .text-slate-700 {
+            color: #eeeeee !important;
+        }
+        .dark input {
+            color: #f5f5f5 !important;
+        }
+        .dark input::placeholder {
+            color: #888888 !important;
+        }
+        .dark #emptyState .bg-white {
+            background-color: #1e1e1e;
+            border-color: #444444;
+        }
+        .dark #emptyState .text-slate-300 {
+            color: #777777 !important;
+        }
+        .dark #emptyState .text-slate-400 {
+            color: #999999 !important;
+        }
+        .dark .border-slate-200 {
+            border-color: #333333 !important;
+        }
+        .dark .border-slate-50 {
+            border-color: #2a2a2a !important;
+        }
+        .dark .bg-white {
+            background-color: #1e1e1e !important;
+        }
+        .dark .site-icon-container {
+            background-color: #2a2a2a !important;
+            border-color: #333333 !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans text-sm pb-10">
+
+    <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-slate-200 px-4 md:px-6 py-3">
+        <div class="max-w-[1600px] mx-auto flex justify-between items-center gap-2 md:gap-4">
+            <div class="flex items-center gap-2 shrink-0">
+                <div class="w-8 h-8 bg-kblue rounded-lg flex items-center justify-center text-white italic font-black text-xs shrink-0">S</div>
+                <h1 class="font-bold text-base md:text-lg tracking-tight hidden sm:block text-ink">SelinuxJ Nav</h1>
+            </div>
+            <div class="flex items-center gap-2 flex-grow justify-end max-w-2xl">
+                <div class="relative flex-grow">
+                    <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"></i>
+                    <input type="text" id="searchInput" placeholder="搜索资源..." class="w-full bg-slate-100 border-none rounded-xl py-2 pl-10 pr-4 text-xs font-medium focus:ring-2 focus:ring-kblue/20 transition-all outline-none">
+                </div>
+                <!-- 新增：模式切换按钮 -->
+                <button id="themeToggleBtn" class="p-2 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors shrink-0">
+                    <i data-lucide="moon" id="themeIcon" class="w-5 h-5 text-slate-600"></i>
+                </button>
+                <button id="mobileMenuBtn" class="lg:hidden p-2 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors shrink-0">
+                    <i data-lucide="layout-grid" class="w-5 h-5 text-slate-600"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-[1600px] mx-auto flex gap-6 p-4 md:p-6">
+        <aside class="hidden lg:block w-56 shrink-0">
+            <div class="sticky top-24 flex flex-col bg-white border border-slate-200 rounded-2xl shadow-sm h-[calc(100vh-120px)] overflow-hidden">
+                <div class="px-5 py-4 border-b border-slate-50 flex justify-between items-center shrink-0">
+                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">分类索引</span>
+                    <span id="category-count" class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-[10px] font-bold">0</span>
+                </div>
+                <div id="categoryMenuList" class="flex-grow overflow-y-auto no-scrollbar py-2 text-slate-600"></div>
+            </div>
+        </aside>
+
+        <main class="flex-grow min-w-0">
+            <div id="siteGrid" class="space-y-8 md:space-y-10"></div>
+            <div id="emptyState" class="hidden py-40 text-center">
+                <div class="bg-white inline-block px-10 py-6 rounded-3xl border border-dashed border-slate-300">
+                    <i data-lucide="layers" class="w-10 h-10 mx-auto mb-4 text-slate-300"></i>
+                    <p class="text-slate-400 font-bold italic">未发现匹配的导航资源</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="drawerOverlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity"></div>
+    <div id="mobileDrawer" class="fixed bottom-0 left-0 right-0 bg-white z-50 rounded-t-[32px] p-6 max-h-[80vh] flex flex-col lg:hidden">
+        <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mb-6 shrink-0"></div>
+        <h3 class="font-bold text-lg mb-4 px-2">分类索引</h3>
+        <div id="mobileCategoryList" class="overflow-y-auto custom-scroll space-y-1"></div>
+    </div>
+
+    <script>
+        let allData = [];
+        const AVATAR_COLORS = ['#4776E6', '#8E54E9', '#11998e', '#38ef7d', '#F2994A', '#EB5757', '#2F80ED'];
+        const avatarCache = new Map();
+
+        // ========== 新增：主题切换核心逻辑 ==========
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlBody = document.body;
+        
+        // 初始化主题（从本地存储读取）
+        function initTheme() {
+            const savedTheme = localStorage.getItem('nav-theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                htmlBody.classList.add('dark');
+                themeIcon.dataset.lucide = 'sun'; // 切换为太阳图标
+            } else {
+                htmlBody.classList.remove('dark');
+                themeIcon.dataset.lucide = 'moon'; // 切换为月亮图标
+            }
+            lucide.createIcons(); // 重新渲染图标
+        }
+
+        // 切换主题
+        function toggleTheme() {
+            const isDark = htmlBody.classList.toggle('dark');
+            localStorage.setItem('nav-theme', isDark ? 'dark' : 'light');
+            themeIcon.dataset.lucide = isDark ? 'sun' : 'moon';
+            lucide.createIcons(); // 重新渲染图标
+        }
+
+        // 绑定主题切换事件
+        themeToggleBtn.addEventListener('click', toggleTheme);
+
+        function getAvatar(name) {
+            if (avatarCache.has(name)) return avatarCache.get(name);
+            const color = AVATAR_COLORS[name.length % AVATAR_COLORS.length];
+            const char = name.charAt(0).toUpperCase();
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="30" fill="${color}"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="50" font-weight="bold" fill="white" font-family="system-ui">${char}</text></svg>`;
+            const base64 = `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(svg)))}`;
+            avatarCache.set(name, base64);
+            return base64;
+        }
+
+        const iconObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    const realSrc = img.dataset.src;
+                    if (realSrc) {
+                        const tempImg = new Image();
+                        tempImg.src = realSrc;
+                        tempImg.onload = () => {
+                            if (tempImg.naturalWidth > 16) {
+                                img.src = realSrc;
+                                img.classList.add('icon-loaded');
+                            }
+                            img.removeAttribute('data-src');
+                        };
+                        tempImg.onerror = () => img.removeAttribute('data-src');
+                    }
+                    observer.unobserve(img);
+                }
+            });
+        }, { rootMargin: '300px' });
+
+        function render(data) {
+            const grid = document.getElementById('siteGrid');
+            const deskMenu = document.getElementById('categoryMenuList');
+            const mobMenu = document.getElementById('mobileCategoryList');
+            const gridFrag = document.createDocumentFragment();
+            const deskFrag = document.createDocumentFragment();
+            const mobFrag = document.createDocumentFragment();
+
+            document.getElementById('category-count').innerText = data.length;
+
+            data.forEach((cat, idx) => {
+                const dItem = document.createElement('div');
+                dItem.className = "nav-item px-5 py-2.5 text-xs font-bold truncate";
+                dItem.innerText = cat.name;
+                dItem.onclick = () => window.scrollTo({ top: document.getElementById(`section-${idx}`).offsetTop - 100 });
+                deskFrag.appendChild(dItem);
+
+                const mItem = document.createElement('div');
+                mItem.className = "px-5 py-4 text-base font-medium border-b border-slate-50 active:bg-slate-100 rounded-xl";
+                mItem.innerText = cat.name;
+                mItem.onclick = () => { toggleDrawer(false); setTimeout(() => window.scrollTo({ top: document.getElementById(`section-${idx}`).offsetTop - 90 }), 350); };
+                mobFrag.appendChild(mItem);
+
+                const section = document.createElement('section');
+                section.id = `section-${idx}`;
+                section.className = "space-y-4";
+                section.innerHTML = `<div class="flex items-center gap-3"><h2 class="font-black text-sm uppercase tracking-tighter text-slate-800">${cat.name}</h2><div class="h-px bg-slate-200 flex-grow"></div></div>`;
+
+                const cardGrid = document.createElement('div');
+                cardGrid.className = "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-4";
+
+                cat.sites.forEach(site => {
+                    const domain = new URL(site.url).hostname;
+                    const placeholder = getAvatar(site.name);
+                    const realIcon = `https://www.google.com/s2/favicons?domain=${domain}&sz=128&default=404`;
+                    
+                    const a = document.createElement('a');
+                    a.href = site.url;
+                    a.target = "_blank";
+                    a.className = "brutal-card p-3 flex items-center gap-3 group active:scale-[0.98] lg:active:scale-100 transition-transform";
+                    // 新增：给图标容器加类名方便暗黑适配
+                    a.innerHTML = `
+                        <div class="w-10 h-10 rounded-xl overflow-hidden shrink-0 bg-slate-50 flex items-center justify-center border border-slate-100 site-icon-container">
+                            <img src="${placeholder}" data-src="${realIcon}" class="w-6 h-6 object-contain site-icon" alt="">
+                        </div>
+                        <div class="min-w-0">
+                            <div class="text-[11px] font-bold text-slate-700 truncate group-hover:text-kblue transition-colors">${site.name}</div>
+                            <div class="text-[9px] text-slate-400 truncate font-mono">${domain}</div>
+                        </div>
+                    `;
+                    cardGrid.appendChild(a);
+                    iconObserver.observe(a.querySelector('.site-icon'));
+                });
+                section.appendChild(cardGrid);
+                gridFrag.appendChild(section);
+            });
+
+            grid.innerHTML = ''; deskMenu.innerHTML = ''; mobMenu.innerHTML = '';
+            grid.appendChild(gridFrag); deskMenu.appendChild(deskFrag); mobMenu.appendChild(mobFrag);
+            document.getElementById('emptyState').classList.toggle('hidden', data.length > 0);
+        }
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const drawerOverlay = document.getElementById('drawerOverlay');
+        function toggleDrawer(isOpen) {
+            if (isOpen) {
+                drawerOverlay.classList.remove('hidden');
+                setTimeout(() => { drawerOverlay.classList.add('opacity-100'); mobileDrawer.classList.add('open'); }, 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawerOverlay.classList.remove('opacity-100');
+                mobileDrawer.classList.remove('open');
+                setTimeout(() => drawerOverlay.classList.add('hidden'), 300);
+                document.body.style.overflow = '';
+            }
+        }
+        mobileMenuBtn.onclick = () => toggleDrawer(true);
+        drawerOverlay.onclick = () => toggleDrawer(false);
+
+        async function init() {
+            lucide.createIcons();
+            initTheme(); // 初始化主题
+            try {
+                const res = await fetch('sites.txt');
+                const text = await res.text();
+                allData = parseM3U(text);
+                render(allData);
+            } catch (err) { console.error("加载失败", err); }
+        }
+
+        function parseM3U(text) {
+            const categories = [];
+            let current = { name: '默认', sites: [] };
+            text.split('\n').forEach(line => {
+                line = line.trim();
+                if (!line || (line.startsWith('#') && !line.startsWith('##'))) return;
+                if (line.startsWith('##')) {
+                    if (current.sites.length > 0) categories.push(current);
+                    current = { name: line.replace(/^##\s*/, '').trim(), sites: [] };
+                } else {
+                    const parts = line.split(/[,|]/);
+                    if (parts.length >= 2) {
+                        current.sites.push({ name: parts[0].trim(), url: parts[1].trim().startsWith('http') ? parts[1].trim() : 'https://' + parts[1].trim() });
+                    }
+                }
+            });
+            if (current.sites.length > 0) categories.push(current);
+            return categories;
+        }
+
+        let timer;
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                const q = e.target.value.toLowerCase();
+                const filtered = allData.map(c => ({
+                    ...c, sites: c.sites.filter(s => s.name.toLowerCase().includes(q) || s.url.toLowerCase().includes(q))
+                })).filter(c => c.sites.length > 0);
+                render(filtered);
+            }, 300);
+        });
+
+        window.onload = init;
+    </script>
+</body>
+</html>
