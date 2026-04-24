@@ -39,7 +39,7 @@ Linux学习教程, https://www.runoob.com/
 编程开发学习, https://ilovefishc.com/
 
 
-## 常用工具
+# 常用工具
 文件重命名, https://webrename.cn
 开发者工具, https://tools.upx8.com
 网络空间测绘, https://quake.360.net/quake/login#/
@@ -60,6 +60,7 @@ Markdown 实时编辑器, https://www.soer.ccwu.cc/Nav/md
 GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data
 在线代码编辑器, https://www.soer.ccwu.cc/Nav/code
 Android 开发工具集, https://www.soer.ccwu.cc/Nav/android
+雨糖科技WPS，https://raincandy.tech/wpsoffice_umrse/
 
 ## 日常办公
 通问千义, https://www.qianwen.com
