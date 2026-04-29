@@ -3,10 +3,11 @@ SelinuxJ Site, https://www.soer.ccwu.cc
 SelinuxJ Nav, https://www.soer.ccwu.cc/Nav
 SelinuxJ Zimaos, http://www.zima.ccwu.cc:60023
 SelinuxJ Wiki, http://www.zima.ccwu.cc:60024/blog/#/home
+SelinuxJ Immich, http://www.zima.ccwu.cc:60025
 SelinuxJ OSS, https://www.zima.ccwu.cc:60026
 SelinuxJ TV, http://www.zima.ccwu.cc:60027
-Openwrt, http://www.zima.ccwu.cc:60028
-SelinuxJ DPanel, http://www.zima.ccwu.cc:60029
+SelinuxJ DPanel, http://www.zima.ccwu.cc:60028
+Openwrt, http://www.zima.ccwu.cc:60029
 ECS服务器, http://123.60.132.209
 
 
@@ -82,6 +83,8 @@ CSDN编程AI, https://inscode.net/
 Logo设计AI, https://www.uugai.com/
 宣传设计AI, https://seede.ai/
 自动化视频剪辑AI, https://caption.flycut.co/zh
+双色球预测, https://double-color-ball-ai.vercel.app
+一飞开源工具箱, https://tool.exmay.com/tool.html#/tool/hash?category=encryption
 
 ## 标准学习
 中国等保网, https://www.djbh.net
