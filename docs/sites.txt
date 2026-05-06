@@ -3,7 +3,7 @@ SelinuxJ Site, https://www.soer.ccwu.cc
 SelinuxJ Nav, https://www.soer.ccwu.cc/Nav
 SelinuxJ Zimaos, http://www.zima.ccwu.cc:60023
 SelinuxJ Wiki, http://www.zima.ccwu.cc:60024/blog/#/home
-SelinuxJ Immich, http://www.zima.ccwu.cc:60025
+SelinuxJ Immich, https://www.zima.ccwu.cc:60025
 SelinuxJ OSS, https://www.zima.ccwu.cc:60026
 SelinuxJ TV, http://www.zima.ccwu.cc:60027
 SelinuxJ DPanel, http://www.zima.ccwu.cc:60028
@@ -63,6 +63,7 @@ GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data
 在线代码编辑器, https://www.soer.ccwu.cc/Nav/code
 Android 开发工具集, https://www.soer.ccwu.cc/Nav/android
 雨糖科技WPS，https://raincandy.tech/wpsoffice_umrse/
+liaison内网穿透, https://liaison.cloud
 
 ## 日常办公
 通问千义, https://www.qianwen.com
@@ -75,6 +76,7 @@ PDF在线扫描, https://lookscanned.io
 ChmlFrp, https://panel.chmlfrp.net/home
 MoFrp, https://console.mofrp.com
 腾讯会议, https://meeting.tencent.com/user-center/join
+等保能力评估系统, https://www.ciipc.gov110.cn:4430/jggl/index.html#/login
 
 ## AI新科技
 阿里秒悟编程AI, https://meoo.com/
