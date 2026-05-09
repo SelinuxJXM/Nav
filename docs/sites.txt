@@ -7,94 +7,144 @@ SelinuxJ Immich, https://www.zima.ccwu.cc:60025
 SelinuxJ OSS, https://www.zima.ccwu.cc:60026
 SelinuxJ TV, http://www.zima.ccwu.cc:60027
 SelinuxJ DPanel, http://www.zima.ccwu.cc:60028
+SelinuxJ ECS, http://123.60.132.209
 Openwrt, http://www.zima.ccwu.cc:60029
-ECS服务器, http://123.60.132.209
+
+AI工具
+通问千义, https://www.qianwen.com
+文心一言, https://chat.baidu.com/
+豆包, https://www.doubao.com/
+
+## 日常办公
+数字化平台, https://cqcdidmp.smartccs.cn:8000
+易投资质申请, https://cqccsyt.smartccs.cn:9900
+等保能力评估系统, https://www.ciipc.gov110.cn:4430/jggl/index.html#/login
 
 
 ## 技术论坛
 黑海洋论坛, https://blog.upx8.com
-Gitcode, https://gitcode.com
 TIDE安全论坛, http://case.tidesec.com
-流影态势感知, https://abyssalfish-os.github.io
 一飞开源论坛, https://code.exmay.com
 恩山无线论坛, https://www.right.com.cn
-Openwrt构建, https://openwrt.ai/
-全球盗版游戏, https://www.gamer520.com
-资源导航网, https://www.chenmoyidaohang.com/
-EW资源论坛, https://www.ewbang.com
 程序员论坛, https://www.cnblogs.com/
-系统迷, https://www.xitmi.com/
-二级域名分发, https://dns.qxnqc.cn
 网站源码论坛, https://www.gerenzhuye.com/
-Hi168云计算平台, https://www.hi168.com/#/desktop
-
-
-## 技术学习
-Fofa搜索引擎, https://fofa.info/
-棱镜X · 单兵渗透平台, https://prismx.io/
-Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file
-Sec-Tools部署教程, https://www.django.cn/article/show-40.html
-等保测评学习, https://www.modb.pro/u/480195
-密评视频学习, https://space.bilibili.com/3546562967899104
-Linux学习教程, https://www.runoob.com/
-编程开发学习, https://ilovefishc.com/
-
 
 ## 常用工具
 文件重命名, https://webrename.cn
-开发者工具, https://tools.upx8.com
-网络空间测绘, https://quake.360.net/quake/login#/
-VM破解版, https://www.xitmi.com/2417.html
-Kdown网盘解析, https://kdown.moiu.cn
-闪链网盘解析, https://kk.wpurl.cc
-免费域名, https://my.dnshe.com/index.php?m=domain_hub
-Clash工具, https://github.com/clash-verge-rev/clash-verge-rev/releases
-一元机场, https://1元机场.org/#/knowledge
-便宜机场, https://便宜机场.co/#/dashboard
-杜卡迪机场, https://sub.dukadi.shop
-机场订阅加速, https://keli.blog
-在线抠图工具, https://www.remove.bg/zh/
-在线PS平台, https://tugaigai.com/online_ps
-在线绘图工具, https://www.soer.ccwu.cc/draw/src/main/webapp
-TVBox 配置生成器, https://www.soer.ccwu.cc/Nav/tv
-在线录屏工作室, https://www.soer.ccwu.cc/Nav/recording
-Markdown 实时编辑器, https://www.soer.ccwu.cc/Nav/md
-GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data
-在线代码编辑器, https://www.soer.ccwu.cc/Nav/code
-Android 开发工具集, https://www.soer.ccwu.cc/Nav/android
-雨糖科技WPS，https://raincandy.tech/wpsoffice_umrse/
-liaison内网穿透, https://liaison.cloud
-
-## 日常办公
-通问千义, https://www.qianwen.com
-文心一言, https://chat.baidu.com/
-豆包, https://www.doubao.com/
-数字化平台, https://cqcdidmp.smartccs.cn:8000
-易投资质申请, https://cqccsyt.smartccs.cn:9900
-在线工具集, https://inbrowser.app
 PDF在线扫描, https://lookscanned.io
-ChmlFrp, https://panel.chmlfrp.net/home
-MoFrp, https://console.mofrp.com
-腾讯会议, https://meeting.tencent.com/user-center/join
-等保能力评估系统, https://www.ciipc.gov110.cn:4430/jggl/index.html#/login
+在线工具集1, https://tools.upx8.com
+在线工具集2, https://inbrowser.app
+在线工具集3, https://tool.exmay.com/tool.html#/tool/hash?category=encryption
+在线抠图, https://www.remove.bg/zh/
+在线PS, https://tugaigai.com/online_ps
+在线绘图, https://www.soer.ccwu.cc/draw/src/main/webapp
+TVBox 配置生成器, https://www.soer.ccwu.cc/Nav/tv
+在线录屏, https://www.soer.ccwu.cc/Nav/recording
+Markdown 编辑器, https://www.soer.ccwu.cc/Nav/md
+GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data
 
-## AI新科技
-阿里秒悟编程AI, https://meoo.com/
-CSDN编程AI, https://inscode.net/
-在线IDE环境AI, https://monkeycode-ai.com
-Logo设计AI, https://www.uugai.com/
-宣传设计AI, https://seede.ai/
-自动化视频剪辑AI, https://caption.flycut.co/zh
-双色球预测, https://double-color-ball-ai.vercel.app
-一飞开源工具箱, https://tool.exmay.com/tool.html#/tool/hash?category=encryption
-
-## 标准学习
-中国等保网, https://www.djbh.net
-标准服务平台, https://std.samr.gov.cn/
-中国法律大全, https://www.justlaws.cn/constitution
-招标资源网, https://www.zhaobiaoziyuan.com/zhaobiao/3-0-897-0-0/网络安全.html
 
 ## 招标投标
 中国中煤供应链平台, https://ego.chinacoal.com/
 金蝉招标网, https://caigou.jcebid.com/zonghe/src/views/sys/user/login.html
 煤婆网, https://bidtest.mp12345.com/bidweb/#/login/index
+
+
+## 内网穿透
+MoFrp, https://console.mofrp.com
+ChmlFrp, https://panel.chmlfrp.net/home
+liaison内网穿透, https://liaison.cloud
+
+## 机场订阅
+一元机场, https://1元机场.org/#/knowledge
+便宜机场, https://便宜机场.co/#/dashboard
+杜卡迪机场, https://sub.dukadi.shop
+机场订阅加速, https://keli.blog
+Clash工具, https://github.com/clash-verge-rev/clash-verge-rev/releases
+
+## 网盘解析
+Kdown网盘解析, https://kdown.moiu.cn
+闪链网盘解析, https://kk.wpurl.cc
+
+## 免备案域名
+DNSHE域名, https://my.dnshe.com/index.php?m=domain_hub
+DigitalPlat域名, https://dash.domain.digitalplat.org/buy-slot
+二级域名（付费）, https://dns.qxnqc.cn
+
+
+## 空间测绘
+Fofa测绘, https://fofa.info/
+360测绘, https://quake.360.net/quake/login#/
+
+## 渗透测试
+棱镜X · 单兵渗透平台, https://prismx.io/
+Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file
+Sec-Tools部署教程, https://www.django.cn/article/show-40.html
+流影态势感知, https://abyssalfish-os.github.io
+
+## 代码仓库
+Gitcode, https://gitcode.com
+Github, https://github.com/
+Gitee, https://gitee.com/
+
+
+## Openwrt
+Openwrt构建, https://openwrt.ai/
+iStoreOS官网, https://site.istoreos.com
+iStoreOS论坛, https://www.koolcenter.com
+iStoreOS下载, https://fw.koolcenter.com
+服务器安装iStoreOS, https://blog.csdn.net/weixin_74313592/article/details/136192062
+
+
+## 云计算平台
+Hi168云计算平台, https://www.hi168.com/#/desktop
+百度云平台, https://cloud.baidu.com/
+阿里云平台, https://www.aliyun.com/
+腾讯云平台, https://cloud.tencent.com/
+华为云平台, https://www.huaweicloud.com/
+
+
+## 杂项AI
+Logo设计AI, https://www.uugai.com/
+宣传设计AI, https://seede.ai/
+自动化视频剪辑AI, https://caption.flycut.co/zh
+双色球预测, https://double-color-ball-ai.vercel.app
+
+
+## 破解工具
+VM破解版, https://www.xitmi.com/2417.html
+雨糖科技WPS，https://raincandy.tech/wpsoffice_umrse
+CMY资源网, https://www.chenmoyidaohang.com/
+EW资源网, https://www.ewbang.com
+
+
+## 编程开发
+阿里秒悟编程AI, https://meoo.com/
+CSDN编程AI, https://inscode.net/
+星图编程AI, https://ai.csdn.net/
+长亭编程AI, https://monkeycode-ai.com/
+在线代码编辑器, https://www.soer.ccwu.cc/Nav/code
+Android 开发, https://www.soer.ccwu.cc/Nav/android
+在线IDE环境AI, https://monkeycode-ai.com
+编程开发学习, https://ilovefishc.com/
+
+
+## 等保密评
+等保测评学习, https://www.modb.pro/u/480195
+密评视频学习, https://space.bilibili.com/3546562967899104
+
+## 标准学习
+中国等保网, https://www.djbh.net
+标准服务平台, https://std.samr.gov.cn/
+中国法律大全, https://www.justlaws.cn/constitution
+
+
+## 游戏资源
+全球盗版游戏, https://www.gamer520.com
+
+## 操作系统
+系统迷, https://www.xitmi.com/
+Linux学习教程, https://www.runoob.com/
+
+## 网站源码
+个人主页源码, https://www.gerenzhuye.com
