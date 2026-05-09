@@ -10,7 +10,7 @@ SelinuxJ DPanel, http://www.zima.ccwu.cc:60028
 SelinuxJ ECS, http://123.60.132.209
 Openwrt, http://www.zima.ccwu.cc:60029
 
-AI工具
+## AI工具
 通问千义, https://www.qianwen.com
 文心一言, https://chat.baidu.com/
 豆包, https://www.doubao.com/
