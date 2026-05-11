@@ -1,14 +1,15 @@
 ## 自建平台
 SelinuxJ Site, https://www.soer.ccwu.cc
 SelinuxJ Nav, https://www.soer.ccwu.cc/Nav
-SelinuxJ Zimaos, http://www.zima.ccwu.cc:60023
-SelinuxJ Wiki, http://www.zima.ccwu.cc:60024/blog/#/home
-SelinuxJ Immich, https://www.zima.ccwu.cc:60025
-SelinuxJ OSS, https://www.zima.ccwu.cc:60026
-SelinuxJ TV, http://www.zima.ccwu.cc:60027
-SelinuxJ DPanel, http://www.zima.ccwu.cc:60028
+SelinuxJ Zimaos, http://www.zima.ccwu.cc:50023
+SelinuxJ Wiki, http://www.zima.ccwu.cc:50024/blog/#/home
+SelinuxJ Immich, https://www.zima.ccwu.cc:50025
+SelinuxJ OSS, https://www.zima.ccwu.cc:50026
+SelinuxJ TV, http://www.zima.ccwu.cc:50030
+SelinuxJ DPanel, http://www.zima.ccwu.cc:50027
 SelinuxJ ECS, http://123.60.132.209
-Openwrt, http://www.zima.ccwu.cc:60029
+Openwrt Router, http://www.zima.ccwu.cc:50028
+Openwrt FrpWeb, http://www.zima.ccwu.cc:50029
 
 ## AI工具
 通问千义, https://www.qianwen.com
