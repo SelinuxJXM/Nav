@@ -16,6 +16,7 @@ Openwrt, http://www.zima.ccwu.cc:60029
 豆包, https://www.doubao.com/
 
 ## 日常办公
+钛投标, https://taitoubiao.com/filelist
 数字化平台, https://cqcdidmp.smartccs.cn:8000
 易投资质申请, https://cqccsyt.smartccs.cn:9900
 等保能力评估系统, https://www.ciipc.gov110.cn:4430/jggl/index.html#/login
@@ -48,6 +49,7 @@ GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data
 中国中煤供应链平台, https://ego.chinacoal.com/
 金蝉招标网, https://caigou.jcebid.com/zonghe/src/views/sys/user/login.html
 煤婆网, https://bidtest.mp12345.com/bidweb/#/login/index
+阳光采购网, https://caigou.chinatelecom.com.cn/ctscPortal
 
 
 ## 内网穿透
@@ -56,8 +58,9 @@ ChmlFrp, https://panel.chmlfrp.net/home
 liaison内网穿透, https://liaison.cloud
 
 ## 机场订阅
-一元机场, https://1元机场.org/#/knowledge
-便宜机场, https://便宜机场.co/#/dashboard
+机场导航, https://ygpy.net/
+苏妲己的后宫, https://sudaji2.eepzau.org
+小火箭账号, https://proxy4all.github.io/FreeShadowrocket/
 杜卡迪机场, https://sub.dukadi.shop
 机场订阅加速, https://keli.blog
 Clash工具, https://github.com/clash-verge-rev/clash-verge-rev/releases
@@ -145,6 +148,14 @@ Android 开发, https://www.soer.ccwu.cc/Nav/android
 ## 操作系统
 系统迷, https://www.xitmi.com/
 Linux学习教程, https://www.runoob.com/
+毫秒镜像, https://1ms.run
 
 ## 网站源码
 个人主页源码, https://www.gerenzhuye.com
+
+
+## 匿名访问
+GPTMail临时邮箱, https://mail.chatgpt.org.uk/ahanson662@eycfhb.com
+GMail临时邮箱, https://www.emailtick.com/zh
+DuckMail临时邮箱, https://www.duckmail.sbs/zh
+国外身份生成, https://www.meiguodizhi.com
