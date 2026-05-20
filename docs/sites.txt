@@ -17,9 +17,10 @@ AI通用-文心一言（综合型）, https://chat.baidu.com/
 AI通用-豆包（综合型）, https://www.doubao.com/
 AI图像视频-通义万相（做AI设计图）, https://tongyi.aliyun.com/wanxiang/
 AI图像视频-Imini（文生图/多模态创作）, https://imini.com/
-AI图像视频-即梦（做海报/短视频）, https://jimeng.jianying.com
 AI图像视频-OpenCut（P图/改细节）, https://opencut.net/
+AI图像视频-即梦（做海报/短视频）, https://jimeng.jianying.com
 AI图像视频-movieflow（短视频生成）, https://www.movieflow.ai
+AI图像视频-小云雀（短视频生成）, https://xiaoyunque.jianying.com/
 AI办公-飞书妙记（写会议纪要）, https://www.feishu.cn
 AI办公-AiPPT（生成PPT）, https://www.aippt.cn
 AI办公-Kimi（写长文，读大文件用）, https://kimi.moonshot.cn
@@ -99,6 +100,7 @@ Fofa测绘, https://fofa.info/
 Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file
 Sec-Tools部署教程, https://www.django.cn/article/show-40.html
 流影态势感知, https://abyssalfish-os.github.io
+TryHackMe在线网安学习平台, https://tryhackme.com/
 
 ## 代码仓库
 Gitcode, https://gitcode.com
