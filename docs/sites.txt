@@ -12,9 +12,22 @@ Openwrt Router, http://www.zima.ccwu.cc:50028
 Openwrt FrpWeb, http://www.zima.ccwu.cc:50029
 
 ## AI工具
-通问千义, https://www.qianwen.com
-文心一言, https://chat.baidu.com/
-豆包, https://www.doubao.com/
+AI通用-通问千义（综合型）, https://www.qianwen.com
+AI通用-文心一言（综合型）, https://chat.baidu.com/
+AI通用-豆包（综合型）, https://www.doubao.com/
+AI图像视频-通义万相（做AI设计图）, https://tongyi.aliyun.com/wanxiang/
+AI图像视频-Imini（文生图/多模态创作）, https://imini.com/
+AI图像视频-即梦（做海报/短视频）, https://jimeng.jianying.com
+AI图像视频-OpenCut（P图/改细节）, https://opencut.net/
+AI图像视频-movieflow（短视频生成）, https://www.movieflow.ai
+AI办公-飞书妙记（写会议纪要）, https://www.feishu.cn
+AI办公-AiPPT（生成PPT）, https://www.aippt.cn
+AI办公-Kimi（写长文，读大文件用）, https://kimi.moonshot.cn
+AI办公-腾讯元宝（写公众号文章）, https://yuanbao.tencent.com
+AI写作-秘塔AI（写论文/查文献用）, https://metaso.cn
+AI深度分析-MolliClaw（电脑自动化/数字员工）, https://www.doubao.com/
+AI深度分析-AutoGPT（批量处理/自动干活）, https://www.doubao.com/
+AI开源学习社区与工具平台, https://www.waytoagi.com/
 
 ## 日常办公
 钛投标, https://taitoubiao.com/filelist
@@ -67,6 +80,7 @@ liaison内网穿透, https://liaison.cloud
 Clash工具, https://github.com/clash-verge-rev/clash-verge-rev/releases
 
 ## 网盘解析
+阿里云盘, https://www.aliyundrive.com/sign/in
 Kdown网盘解析, https://kdown.moiu.cn
 闪链网盘解析, https://kk.wpurl.cc
 
