@@ -29,8 +29,8 @@ AI办公-AiPPT（生成PPT）, https://www.aippt.cn
 AI办公-Kimi（写长文，读大文件用）, https://kimi.moonshot.cn
 AI办公-腾讯元宝（写公众号文章）, https://yuanbao.tencent.com
 AI写作-秘塔AI（写论文/查文献用）, https://metaso.cn
-AI深度分析-MolliClaw（电脑自动化/数字员工）, https://www.doubao.com/
-AI深度分析-AutoGPT（批量处理/自动干活）, https://www.doubao.com/
+AI深度分析-MolliClaw（电脑自动化/数字员工）, https://www.molili.com.cn/
+AI深度分析-AutoGPT（批量处理/自动干活）, https://agpt.co
 AI编程-Stitch（网站设计/应用开发）, https://stitch.withgoogle.com/
 AI预测-双色球彩票, https://double-color-ball-ai.vercel.app
 AI开源学习社区与工具平台, https://www.waytoagi.com/
