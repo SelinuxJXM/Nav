@@ -12,9 +12,10 @@ Openwrt Router, http://www.zima.ccwu.cc:50028
 Openwrt FrpWeb, http://www.zima.ccwu.cc:50029
 
 ## AI工具
-AI通用-通问千义（综合型）, https://www.qianwen.com
-AI通用-文心一言（综合型）, https://chat.baidu.com/
-AI通用-豆包（综合型）, https://www.doubao.com/
+AI通用-AskManyAI（多模型聚合）, https://askmanyai.cn
+AI通用-通问千义, https://www.qianwen.com
+AI通用-文心一言, https://chat.baidu.com/
+AI通用-豆包, https://www.doubao.com/
 AI图像视频-通义万相（做AI设计图）, https://tongyi.aliyun.com/wanxiang/
 AI图像视频-U钙网（做AI商标）, https://www.uugai.com/
 AI图像视频-Imini（文生图/多模态创作）, https://imini.com/
@@ -36,6 +37,7 @@ AI预测-双色球彩票, https://double-color-ball-ai.vercel.app
 AI开源学习社区与工具平台, https://www.waytoagi.com/
 
 ## 日常办公
+Ima知识库, https://ima.qq.com/
 钛投标, https://taitoubiao.com/filelist
 数字化平台, https://cqcdidmp.smartccs.cn:8000
 易投资质申请, https://cqccsyt.smartccs.cn:9900
