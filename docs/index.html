@@ -131,6 +131,49 @@
             background-color: #2a2a2a !important;
             border-color: #333333 !important;
         }
+        /* 自定义秒出提示框样式 */
+    
+    /* 1. 定义提示框的基础样式 */
+    .group[data-title]:hover::after {
+        content: attr(data-title); /* 获取 data-title 里的文字 */
+        position: absolute;
+        left: 0;
+        top: -35px; /* 在文字上方显示 */
+        width: max-content;
+        max-width: 200px; /* 限制最大宽度 */
+        background-color: #1e293b; /* 深蓝灰色背景 (Tailwind slate-800) */
+        color: #fff; /* 白色文字 */
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: normal;
+        text-align: left;
+        white-space: normal; /* 允许换行 */
+        z-index: 50; /* 确保在最上层 */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* 阴影 */
+        
+        /* 2. 关键动画：立即显示，无延迟 */
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.1s ease-in; /* 极快的淡入 */
+    }
+
+    /* 3. 默认隐藏 */
+    .group[data-title]::after {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* 4. 添加一个小箭头（可选） */
+    .group[data-title]:hover::before {
+        content: '';
+        position: absolute;
+        top: -5px; /* 箭头位置 */
+        left: 10px; /* 箭头距离左边的距离 */
+        border: 5px solid transparent;
+        border-top-color: #1e293b; /* 箭头颜色与背景一致 */
+        z-index: 50;
+    }
     </style>
 </head>
 <body class="min-h-screen font-sans text-sm pb-10">
@@ -298,7 +341,7 @@
                             <img src="${placeholder}" data-src="${realIcon}" class="w-6 h-6 object-contain site-icon" alt="">
                         </div>
                         <div class="min-w-0">
-                            <div class="text-[11px] font-bold text-slate-700 truncate group-hover:text-kblue transition-colors"title="${site.name}">${site.name}</div>
+                            <div class="text-[11px] font-bold text-slate-700 truncate group-hover:text-kblue transition-colors group relative" data-title="${site.name}">${site.name}</div>
                             <div class="text-[9px] text-slate-400 truncate font-mono">${domain}</div>
                         </div>
                     `;
