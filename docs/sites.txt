@@ -16,9 +16,12 @@ AI通用-通问千义（综合型）, https://www.qianwen.com
 AI通用-文心一言（综合型）, https://chat.baidu.com/
 AI通用-豆包（综合型）, https://www.doubao.com/
 AI图像视频-通义万相（做AI设计图）, https://tongyi.aliyun.com/wanxiang/
+AI图像视频-U钙网（做AI商标）, https://www.uugai.com/
 AI图像视频-Imini（文生图/多模态创作）, https://imini.com/
 AI图像视频-OpenCut（P图/改细节）, https://opencut.net/
 AI图像视频-即梦（做海报/短视频）, https://jimeng.jianying.com
+AI图像视频-Seede AI（做宣传海报）, https://seede.ai/
+AI图像视频-Fly Cut Caption（AI视频字幕生成）, https://caption.flycut.co/zh
 AI图像视频-movieflow（短视频生成）, https://www.movieflow.ai
 AI图像视频-小云雀（短视频生成）, https://xiaoyunque.jianying.com/
 AI办公-飞书妙记（写会议纪要）, https://www.feishu.cn
@@ -28,6 +31,8 @@ AI办公-腾讯元宝（写公众号文章）, https://yuanbao.tencent.com
 AI写作-秘塔AI（写论文/查文献用）, https://metaso.cn
 AI深度分析-MolliClaw（电脑自动化/数字员工）, https://www.doubao.com/
 AI深度分析-AutoGPT（批量处理/自动干活）, https://www.doubao.com/
+AI编程-Stitch（网站设计/应用开发）, https://stitch.withgoogle.com/
+AI预测-双色球彩票, https://double-color-ball-ai.vercel.app
 AI开源学习社区与工具平台, https://www.waytoagi.com/
 
 ## 日常办公
@@ -46,6 +51,7 @@ TIDE安全论坛, http://case.tidesec.com
 网站源码论坛, https://www.gerenzhuye.com/
 
 ## 常用工具
+开源情报（根据用户名全网收集信息）, https://github.com/soxoj/maigret/releases
 文件重命名, https://webrename.cn
 PDF在线扫描, https://lookscanned.io
 在线工具集1, https://tools.upx8.com
@@ -122,13 +128,6 @@ Hi168云计算平台, https://www.hi168.com/#/desktop
 阿里云平台, https://www.aliyun.com/
 腾讯云平台, https://cloud.tencent.com/
 华为云平台, https://www.huaweicloud.com/
-
-
-## 杂项AI
-Logo设计AI, https://www.uugai.com/
-宣传设计AI, https://seede.ai/
-自动化视频剪辑AI, https://caption.flycut.co/zh
-双色球预测, https://double-color-ball-ai.vercel.app
 
 
 ## 破解工具
