@@ -54,9 +54,8 @@ TIDE安全论坛, http://case.tidesec.com
 开源情报（根据用户名全网收集信息）, https://github.com/soxoj/maigret/releases
 文件重命名, https://webrename.cn
 PDF在线扫描, https://lookscanned.io
-在线工具集1, https://tools.upx8.com
-在线工具集2, https://inbrowser.app
-在线工具集3, https://tool.exmay.com/tool.html#/tool/hash?category=encryption
+免费在线工具箱（各种转换）, https://tinywow.com/
+免费在线工具箱（代码转换）, https://tool.exmay.com/tool.html#/tool/hash?category=encryption
 在线抠图, https://www.remove.bg/zh/
 在线PS, https://tugaigai.com/online_ps
 在线绘图, https://www.soer.ccwu.cc/draw/src/main/webapp
