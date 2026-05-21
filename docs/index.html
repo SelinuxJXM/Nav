@@ -10,14 +10,13 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class', // 启用class模式的暗黑模式
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: { 
                         paper: '#f0f2f5', 
                         ink: '#1a1a1a', 
                         kblue: '#0052cc',
-                        // 暗黑模式配色扩展
                         dark: {
                             paper: '#121212',
                             ink: '#f5f5f5',
@@ -36,7 +35,6 @@
         }
     </script>
     <style>
-        /* 基础样式 + 暗黑模式适配 */
         body { 
             background-color: #f0f2f5; 
             color: #1a1a1a; 
@@ -47,10 +45,8 @@
             background-color: #121212;
             color: #f5f5f5;
         }
-
         section { content-visibility: auto; contain-intrinsic-size: 1px 500px; scroll-margin-top: 100px; }
         
-        /* 卡片样式暗黑适配 */
         .brutal-card { 
             background: #fff; 
             border: 1.5px solid #e2e8f0; 
@@ -65,7 +61,6 @@
             .brutal-card:hover { transform: translateY(-2px); border-color: #0052cc; box-shadow: 0 10px 15px -3px rgba(0, 82, 204, 0.1); }
             .dark .brutal-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 82, 204, 0.2); }
         }
-
         .nav-item { border-radius: 10px; margin: 2px 8px; transition: all 0.2s; cursor: pointer; }
         .nav-item:hover, .nav-item.active { background-color: #0052cc; color: #fff; }
         
@@ -75,14 +70,13 @@
         .custom-scroll::-webkit-scrollbar { width: 4px; }
         .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         .dark .custom-scroll::-webkit-scrollbar-thumb { background: #555555; }
-
+        
         #mobileDrawer { transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         #mobileDrawer.open { transform: translateY(0); }
         
         .icon-loaded { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
 
-        /* 头部/输入框/按钮 暗黑适配 */
         .dark header {
             background-color: #1e1e1e/70;
             border-b-color: #333333;
@@ -131,10 +125,15 @@
             background-color: #2a2a2a !important;
             border-color: #333333 !important;
         }
+
+        /* 多层级菜单样式 */
+        .category-item { cursor: pointer; }
+        .child-list { overflow: hidden; transition: height 0.2s; }
+        .collapse-icon { transition: transform 0.2s; }
+        .collapse-icon.open { transform: rotate(90deg); }
     </style>
 </head>
 <body class="min-h-screen font-sans text-sm pb-10">
-
     <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-slate-200 px-4 md:px-6 py-3">
         <div class="max-w-[1600px] mx-auto flex justify-between items-center gap-2 md:gap-4">
             <div class="flex items-center gap-2 shrink-0">
@@ -146,7 +145,6 @@
                     <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"></i>
                     <input type="text" id="searchInput" placeholder="搜索资源..." class="w-full bg-slate-100 border-none rounded-xl py-2 pl-10 pr-4 text-xs font-medium focus:ring-2 focus:ring-kblue/20 transition-all outline-none">
                 </div>
-                <!-- 新增：模式切换按钮 -->
                 <button id="themeToggleBtn" class="p-2 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors shrink-0">
                     <i data-lucide="moon" id="themeIcon" class="w-5 h-5 text-slate-600"></i>
                 </button>
@@ -190,36 +188,35 @@
         let allData = [];
         const AVATAR_COLORS = ['#4776E6', '#8E54E9', '#11998e', '#38ef7d', '#F2994A', '#EB5757', '#2F80ED'];
         const avatarCache = new Map();
+        const expandedMap = new Map();
 
-        // ========== 新增：主题切换核心逻辑 ==========
+        // 主题切换
         const themeToggleBtn = document.getElementById('themeToggleBtn');
         const themeIcon = document.getElementById('themeIcon');
         const htmlBody = document.body;
         
-        // 初始化主题（从本地存储读取）
         function initTheme() {
             const savedTheme = localStorage.getItem('nav-theme');
             if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 htmlBody.classList.add('dark');
-                themeIcon.dataset.lucide = 'sun'; // 切换为太阳图标
+                themeIcon.dataset.lucide = 'sun';
             } else {
                 htmlBody.classList.remove('dark');
-                themeIcon.dataset.lucide = 'moon'; // 切换为月亮图标
+                themeIcon.dataset.lucide = 'moon';
             }
-            lucide.createIcons(); // 重新渲染图标
+            lucide.createIcons();
         }
-
-        // 切换主题
+        
         function toggleTheme() {
             const isDark = htmlBody.classList.toggle('dark');
             localStorage.setItem('nav-theme', isDark ? 'dark' : 'light');
             themeIcon.dataset.lucide = isDark ? 'sun' : 'moon';
-            lucide.createIcons(); // 重新渲染图标
+            lucide.createIcons();
         }
-
-        // 绑定主题切换事件
+        
         themeToggleBtn.addEventListener('click', toggleTheme);
 
+        // 头像生成
         function getAvatar(name) {
             if (avatarCache.has(name)) return avatarCache.get(name);
             const color = AVATAR_COLORS[name.length % AVATAR_COLORS.length];
@@ -230,97 +227,36 @@
             return base64;
         }
 
-        const iconObserver = new IntersectionObserver((entries, observer) => {
+        // 图标懒加载
+        const iconObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
                     const realSrc = img.dataset.src;
-                    if (realSrc) {
-                        const tempImg = new Image();
-                        tempImg.src = realSrc;
-                        tempImg.onload = () => {
-                            if (tempImg.naturalWidth > 16) {
-                                img.src = realSrc;
-                                img.classList.add('icon-loaded');
-                            }
-                            img.removeAttribute('data-src');
-                        };
-                        tempImg.onerror = () => img.removeAttribute('data-src');
-                    }
-                    observer.unobserve(img);
+                    if (!realSrc) return;
+                    const temp = new Image();
+                    temp.src = realSrc;
+                    temp.onload = () => {
+                        img.src = realSrc;
+                        img.classList.add('icon-loaded');
+                        img.removeAttribute('data-src');
+                    };
+                    temp.onerror = () => img.removeAttribute('data-src');
+                    iconObserver.unobserve(img);
                 }
             });
         }, { rootMargin: '300px' });
 
-        function render(data) {
-            const grid = document.getElementById('siteGrid');
-            const deskMenu = document.getElementById('categoryMenuList');
-            const mobMenu = document.getElementById('mobileCategoryList');
-            const gridFrag = document.createDocumentFragment();
-            const deskFrag = document.createDocumentFragment();
-            const mobFrag = document.createDocumentFragment();
-
-            document.getElementById('category-count').innerText = data.length;
-
-            data.forEach((cat, idx) => {
-                const dItem = document.createElement('div');
-                dItem.className = "nav-item px-5 py-2.5 text-xs font-bold truncate";
-                dItem.innerText = cat.name;
-                dItem.onclick = () => window.scrollTo({ top: document.getElementById(`section-${idx}`).offsetTop - 100 });
-                deskFrag.appendChild(dItem);
-
-                const mItem = document.createElement('div');
-                mItem.className = "px-5 py-4 text-base font-medium border-b border-slate-50 active:bg-slate-100 rounded-xl";
-                mItem.innerText = cat.name;
-                mItem.onclick = () => { toggleDrawer(false); setTimeout(() => window.scrollTo({ top: document.getElementById(`section-${idx}`).offsetTop - 90 }), 350); };
-                mobFrag.appendChild(mItem);
-
-                const section = document.createElement('section');
-                section.id = `section-${idx}`;
-                section.className = "space-y-4";
-                section.innerHTML = `<div class="flex items-center gap-3"><h2 class="font-black text-sm uppercase tracking-tighter text-slate-800">${cat.name}</h2><div class="h-px bg-slate-200 flex-grow"></div></div>`;
-
-                const cardGrid = document.createElement('div');
-                cardGrid.className = "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-4";
-
-                cat.sites.forEach(site => {
-                    const domain = new URL(site.url).hostname;
-                    const placeholder = getAvatar(site.name);
-                    const realIcon = `https://www.google.com/s2/favicons?domain=${domain}&sz=128&default=404`;
-                    
-                    const a = document.createElement('a');
-                    a.href = site.url;
-                    a.target = "_blank";
-                    a.className = "brutal-card p-3 flex items-center gap-3 group active:scale-[0.98] lg:active:scale-100 transition-transform";
-                    // 新增：给图标容器加类名方便暗黑适配
-                    a.innerHTML = `
-                        <div class="w-10 h-10 rounded-xl overflow-hidden shrink-0 bg-slate-50 flex items-center justify-center border border-slate-100 site-icon-container">
-                            <img src="${placeholder}" data-src="${realIcon}" class="w-6 h-6 object-contain site-icon" alt="">
-                        </div>
-                        <div class="min-w-0">
-                            <div class="text-[11px] font-bold text-slate-700 truncate group-hover:text-kblue transition-colors" title="${site.name}">${site.name}</div>
-                            <div class="text-[9px] text-slate-400 truncate font-mono">${domain}</div>
-                        </div>
-                    `;
-                    cardGrid.appendChild(a);
-                    iconObserver.observe(a.querySelector('.site-icon'));
-                });
-                section.appendChild(cardGrid);
-                gridFrag.appendChild(section);
-            });
-
-            grid.innerHTML = ''; deskMenu.innerHTML = ''; mobMenu.innerHTML = '';
-            grid.appendChild(gridFrag); deskMenu.appendChild(deskFrag); mobMenu.appendChild(mobFrag);
-            document.getElementById('emptyState').classList.toggle('hidden', data.length > 0);
-        }
-
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        // 移动端抽屉
         const mobileDrawer = document.getElementById('mobileDrawer');
         const drawerOverlay = document.getElementById('drawerOverlay');
         function toggleDrawer(isOpen) {
             if (isOpen) {
                 drawerOverlay.classList.remove('hidden');
-                setTimeout(() => { drawerOverlay.classList.add('opacity-100'); mobileDrawer.classList.add('open'); }, 10);
+                setTimeout(() => {
+                    drawerOverlay.classList.add('opacity-100');
+                    mobileDrawer.classList.add('open');
+                }, 10);
                 document.body.style.overflow = 'hidden';
             } else {
                 drawerOverlay.classList.remove('opacity-100');
@@ -329,48 +265,242 @@
                 document.body.style.overflow = '';
             }
         }
-        mobileMenuBtn.onclick = () => toggleDrawer(true);
+        document.getElementById('mobileMenuBtn').onclick = () => toggleDrawer(true);
         drawerOverlay.onclick = () => toggleDrawer(false);
 
+        // 核心：解析多级分类
+        function parseM3U(text) {
+            const root = [];
+            const stack = [];
+            let currentParent = root;
+
+            text.split('\n').forEach(line => {
+                line = line.trim();
+                if (!line || (line.startsWith('#') && !line.startsWith('#'))) return;
+
+                // 分类行：## 一级 / ### 二级 / #### 三级
+                if (/^#{2,}/.test(line)) {
+                    const level = (line.match(/^#+/)[0]).length - 1;
+                    const name = line.replace(/^#+\s*/, '').trim();
+                    const node = { name, level, sites: [], children: [] };
+
+                    while (stack.length > 0 && stack[stack.length - 1].level >= level) {
+                        stack.pop();
+                    }
+
+                    if (stack.length === 0) {
+                        root.push(node);
+                    } else {
+                        stack[stack.length - 1].children.push(node);
+                    }
+                    stack.push(node);
+                    currentParent = node;
+                    return;
+                }
+
+                // 站点行
+                const parts = line.split(/[,|]/);
+                if (parts.length >= 2 && currentParent) {
+                    currentParent.sites.push({
+                        name: parts[0].trim(),
+                        url: parts[1].trim().startsWith('http') ? parts[1].trim() : 'https://' + parts[1].trim()
+                    });
+                }
+            });
+            return root;
+        }
+
+        // 递归渲染菜单
+        function renderMenuList(container, list, isMobile = false) {
+            list.forEach((node, idx) => {
+                const hasChild = node.children && node.children.length > 0;
+                const hasSite = node.sites && node.sites.length > 0;
+                const key = `cat-${idx}-${node.name}`;
+                const expanded = expandedMap.get(key) ?? false;
+
+                const item = document.createElement('div');
+                item.className = `category-item ${isMobile ? 'px-5 py-3 text-base' : 'px-5 py-2.5 text-xs'} font-medium truncate`;
+                
+                // 头部行
+                const head = document.createElement('div');
+                head.className = 'flex items-center gap-2 justify-between';
+                if (isMobile) head.className += ' py-1';
+
+                const text = document.createElement('div');
+                text.className = 'flex-1 truncate';
+                text.innerText = node.name;
+
+                // 折叠图标
+                let arrow = null;
+                if (hasChild) {
+                    arrow = document.createElement('i');
+                    arrow.dataset.lucide = 'chevron-right';
+                    arrow.className = `collapse-icon w-3.5 h-3.5 shrink-0 ${expanded ? 'open' : ''}`;
+                }
+
+                head.appendChild(text);
+                if (arrow) head.appendChild(arrow);
+                item.appendChild(head);
+
+                // 点击标题：滚动到对应区域
+                text.style.cursor = 'pointer';
+                text.onclick = () => {
+                    const el = document.getElementById(`section-${key}`);
+                    if (el) {
+                        const top = el.offsetTop - 100;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                        if (isMobile) toggleDrawer(false);
+                    }
+                };
+
+                // 子列表
+                const childWrap = document.createElement('div');
+                childWrap.className = 'child-list pl-' + (isMobile ? '6' : '4');
+                if (!expanded) childWrap.style.height = '0px';
+
+                if (hasChild) {
+                    renderMenuList(childWrap, node.children, isMobile);
+                    head.onclick = (e) => {
+                        e.stopPropagation();
+                        const now = !expandedMap.get(key);
+                        expandedMap.set(key, now);
+                        if (now) {
+                            childWrap.style.height = childWrap.scrollHeight + 'px';
+                            arrow.classList.add('open');
+                        } else {
+                            childWrap.style.height = '0px';
+                            arrow.classList.remove('open');
+                        }
+                    };
+                }
+
+                item.appendChild(childWrap);
+                container.appendChild(item);
+            });
+        }
+
+        // 递归渲染卡片区域
+        function renderSections(grid, list, parentKey = '') {
+            list.forEach((node, idx) => {
+                const key = parentKey ? `${parentKey}-${idx}` : `cat-${idx}-${node.name}`;
+                const section = document.createElement('section');
+                section.id = `section-${key}`;
+                section.className = 'space-y-4';
+
+                // 标题
+                const titleWrap = document.createElement('div');
+                titleWrap.className = 'flex items-center gap-3';
+                titleWrap.innerHTML = `
+                    <h2 class="font-black text-sm uppercase tracking-tighter text-slate-800">${node.name}</h2>
+                    <div class="h-px bg-slate-200 flex-grow"></div>
+                `;
+                section.appendChild(titleWrap);
+
+                // 站点卡片
+                if (node.sites.length > 0) {
+                    const cardGrid = document.createElement('div');
+                    cardGrid.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-4';
+                    node.sites.forEach(site => {
+                        const domain = new URL(site.url).hostname;
+                        const placeholder = getAvatar(site.name);
+                        const realIcon = `https://www.google.com/s2/favicons?domain=${domain}&sz=128&default=404`;
+                        
+                        const a = document.createElement('a');
+                        a.href = site.url;
+                        a.target = '_blank';
+                        a.className = 'brutal-card p-3 flex items-center gap-3 group active:scale-[0.98] lg:active:scale-100 transition-transform';
+                        a.innerHTML = `
+                            <div class="w-10 h-10 rounded-xl overflow-hidden shrink-0 bg-slate-50 flex items-center justify-center border border-slate-100 site-icon-container">
+                                <img src="${placeholder}" data-src="${realIcon}" class="w-6 h-6 object-contain site-icon" alt="">
+                            </div>
+                            <div class="min-w-0">
+                                <div class="text-[11px] font-bold text-slate-700 truncate group-hover:text-kblue transition-colors" title="${site.name}">${site.name}</div>
+                                <div class="text-[9px] text-slate-400 truncate font-mono">${domain}</div>
+                            </div>
+                        `;
+                        cardGrid.appendChild(a);
+                        iconObserver.observe(a.querySelector('.site-icon'));
+                    });
+                    section.appendChild(cardGrid);
+                }
+
+                grid.appendChild(section);
+                // 渲染子分类
+                if (node.children && node.children.length > 0) {
+                    renderSections(grid, node.children, key);
+                }
+            });
+        }
+
+        // 统计总分类数
+        function countCategories(list) {
+            let n = 0;
+            list.forEach(node => {
+                n++;
+                if (node.children) n += countCategories(node.children);
+            });
+            return n;
+        }
+
+        // 全局渲染
+        function render(data) {
+            const grid = document.getElementById('siteGrid');
+            const deskMenu = document.getElementById('categoryMenuList');
+            const mobMenu = document.getElementById('mobileCategoryList');
+            
+            grid.innerHTML = '';
+            deskMenu.innerHTML = '';
+            mobMenu.innerHTML = '';
+
+            document.getElementById('category-count').innerText = countCategories(data);
+            renderSections(grid, data);
+            renderMenuList(deskMenu, data, false);
+            renderMenuList(mobMenu, data, true);
+
+            lucide.createIcons();
+            document.getElementById('emptyState').classList.toggle('hidden', data.length > 0);
+        }
+
+        // 搜索过滤（支持多级）
+        function filterData(data, q) {
+            return data.map(node => {
+                const matchedSites = node.sites.filter(s => 
+                    s.name.toLowerCase().includes(q) || s.url.toLowerCase().includes(q)
+                );
+                const matchedChildren = node.children ? filterData(node.children, q) : [];
+                return {
+                    ...node,
+                    sites: matchedSites,
+                    children: matchedChildren
+                };
+            }).filter(node => node.sites.length > 0 || (node.children && node.children.length > 0));
+        }
+
+        // 初始化
         async function init() {
             lucide.createIcons();
-            initTheme(); // 初始化主题
+            initTheme();
             try {
                 const res = await fetch('sites.txt');
                 const text = await res.text();
                 allData = parseM3U(text);
                 render(allData);
-            } catch (err) { console.error("加载失败", err); }
+            } catch (err) {
+                console.error('加载失败', err);
+            }
         }
 
-        function parseM3U(text) {
-            const categories = [];
-            let current = { name: '默认', sites: [] };
-            text.split('\n').forEach(line => {
-                line = line.trim();
-                if (!line || (line.startsWith('#') && !line.startsWith('##'))) return;
-                if (line.startsWith('##')) {
-                    if (current.sites.length > 0) categories.push(current);
-                    current = { name: line.replace(/^##\s*/, '').trim(), sites: [] };
-                } else {
-                    const parts = line.split(/[,|]/);
-                    if (parts.length >= 2) {
-                        current.sites.push({ name: parts[0].trim(), url: parts[1].trim().startsWith('http') ? parts[1].trim() : 'https://' + parts[1].trim() });
-                    }
-                }
-            });
-            if (current.sites.length > 0) categories.push(current);
-            return categories;
-        }
-
+        // 搜索事件
         let timer;
         document.getElementById('searchInput').addEventListener('input', (e) => {
             clearTimeout(timer);
             timer = setTimeout(() => {
-                const q = e.target.value.toLowerCase();
-                const filtered = allData.map(c => ({
-                    ...c, sites: c.sites.filter(s => s.name.toLowerCase().includes(q) || s.url.toLowerCase().includes(q))
-                })).filter(c => c.sites.length > 0);
+                const q = e.target.value.trim().toLowerCase();
+                if (!q) {
+                    render(allData);
+                    return;
+                }
+                const filtered = filterData(allData, q);
                 render(filtered);
             }, 300);
         });
