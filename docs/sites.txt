@@ -177,3 +177,15 @@ Android 开发, https://www.soer.ccwu.cc/Nav/android, 安卓一站式在线开�
 中国等保网, https://www.djbh.net, 网络安全等级保护官方资讯平台，发布等保政策、标准、测评机构、通知公告与行业动态。
 标准服务平台, https://std.samr.gov.cn, 全国标准信息公共服务平台，可查询国标、行标、地标、团体标准，提供标准公告与文本查阅。
 中国法律大全, https://www.justlaws.cn/constitution, 法律法规在线查阅站点，当前展示宪法全文，支持法律条文检索与学习。
+
+
+# 游戏/匿名
+## 游戏资源
+全球盗版游戏, https://www.gamer520.com, 游戏资源下载站，提供 PC 单机游戏、修改器、DLC 整合包，解压即玩类型资源。
+
+## 匿名访问
+SupayCard | 虚拟信用卡, https://www.supaycard.com/app/setting, 跨境支付虚拟卡平台，支持无限开卡，覆盖 ChatGPT、Steam、Netflix、Google 等 99% 海外订阅与消费场景。
+GPTMail临时邮箱, https://mail.chatgpt.org.uk/ahanson662@eycfhb.com, 一次性临时邮箱服务，千余域名可选，自动提取验证码，24 小时自动销毁，保护主邮箱隐私。
+GMail临时邮箱, https://www.emailtick.com/zh, 仿 Gmail 临时收件工具，打开即用、自动销毁，支持历史找回，用于注册验证防骚扰。
+DuckMail临时邮箱, https://www.duckmail.sbs/zh, 免费匿名临时邮箱，密码保护、即时收信，自建后端稳定可靠，用于匿名注册与测试。
+国外身份生成, https://www.meiguodizhi.com, 美国虚拟身份信息生成器，生成地址、电话、信用卡、社保号等虚拟资料，仅用于测试与学习。
