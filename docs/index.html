@@ -274,7 +274,7 @@
                     const domain = new URL(s.url).hostname;
                     a.innerHTML = `
                         <div class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-dark-slate50 border border-slate-100 dark:border-dark-border flex items-center justify-center">
-                            <img src="https://www.google.com/s2/favicons?domain=${domain}&sz=64" class="w-6 h-6 object-contain">
+                            <img src="${ico}" data-src="https://favicon.icovictor.com/${domain}" class="w-6 h-6 object-contain">
                         </div>
                         <div class="min-w-0">
                             <div class="text-[11px] font-bold text-slate-700 dark:text-dark-ink truncate group-hover:text-kblue">${s.name}</div>
