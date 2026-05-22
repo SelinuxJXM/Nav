@@ -207,8 +207,20 @@
             padding: 1rem;
             overflow-y: auto;
             height: 100%;
-            transition: flex 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transition: flex 0.3s ease-in-out, opacity 0.3s ease-in-out, display 0.3s ease-in-out;
             min-width: 0;
+        }
+
+        /* 修复编辑区/预览区隐藏样式 */
+        main.editor-hidden .editor-container {
+            flex: 0;
+            display: none;
+            opacity: 0;
+        }
+        main.preview-hidden .preview-container {
+            flex: 0;
+            display: none;
+            opacity: 0;
         }
 
         .editor-container {
@@ -281,8 +293,11 @@
             main { flex-direction: column; }
             .editor-container, .preview-container { flex: none; height: 50%; width: 100%; }
             .editor-container { border-right: none; border-bottom: 1px solid var(--border-color); }
-            main.preview-hidden .editor-container,
-            main.editor-hidden .preview-container { height: 100%; border-bottom: none; }
+            /* 移动端隐藏样式修复 */
+            main.preview-hidden .editor-container { height: 100%; border-bottom: none; display: block; opacity: 1; }
+            main.editor-hidden .preview-container { height: 100%; border-bottom: none; display: block; opacity: 1; }
+            main.editor-hidden .editor-container { height: 0; display: none; opacity: 0; }
+            main.preview-hidden .preview-container { height: 0; display: none; opacity: 0; }
         }
 
         .sync-scroll-toggle {
@@ -488,22 +503,37 @@
                 }
             });
 
-            // 视图切换
+            // 视图切换 - 修复核心逻辑
             function updateViewButtonsText() {
-                toggleEditorBtn.textContent = mainContainer.classList.contains('editor-hidden') ? '显示编辑区' : '隐藏编辑区';
-                togglePreviewBtn.textContent = mainContainer.classList.contains('preview-hidden') ? '显示预览区' : '隐藏预览区';
+                // 修复按钮文字显示逻辑
+                toggleEditorBtn.textContent = mainContainer.classList.contains('editor-hidden') 
+                    ? '显示编辑区' 
+                    : '隐藏编辑区';
+                togglePreviewBtn.textContent = mainContainer.classList.contains('preview-hidden') 
+                    ? '显示预览区' 
+                    : '隐藏预览区';
                 mdGuideBtn.textContent = isShowingGuide ? '返回编辑' : 'Markdown 指南';
             }
 
+            // 修复编辑区切换逻辑
             toggleEditorBtn.addEventListener('click', function () {
-                mainContainer.classList.remove('preview-hidden');
+                // 切换编辑区隐藏状态
                 mainContainer.classList.toggle('editor-hidden');
+                // 确保预览区状态正确（如果编辑区隐藏，预览区不能隐藏）
+                if (mainContainer.classList.contains('editor-hidden')) {
+                    mainContainer.classList.remove('preview-hidden');
+                }
                 updateViewButtonsText();
             });
             
+            // 修复预览区切换逻辑
             togglePreviewBtn.addEventListener('click', function () {
-                mainContainer.classList.remove('editor-hidden');
+                // 切换预览区隐藏状态
                 mainContainer.classList.toggle('preview-hidden');
+                // 确保编辑区状态正确（如果预览区隐藏，编辑区不能隐藏）
+                if (mainContainer.classList.contains('preview-hidden')) {
+                    mainContainer.classList.remove('editor-hidden');
+                }
                 updateViewButtonsText();
             });
 
@@ -601,31 +631,66 @@
             loadSitesBtn.onclick = async () => {
                 try {
                     const res = await fetch("https://raw.githubusercontent.com/SelinuxJXM/Nav/main/docs/sites.txt");
+                    // 修复：检查HTTP状态码，确保请求成功
+                    if (!res.ok) throw new Error(`HTTP错误：${res.status}`);
                     const txt = await res.text();
                     editor.value = txt;
                     renderMarkdown();
                     alert("✅ 加载成功");
                 } catch(e) {
-                    alert("❌ 加载失败");
+                    console.error("加载失败详情：", e);
+                    alert("❌ 加载失败，请检查网络或文件路径");
                 }
             };
 
             saveToGithubBtn.onclick = async () => {
                 let t = prompt("请输入 GitHub Token：");
                 if(!t) return;
+                
                 try {
+                    // 步骤1：获取文件当前SHA（确保最新）
                     let r = await fetch("https://api.github.com/repos/SelinuxJXM/Nav/contents/docs/sites.txt");
+                    // 修复：检查SHA请求状态
+                    if (!r.ok) throw new Error(`获取SHA失败：${r.status}`);
+                    
                     let d = await r.json();
-                    let content = btoa(unescape(encodeURIComponent(editor.value)));
+                    // 修复：处理GitHub API返回的编码问题
+                    const content = btoa(unescape(encodeURIComponent(editor.value)));
+                    
+                    // 步骤2：构建PUT请求（严格遵循GitHub API规范）
                     let resp = await fetch("https://api.github.com/repos/SelinuxJXM/Nav/contents/docs/sites.txt", {
                         method: "PUT",
-                        headers: { "Authorization": `token ${t}`, "Content-Type": "application/json" },
-                        body: JSON.stringify({ message: "更新", content: content, sha: d.sha })
+                        headers: { 
+                            "Authorization": `token ${t}`, 
+                            "Content-Type": "application/json",
+                            "Accept": "application/vnd.github.v3+json" // 强制使用v3 API
+                        },
+                        body: JSON.stringify({ 
+                            message: "更新 sites.txt", // 明确的提交信息
+                            content: content, 
+                            sha: d.sha,
+                            branch: "main" // 明确指定分支（避免默认分支问题）
+                        })
                     });
-                    if(resp.ok) alert("✅ 保存成功！");
-                    else alert("❌ 失败");
-                } catch(e) { alert("❌ 出错"); }
+                    
+                    // 修复：详细处理响应状态
+                    if(resp.ok) {
+                        alert("✅ 保存成功！");
+                        // 同步更新本地缓存，确保前后端一致
+                        localStorage.setItem('markdown-content', editor.value);
+                    } else {
+                        const errData = await resp.json();
+                        console.error("保存失败详情：", errData);
+                        alert(`❌ 保存失败：${errData.message || resp.statusText}`);
+                    }
+                } catch(e) { 
+                    console.error("保存出错详情：", e);
+                    alert("❌ 出错：" + e.message); 
+                }
             };
+            
+            // 初始化视图按钮文字
+            updateViewButtonsText();
         });
     </script>
 </body>
