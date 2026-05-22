@@ -155,3 +155,14 @@ Hi168云计算平台, https://www.hi168.com/#/desktop, 一站式云计算服务�
 腾讯云平台, https://cloud.tencent.com, 腾讯云，提供云服务器、对象存储、音视频、混元大模型与开发者生态服务。
 华为云平台, https://www.huaweicloud.com, 华为云，算力、存储、网络、数据库与盘古大模型一体，面向企业数字化与智能化升级。
 独角鲸云, https://dash.fuckip.me/deploy, 轻量云服务器与网络服务部署平台，提供快捷的 VPS / 云主机创建、内网穿透、代理节点部署等功能。
+
+
+# 编程开发
+## 编程器
+阿里秒悟编程AI, https://meoo.com, 阿里云出品零代码 AI 应用生成平台，自然语言描述即可快速生成网页 / H5 / 小程序。
+CSDN编程AI, https://inscode.net, CSDN 旗下 AI 在线 IDE，支持 30 + 语言实时编写运行，AI 辅助补全、纠错、生成代码。
+星图编程AI, https://ai.csdn.net, CSDN 大模型工坊，零代码一键微调主流大模型，适合快速搭建与上线 AI 应用。
+长亭编程AI, https://monkeycode-ai.com, 长亭科技企业级 AI 编程平台，覆盖需求→设计→开发→审查全流程，多模型免费畅用。
+在线代码编辑器, https://www.soer.ccwu.cc/Nav/code, 多语言在线代码编辑工具，支持 Shell、JS、Python、Java、C++、HTML 等主流语言。
+Android 开发, https://www.soer.ccwu.cc/Nav/android, 安卓一站式在线开发工具箱，支持图标生成、APK 签名密钥库生成，本地处理、配置导出。
+编程开发学习, https://ilovefishc.com, 小甲鱼主讲编程学习平台，零基础 Python/C/JS/Web 开发视频教程。
