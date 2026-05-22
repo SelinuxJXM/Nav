@@ -324,7 +324,7 @@
                         currentSites.push({
                             name: parts[0].trim(),
                             url: parts[1].trim().startsWith('http') ? parts[1].trim() : 'https://' + parts[1].trim()
-                            desc: parts[2] ? parts[2].trim() : ''
+                            desc: parts.slice(2).join(',').trim()
                         });
                     }
                 }
