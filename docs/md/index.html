@@ -186,7 +186,7 @@
         #themeSelector {
             padding: 6px 10px;
             border-radius: 4px;
-            border: 1px solid var(--border-color);
+            border: 1px var(--border-color);
             background-color: var(--editor-bg);
             color: var(--text-color);
             cursor: pointer;
@@ -214,7 +214,6 @@
         .editor-container {
             background-color: var(--editor-bg);
             border-right: 1px solid var(--border-color);
-            /* 保持与.preview-container一致，无多余样式 */
             border-radius: 0;
             padding: 1rem;
         }
@@ -269,12 +268,12 @@
         .editor-container::-webkit-scrollbar,
         .preview-container::-webkit-scrollbar {
             width: 0 !important;
-            background: transparent;
+            background-color: transparent;
         }
         .editor-container,
         .preview-container {
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE 10+ */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
 
         @media (max-width: 768px) {
@@ -308,7 +307,9 @@
         <header>
             <h1>Markdown 实时编辑器</h1>
             <div class="toolbar">
-                <!-- 文件操作 -->
+                <button id="loadSitesBtn" style="background:#0071e3;color:white">📂 加载 sites.txt</button>
+                <button id="saveToGithubBtn" style="background:#0071e3;color:white">💾 保存到导航站</button>
+
                 <button id="saveBtn">保存</button>
                 <button id="importBtn">导入 MD</button>
                 <div class="dropdown">
@@ -320,7 +321,6 @@
                     </div>
                 </div>
 
-                <!-- 视图选项 -->
                 <div class="dropdown">
                     <button class="dropdown-toggle">视图</button>
                     <div id="view-menu" class="dropdown-menu">
@@ -330,7 +330,6 @@
                     </div>
                 </div>
 
-                <!-- 主题选择 -->
                 <div class="theme-selector">
                     <select id="themeSelector">
                         <option value="default">白天模式</option>
@@ -339,10 +338,8 @@
                         <option value="cyberpunk">赛博朋克</option>
                     </select>
                 </div>
-                <!-- 同步滚动开关 -->
-                <label class="sync-scroll-toggle" title="编辑区滚动时预览区也跟随滚动">
-                    <input type="checkbox" id="syncScrollToggle" checked>
-                    同步滚动
+                <label class="sync-scroll-toggle">
+                    <input type="checkbox" id="syncScrollToggle" checked> 同步滚动
                 </label>
             </div>
         </header>
@@ -356,20 +353,18 @@
         </main>
     </div>
     
-    <!-- 依赖库 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-    <!-- 主逻辑 -->
     <script>
         window.addEventListener('load', function () {
-            // --- DOM 元素获取 ---
             const editor = document.getElementById('editor');
             const preview = document.getElementById('preview');
             const mainContainer = document.querySelector('main');
             const syncScrollToggle = document.getElementById('syncScrollToggle');
+            const themeSelector = document.getElementById('themeSelector');
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-            // 工具栏按钮
             const saveBtn = document.getElementById('saveBtn');
             const importBtn = document.getElementById('importBtn');
             const exportBtn = document.getElementById('exportBtn');
@@ -378,10 +373,7 @@
             const toggleEditorBtn = document.getElementById('toggleEditorBtn');
             const togglePreviewBtn = document.getElementById('togglePreviewBtn');
             const mdGuideBtn = document.getElementById('mdGuideBtn');
-            const themeSelector = document.getElementById('themeSelector');
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            
-            // --- 状态变量 ---
+
             let isShowingGuide = false;
             let userContentBeforeGuide = '';
 
@@ -393,7 +385,6 @@
 
             marked.setOptions({ breaks: true, gfm: true, headerIds: true, sanitize: false });
 
-            // --- 核心功能 ---
             function renderMarkdown(shouldSave = true) {
                 const markdownText = editor.value;
                 const htmlContent = marked.parse(markdownText);
@@ -409,17 +400,19 @@
                 return sanitized && sanitized.length > 0 ? sanitized : 'markdown-export';
             }
 
-            // --- 初始化 ---
+            // ==============================================
+            // 【绝对无自动加载】初始化只加载本地缓存
+            // ==============================================
             const savedContent = localStorage.getItem('markdown-content');
             if (savedContent) editor.value = savedContent;
             renderMarkdown(false);
 
             const initialTheme = localStorage.getItem('markdown-theme') || 'default';
-            applyTheme(initialTheme);
+            document.body.className = '';
+            document.body.classList.add(`theme-${initialTheme}`);
             themeSelector.value = initialTheme;
-            updateViewButtonsText();
 
-            // --- 事件监听器 ---
+            // 编辑事件
             editor.addEventListener('input', () => {
                 if (isShowingGuide) {
                     isShowingGuide = false;
@@ -428,29 +421,29 @@
                 renderMarkdown(true);
             });
 
+            // 保存
             saveBtn.addEventListener('click', () => {
                 localStorage.setItem('markdown-content', editor.value);
-                alert('内容已手动保存到本地存储！');
+                alert('内容已保存到本地！');
             });
 
+            // 导入
             importBtn.addEventListener('click', () => fileInput.click());
-
             fileInput.addEventListener('change', (e) => {
                 const file = e.target.files[0];
                 if (!file) return;
                 const reader = new FileReader();
                 reader.onload = (e) => {
                     editor.value = e.target.result;
-                    if (isShowingGuide) {
-                        isShowingGuide = false;
-                        mdGuideBtn.textContent = '返回编辑';
-                    }
+                    isShowingGuide = false;
+                    mdGuideBtn.textContent = 'Markdown 指南';
                     renderMarkdown(true);
                 };
                 reader.readAsText(file);
                 fileInput.value = '';
             });
 
+            // 导出
             exportBtn.addEventListener('click', () => {
                 const blob = new Blob([editor.value], { type: 'text/markdown' });
                 const url = URL.createObjectURL(blob);
@@ -463,8 +456,7 @@
             
             exportHtmlBtn.addEventListener('click', () => {
                 const filename = getFilename() + '.html';
-                // 构造完整HTML文档
-                const htmlContent = `<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"UTF-8\">\n<title>${filename}</title>\n<style>${document.querySelector('style').innerHTML}</style>\n</head>\n<body>\n<div class=\"markdown-body\">${preview.innerHTML}</div>\n</body>\n</html>`;
+                const htmlContent = `<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n<meta charset="UTF-8">\n<title>${filename}</title>\n<style>${document.querySelector('style').innerHTML}</style>\n</head>\n<body>\n<div class="markdown-body">${preview.innerHTML}</div>\n</body>\n</html>`;
                 const blob = new Blob([htmlContent], { type: 'text/html' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
@@ -489,15 +481,14 @@
                     };
                     await html2pdf().from(element).set(opt).save();
                 } catch (error) {
-                    console.error("PDF导出失败:", error);
-                    alert("导出 PDF 时出错，请查看控制台获取更多信息。");
+                    alert("PDF 导出失败");
                 } finally {
                     btn.disabled = false;
                     btn.textContent = '导出 PDF';
                 }
             });
 
-            // --- 视图切换功能 ---
+            // 视图切换
             function updateViewButtonsText() {
                 toggleEditorBtn.textContent = mainContainer.classList.contains('editor-hidden') ? '显示编辑区' : '隐藏编辑区';
                 togglePreviewBtn.textContent = mainContainer.classList.contains('preview-hidden') ? '显示预览区' : '隐藏预览区';
@@ -516,112 +507,40 @@
                 updateViewButtonsText();
             });
 
-            const markdownGuideContent = `...`; // 指南内容太长，为保持代码清爽此处省略，实际代码会包含完整内容。
+            const markdownGuideContent = `# Markdown 语法指南
+## 标题
+# 一级标题
+## 二级标题
+### 三级标题
+
+## 强调
+*斜体* **粗体** ***粗斜体***
+
+## 列表
+- 项目1
+- 项目2
+
+1. 有序1
+2. 有序2
+
+## 链接
+[名称](链接)
+
+## 代码
+\`代码\`
+
+\`\`\`
+代码块
+\`\`\`
+
+## 引用
+> 引用内容
+`;
             mdGuideBtn.addEventListener('click', () => {
                 isShowingGuide = !isShowingGuide;
                 if (isShowingGuide) {
                     userContentBeforeGuide = editor.value;
-                    editor.value = markdownGuideContent.replace('...', `
-# Markdown 语法指南
-
-这是一个 Markdown 格式的快速参考指南，您可以随时查看这个页面来学习 Markdown 的使用方法。
-
-## 基本语法
-
-### 标题
-
-\`\`\`
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-\`\`\`
-
-### 强调
-
-\`\`\`
-*斜体文本* 或 _斜体文本_
-**粗体文本** 或 __粗体文本__
-***粗斜体文本*** 或 ___粗斜体文本___
-\`\`\`
-
-### 列表
-
-无序列表：
-\`\`\`
-- 项目1
-- 项目2
-  - 子项目A
-  - 子项目B
-\`\`\`
-
-有序列表：
-\`\`\`
-1. 第一项
-2. 第二项
-3. 第三项
-\`\`\`
-
-### 链接
-
-\`\`\`
-[链接文本](https://www.example.com)
-\`\`\`
-
-### 图片
-
-\`\`\`
-![替代文本](图片URL)
-\`\`\`
-
-## 高级语法
-
-### 表格
-
-\`\`\`
-| 表头1 | 表头2 | 表头3 |
-| :--- | :---: | ---: |
-| 左对齐 | 居中对齐 | 右对齐 |
-| 单元格4 | 单元格5 | 单元格6 |
-\`\`\`
-
-### 代码块
-
-行内代码使用反引号 \`code\` 包裹。
-
-代码块使用三个反引号包裹：
-\`\`\`javascript
-function greet(name) {
-  console.log("Hello, " + name + "!");
-}
-greet('World');
-\`\`\`
-
-### 引用
-
-\`\`\`
-> 这是一段引用的文字。
->
-> > 引用可以嵌套。
-\`\`\`
-
-### 分隔线
-
-使用三个或更多的星号、破折号或下划线来创建分隔线。
-\`\`\`
-***
----
-___
-\`\`\`
-
-### 删除线
-
-\`\`\`
-~~这段文字将被划掉。~~
-\`\`\`
-`);
+                    editor.value = markdownGuideContent;
                     renderMarkdown(false);
                 } else {
                     editor.value = userContentBeforeGuide;
@@ -630,52 +549,36 @@ ___
                 updateViewButtonsText();
             });
             
-            // --- 主题切换 ---
+            // 主题
             themeSelector.addEventListener('change', (e) => {
-                applyTheme(e.target.value);
+                document.body.className = '';
+                document.body.classList.add(`theme-${e.target.value}`);
                 localStorage.setItem('markdown-theme', e.target.value);
             });
 
-            function applyTheme(theme) {
-                document.body.className = '';
-                document.body.classList.add(`theme-${theme}`);
-            }
-
-            // --- 下拉菜单交互逻辑 ---
+            // 下拉菜单
             function closeAllDropdowns() {
-                document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                    menu.classList.remove('show');
-                });
+                document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show'));
             }
-
             dropdownToggles.forEach(toggle => {
                 toggle.addEventListener('click', function(event) {
                     event.stopPropagation();
                     const currentMenu = this.nextElementSibling;
                     const isShown = currentMenu.classList.contains('show');
-                    closeAllDropdowns(); // Close others first
-                    if (!isShown) {
-                        currentMenu.classList.add('show');
-                    }
+                    closeAllDropdowns();
+                    if (!isShown) currentMenu.classList.add('show');
                 });
             });
+            window.addEventListener('click', closeAllDropdowns);
 
-            // Click outside to close dropdowns
-            window.addEventListener('click', function(event) {
-                if (!event.target.matches('.dropdown-toggle')) {
-                    closeAllDropdowns();
-                }
-            });
-
-            // --- 同步滚动功能 ---
+            // 同步滚动
             let isSyncScroll = true;
             let isPreviewScrolling = false;
             syncScrollToggle.addEventListener('change', function() {
                 isSyncScroll = this.checked;
             });
             editor.addEventListener('scroll', function() {
-                if (!isSyncScroll) return;
-                if (isPreviewScrolling) return;
+                if (!isSyncScroll || isPreviewScrolling) return;
                 const editorScroll = editor.scrollTop;
                 const editorHeight = editor.scrollHeight - editor.clientHeight;
                 const percent = editorHeight > 0 ? editorScroll / editorHeight : 0;
@@ -685,6 +588,44 @@ ___
                 previewContainer.scrollTop = percent * previewHeight;
                 setTimeout(() => { isPreviewScrolling = false; }, 10);
             });
+
+            // ==============================================
+            // 【终极关闭】sites 只允许手动点按钮才加载
+            // ==============================================
+            const loadSitesBtn = document.getElementById('loadSitesBtn');
+            const saveToGithubBtn = document.getElementById('saveToGithubBtn');
+            
+            // 【关闭所有自动加载逻辑】一行自动请求都没有
+            // 只有你手动点击才会运行！
+
+            loadSitesBtn.onclick = async () => {
+                try {
+                    const res = await fetch("https://raw.githubusercontent.com/SelinuxJXM/Nav/main/docs/sites.txt");
+                    const txt = await res.text();
+                    editor.value = txt;
+                    renderMarkdown();
+                    alert("✅ 加载成功");
+                } catch(e) {
+                    alert("❌ 加载失败");
+                }
+            };
+
+            saveToGithubBtn.onclick = async () => {
+                let t = prompt("请输入 GitHub Token：");
+                if(!t) return;
+                try {
+                    let r = await fetch("https://api.github.com/repos/SelinuxJXM/Nav/contents/docs/sites.txt");
+                    let d = await r.json();
+                    let content = btoa(unescape(encodeURIComponent(editor.value)));
+                    let resp = await fetch("https://api.github.com/repos/SelinuxJXM/Nav/contents/docs/sites.txt", {
+                        method: "PUT",
+                        headers: { "Authorization": `token ${t}`, "Content-Type": "application/json" },
+                        body: JSON.stringify({ message: "更新", content: content, sha: d.sha })
+                    });
+                    if(resp.ok) alert("✅ 保存成功！");
+                    else alert("❌ 失败");
+                } catch(e) { alert("❌ 出错"); }
+            };
         });
     </script>
 </body>
