@@ -167,6 +167,15 @@ CSDN编程AI, https://inscode.net, CSDN 旗下 AI 在线 IDE，支持 30 + 语�
 Android 开发, https://www.soer.ccwu.cc/Nav/android, 安卓一站式在线开发工具箱，支持图标生成、APK 签名密钥库生成，本地处理、配置导出。
 编程开发学习, https://ilovefishc.com, 小甲鱼主讲编程学习平台，零基础 Python/C/JS/Web 开发视频教程。
 
+## 等保密评
+等保测评学习, https://www.modb.pro/u/480195, 墨天轮等保技术博客，含 Windows/Linux/ 数据库 / 安全设备等保测评要点、加固方案与整改指南。
+密评视频学习, https://space.bilibili.com/3546562967899104, B 站密评学习账号，提供密码应用测评相关视频教程。
+
+## 代码仓库
+Gitcode, https://gitcode.com, CSDN 旗下 AI 开源托管平台，提供代码仓库、项目协作、模型数据集，适配国内开发者与信创环境。
+Github, https://github.com, 全球最大开源代码托管平台，支持版本管理、协作开发。
+Gitee, https://gitee.com, 国产开源代码托管与 DevOps 平台，高速稳定、支持私有化部署。
+
 
 # 学习资料
 ## 等保密评
