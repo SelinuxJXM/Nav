@@ -85,6 +85,14 @@
             max-height: 2000px;
             opacity: 1;
         }
+		/* 新增：强制图标统一尺寸和显示规则 */
+		.icon-unified {
+   			display: block; /* 消除 inline 元素的默认间隙 */
+    		max-width: 100%;
+    		max-height: 100%;
+    		object-fit: contain; /* 保持比例，完整显示图标 */
+    		image-rendering: crisp-edges; /* 优化小图标清晰度（可选） */
+		}
     </style>
 </head>
 <body class="min-h-screen font-sans text-sm pb-10 dark:bg-dark-paper dark:text-dark-ink">
@@ -271,9 +279,9 @@
                     const ico = getAvatar(s.name);
                     const domain = new URL(s.url).hostname;
                     a.innerHTML = `
-                        <div class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-dark-slate50 border border-slate-100 dark:border-dark-border flex items-center justify-center">
-                            <img src="${ico}" data-src="https://favicon.icovictor.com/${domain}" class="w-6 h-6 object-contain">
-                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-dark-slate50 border border-slate-100 dark:border-dark-border flex items-center justify-center p-1">
+    						<img src="${ico}" data-src="https://favicon.icovictor.com/${domain}" class="w-full h-full object-contain icon-unified">
+						</div>
                         <div class="min-w-0">
                             <div class="text-[11px] font-bold text-slate-700 dark:text-dark-ink truncate group-hover:text-kblue">${s.name}</div>
                             ${s.desc ? `<div class="text-[9px] text-slate-500 dark:text-dark-slate400 line-clamp-1">${s.desc}</div>` : ''}
