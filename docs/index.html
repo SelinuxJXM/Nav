@@ -284,34 +284,82 @@
             });
         }, { rootMargin: '300px' });
 
-        function renderMultiLevelCategories(data, container, isMobile = false) {
-            const frag = document.createDocumentFragment();
-            const categoryMap = new Map();
+        // 修复：正确解析 #一级 / ##二级 格式
+        function parseM3U(text) {
+            const categories = [];
             let currentLevel1 = null;
+            let currentLevel2 = null;
+            let currentSites = [];
 
-            data.forEach((item, idx) => {
-                if (item.name.startsWith('#')) {
-                    const level1Name = item.name.replace(/^#\s*/, '').trim();
-                    currentLevel1 = level1Name;
-                    if (!categoryMap.has(currentLevel1)) {
-                        categoryMap.set(currentLevel1, { main: null, subs: [] });
+            const lines = text.split('\n').map(line => line.trim()).filter(line => line);
+
+            lines.forEach(line => {
+                if (line.startsWith('# ') && !line.startsWith('## ')) {
+                    // 一级标题 # 工具
+                    if (currentLevel2 && currentSites.length > 0) {
+                        categories.push({
+                            name: `${currentLevel1}/${currentLevel2}`,
+                            sites: [...currentSites]
+                        });
+                        currentSites = [];
                     }
-                } else if (item.name.startsWith('##')) {
-                    const level2Name = item.name.replace(/^##\s*/, '').trim();
+                    currentLevel1 = line.replace(/^#\s*/, '').trim();
+                    currentLevel2 = null;
+                } else if (line.startsWith('## ')) {
+                    // 二级标题 ## 在线工具
+                    if (currentLevel2 && currentSites.length > 0) {
+                        categories.push({
+                            name: `${currentLevel1}/${currentLevel2}`,
+                            sites: [...currentSites]
+                        });
+                        currentSites = [];
+                    }
+                    currentLevel2 = line.replace(/^##\s*/, '').trim();
+                } else if (!line.startsWith('#')) {
+                    // 网站链接
                     if (!currentLevel1) currentLevel1 = '未分类';
-                    if (!categoryMap.has(currentLevel1)) {
-                        categoryMap.set(currentLevel1, { main: null, subs: [] });
+                    if (!currentLevel2) currentLevel2 = '默认';
+                    const parts = line.split(/[,|]/);
+                    if (parts.length >= 2) {
+                        currentSites.push({
+                            name: parts[0].trim(),
+                            url: parts[1].trim().startsWith('http') ? parts[1].trim() : 'https://' + parts[1].trim()
+                        });
                     }
-                    categoryMap.get(currentLevel1).subs.push({
-                        ...item,
-                        index: idx,
-                        subName: level2Name,
-                        isSub: true
-                    });
                 }
             });
 
-            categoryMap.forEach((category, level1Name) => {
+            // 处理最后一组
+            if (currentLevel1 && currentLevel2 && currentSites.length > 0) {
+                categories.push({
+                    name: `${currentLevel1}/${currentLevel2}`,
+                    sites: currentSites
+                });
+            }
+
+            return categories;
+        }
+
+        // 修复：正确渲染多级分类菜单
+        function renderMultiLevelCategories(data, container, isMobile = false) {
+            const frag = document.createDocumentFragment();
+            const categoryMap = new Map();
+
+            // 构建一级-二级映射
+            data.forEach((item, idx) => {
+                const [level1, level2] = item.name.split('/').map(s => s.trim());
+                if (!categoryMap.has(level1)) {
+                    categoryMap.set(level1, []);
+                }
+                categoryMap.get(level1).push({
+                    name: level2,
+                    index: idx
+                });
+            });
+
+            // 渲染一级和二级分类
+            categoryMap.forEach((subs, level1Name) => {
+                // 一级分类
                 const item = document.createElement('div');
                 item.className = isMobile 
                     ? "px-5 py-4 text-base font-medium border-b border-slate-50 active:bg-slate-100 rounded-xl category-level-1"
@@ -319,12 +367,13 @@
                 item.innerText = level1Name;
                 frag.appendChild(item);
 
-                category.subs.forEach(sub => {
+                // 二级分类
+                subs.forEach(sub => {
                     const subItem = document.createElement('div');
                     subItem.className = isMobile
                         ? "px-5 py-3 text-sm font-medium border-b border-slate-50 active:bg-slate-100 rounded-xl category-level-2"
                         : "nav-subitem px-5 py-2 text-xs truncate category-level-2";
-                    subItem.innerText = sub.subName;
+                    subItem.innerText = sub.name;
                     const scrollTarget = () => document.getElementById(`section-${sub.index}`).offsetTop - (isMobile ? 90 : 100);
                     subItem.onclick = () => {
                         if (isMobile) toggleDrawer(false);
@@ -338,33 +387,26 @@
             container.appendChild(frag);
         }
 
+        // 修复：正确渲染页面内容
         function render(data) {
             const grid = document.getElementById('siteGrid');
             const deskMenu = document.getElementById('categoryMenuList');
             const mobMenu = document.getElementById('mobileCategoryList');
             const gridFrag = document.createDocumentFragment();
-            const filtered = data.filter(i => !i.name.startsWith('#'));
 
-            document.getElementById('category-count').innerText = filtered.length;
+            document.getElementById('category-count').innerText = data.length;
             renderMultiLevelCategories(data, deskMenu, false);
             renderMultiLevelCategories(data, mobMenu, true);
 
-            let currentLevel1 = '';
             data.forEach((cat, idx) => {
-                if (cat.name.startsWith('#')) {
-                    currentLevel1 = cat.name.replace(/^#\s*/, '').trim();
-                    return;
-                }
-                if (!cat.name.startsWith('##')) return;
-
-                const level2Name = cat.name.replace(/^##\s*/, '').trim();
+                const [level1, level2] = cat.name.split('/').map(s => s.trim());
                 const section = document.createElement('section');
                 section.id = `section-${idx}`;
                 section.className = "space-y-4";
 
                 section.innerHTML = `
                     <div class="subcategory-section">
-                        <div class="subcategory-title">${currentLevel1} / ${level2Name}</div>
+                        <div class="subcategory-title">${level1} / ${level2}</div>
                     </div>
                 `;
 
@@ -398,7 +440,7 @@
 
             grid.innerHTML = '';
             grid.appendChild(gridFrag);
-            document.getElementById('emptyState').classList.toggle('hidden', filtered.length > 0);
+            document.getElementById('emptyState').classList.toggle('hidden', data.length > 0);
         }
 
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -430,30 +472,6 @@
             } catch (err) { console.error("加载失败", err); }
         }
 
-        function parseM3U(text) {
-            const categories = [];
-            let current = null;
-            text.split('\n').forEach(line => {
-                line = line.trim();
-                if (!line) return;
-                if (line.startsWith('#')) {
-                    if (current && current.sites.length > 0) categories.push(current);
-                    current = { name: line, sites: [] };
-                } else {
-                    if (!current) current = { name: '默认', sites: [] };
-                    const parts = line.split(/[,|]/);
-                    if (parts.length >= 2) {
-                        current.sites.push({
-                            name: parts[0].trim(),
-                            url: parts[1].trim().startsWith('http') ? parts[1].trim() : 'https://' + parts[1].trim()
-                        });
-                    }
-                }
-            });
-            if (current && current.sites.length > 0) categories.push(current);
-            return categories;
-        }
-
         let timer;
         document.getElementById('searchInput').addEventListener('input', (e) => {
             clearTimeout(timer);
@@ -468,6 +486,7 @@
 
         window.onload = init;
 
+        // 折叠/展开功能
         document.addEventListener('DOMContentLoaded', () => {
             function addCategoryToggle() {
                 const deskCats = document.querySelectorAll('#categoryMenuList .category-level-1');
