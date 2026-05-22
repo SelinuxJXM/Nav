@@ -72,7 +72,6 @@
         .icon-loaded { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn { from { opacity: 0.5; } to { opacity: 1; } }
 
-        /* 👇 以下是【只新增、不修改你原有代码】的折叠样式 */
         .category-toggle { transition: transform 0.2s; }
         .category-toggle.expanded { transform: rotate(90deg); }
         .category-children {
@@ -88,56 +87,55 @@
         }
     </style>
 </head>
-<body class="min-h-screen font-sans text-sm pb-10">
-<header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-slate-200 px-4 md:px-6 py-3">
+<body class="min-h-screen font-sans text-sm pb-10 dark:bg-dark-paper dark:text-dark-ink">
+<header class="sticky top-0 z-40 bg-white/70 dark:bg-dark-card/70 backdrop-blur-md border-b border-slate-200 dark:border-dark-border px-4 md:px-6 py-3">
     <div class="max-w-[1600px] mx-auto flex justify-between items-center gap-2 md:gap-4">
         <div class="flex items-center gap-2 shrink-0">
             <div class="w-8 h-8 bg-kblue rounded-lg flex items-center justify-center text-white italic font-black text-xs shrink-0">S</div>
-            <h1 class="font-bold text-base md:text-lg tracking-tight hidden sm:block text-ink">SelinuxJ Nav</h1>
+            <h1 class="font-bold text-base md:text-lg tracking-tight hidden sm:block text-ink dark:text-dark-ink">SelinuxJ Nav</h1>
         </div>
         <div class="flex items-center gap-2 flex-grow justify-end max-w-2xl">
             <div class="relative flex-grow">
-                <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"></i>
-                <input type="text" id="searchInput" placeholder="搜索资源..." class="w-full bg-slate-100 border-none rounded-xl py-2 pl-10 pr-4 text-xs font-medium focus:ring-2 focus:ring-kblue/20 transition-all outline-none">
+                <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-dark-slate400"></i>
+                <input type="text" id="searchInput" placeholder="搜索资源..." class="w-full bg-slate-100 dark:bg-dark-slate100 border-none rounded-xl py-2 pl-10 pr-4 text-xs font-medium text-ink dark:text-dark-ink focus:ring-2 focus:ring-kblue/20 transition-all outline-none">
             </div>
-            <button id="themeToggleBtn" class="p-2 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors shrink-0">
-                <i data-lucide="moon" id="themeIcon" class="w-5 h-5 text-slate-600"></i>
+            <button id="themeToggleBtn" class="p-2 bg-slate-100 dark:bg-dark-slate100 hover:bg-slate-200 dark:hover:bg-dark-slate200 rounded-xl transition-colors shrink-0">
+                <i data-lucide="moon" id="themeIcon" class="w-5 h-5 text-slate-600 dark:text-dark-ink"></i>
             </button>
-            <button id="mobileMenuBtn" class="lg:hidden p-2 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors shrink-0">
-                <i data-lucide="layout-grid" class="w-5 h-5 text-slate-600"></i>
+            <button id="mobileMenuBtn" class="lg:hidden p-2 bg-slate-100 dark:bg-dark-slate100 hover:bg-slate-200 dark:hover:bg-dark-slate200 rounded-xl transition-colors shrink-0">
+                <i data-lucide="layout-grid" class="w-5 h-5 text-slate-600 dark:text-dark-ink"></i>
             </button>
         </div>
     </div>
 </header>
 <div class="max-w-[1600px] mx-auto flex gap-6 p-4 md:p-6">
     <aside class="hidden lg:block w-56 shrink-0">
-        <div class="sticky top-24 flex flex-col bg-white border border-slate-200 rounded-2xl shadow-sm h-[calc(100vh-120px)] overflow-hidden">
-            <div class="px-5 py-4 border-b border-slate-50 flex justify-between items-center shrink-0">
-                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">分类索引</span>
-                <span id="category-count" class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-[10px] font-bold">0</span>
+        <div class="sticky top-24 flex flex-col bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border rounded-2xl shadow-sm h-[calc(100vh-120px)] overflow-hidden">
+            <div class="px-5 py-4 border-b border-slate-50 dark:border-dark-border flex justify-between items-center shrink-0">
+                <span class="text-[10px] font-black text-slate-400 dark:text-dark-slate400 uppercase tracking-widest">分类索引</span>
+                <span id="category-count" class="bg-slate-100 dark:bg-dark-slate100 text-slate-600 dark:text-dark-ink px-2 py-0.5 rounded-full text-[10px] font-bold">0</span>
             </div>
-            <div id="categoryMenuList" class="flex-grow overflow-y-auto no-scrollbar py-2 text-slate-600"></div>
+            <div id="categoryMenuList" class="flex-grow overflow-y-auto no-scrollbar py-2 text-slate-600 dark:text-dark-ink"></div>
         </div>
     </aside>
     <main class="flex-grow min-w-0">
         <div id="siteGrid" class="space-y-8 md:space-y-10"></div>
         <div id="emptyState" class="hidden py-40 text-center">
-            <div class="bg-white inline-block px-10 py-6 rounded-3xl border border-dashed border-slate-300">
-                <i data-lucide="layers" class="w-10 h-10 mx-auto mb-4 text-slate-300"></i>
-                <p class="text-slate-400 font-bold italic">未发现匹配的导航资源</p>
+            <div class="bg-white dark:bg-dark-card inline-block px-10 py-6 rounded-3xl border border-dashed border-slate-300 dark:border-dark-border">
+                <i data-lucide="layers" class="w-10 h-10 mx-auto mb-4 text-slate-300 dark:text-dark-slate400"></i>
+                <p class="text-slate-400 dark:text-dark-slate400 font-bold italic">未发现匹配的导航资源</p>
             </div>
         </div>
     </main>
 </div>
 <div id="drawerOverlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity"></div>
-<div id="mobileDrawer" class="fixed bottom-0 left-0 right-0 bg-white z-50 rounded-t-[32px] p-6 max-h-[80vh] flex flex-col lg:hidden">
-    <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mb-6 shrink-0"></div>
-    <h3 class="font-bold text-lg mb-4 px-2">分类索引</h3>
-    <div id="mobileCategoryList" class="overflow-y-auto custom-scroll space-y-1"></div>
+<div id="mobileDrawer" class="fixed bottom-0 left-0 right-0 bg-white dark:bg-dark-card z-50 rounded-t-[32px] p-6 max-h-[80vh] flex flex-col lg:hidden">
+    <div class="w-12 h-1.5 bg-slate-200 dark:bg-dark-slate200 rounded-full mx-auto mb-6 shrink-0"></div>
+    <h3 class="font-bold text-lg mb-4 px-2 text-ink dark:text-dark-ink">分类索引</h3>
+    <div id="mobileCategoryList" class="overflow-y-auto custom-scroll space-y-1 text-slate-600 dark:text-dark-ink"></div>
 </div>
 
 <script>
-    // 👇 你的原有代码 100% 保留，只追加折叠功能
     let allData = [];
     const AVATAR_COLORS = ['#4776E6', '#8E54E9', '#11998e', '#38ef7d', '#F2994A', '#EB5757', '#2F80ED'];
     const avatarCache = new Map();
@@ -193,7 +191,6 @@
         });
     }, { rootMargin: '300px' });
 
-    // 👇 只在这里新增：折叠切换逻辑（不改动你原有代码）
     function toggleCategoryExpand(id) {
         const isExpanded = expandedCategories.get(id) || false;
         expandedCategories.set(id, !isExpanded);
@@ -203,7 +200,17 @@
         if (child) child.classList.toggle('expanded', !isExpanded);
     }
 
-    // 👇 只在这里新增：递归渲染多级折叠菜单
+    function countTotalCategories(cats) {
+        let count = 0;
+        cats.forEach(cat => {
+            count++;
+            if (cat.children && cat.children.length) {
+                count += countTotalCategories(cat.children);
+            }
+        });
+        return count;
+    }
+
     function renderMenu(cats, parent = '', container) {
         cats.forEach((cat, i) => {
             const id = parent ? `${parent}-${i}` : `${i}`;
@@ -215,7 +222,7 @@
             line.setAttribute('data-cat', id);
 
             if (hasChild) {
-                line.innerHTML += `<i class="category-toggle w-3 h-3 text-slate-500" data-lucide="chevron-right"></i>`;
+                line.innerHTML += `<i class="category-toggle w-3 h-3 text-slate-500 dark:text-dark-slate400" data-lucide="chevron-right"></i>`;
                 line.onclick = (e) => { e.stopPropagation(); toggleCategoryExpand(id); };
             } else {
                 line.innerHTML += '<span class="w-4"></span>';
@@ -239,7 +246,6 @@
         lucide.createIcons();
     }
 
-    // 👇 只在这里新增：递归渲染内容
     function renderContent(cats, parent = '', container) {
         cats.forEach((cat, i) => {
             const id = parent ? `${parent}-${i}` : `${i}`;
@@ -248,8 +254,8 @@
             sec.className = 'space-y-4';
             sec.innerHTML = `
                 <div class="flex items-center gap-3">
-                    <h2 class="font-black text-sm uppercase tracking-tighter text-slate-800">${cat.name}</h2>
-                    <div class="h-px bg-slate-200 flex-grow"></div>
+                    <h2 class="font-black text-sm uppercase tracking-tighter text-slate-800 dark:text-dark-ink">${cat.name}</h2>
+                    <div class="h-px bg-slate-200 dark:bg-dark-border flex-grow"></div>
                 </div>
             `;
             if (cat.sites && cat.sites.length) {
@@ -263,12 +269,12 @@
                     const ico = getAvatar(s.name);
                     const domain = new URL(s.url).hostname;
                     a.innerHTML = `
-                        <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center">
+                        <div class="w-10 h-10 rounded-xl bg-slate-50 dark:bg-dark-slate50 border border-slate-100 dark:border-dark-border flex items-center justify-center">
                             <img src="${ico}" data-src="https://favicon.icovictor.com/${domain}" class="w-6 h-6 object-contain">
                         </div>
                         <div class="min-w-0">
-                            <div class="text-[11px] font-bold text-slate-700 truncate group-hover:text-kblue">${s.name}</div>
-                            <div class="text-[9px] text-slate-400 truncate font-mono">${domain}</div>
+                            <div class="text-[11px] font-bold text-slate-700 dark:text-dark-ink truncate group-hover:text-kblue">${s.name}</div>
+                            <div class="text-[9px] text-slate-400 dark:text-dark-slate400 truncate font-mono">${domain}</div>
                         </div>
                     `;
                     grid.appendChild(a);
@@ -286,7 +292,6 @@
         });
     }
 
-    // 👇 你的原有解析逻辑完全不变，兼容 sites.txt
     function parseSites(text) {
         const lines = text.split('\n').map(i => i.trim()).filter(Boolean);
         const root = [];
@@ -324,10 +329,11 @@
         menu.innerHTML = '';
         renderContent(data, '', grid);
         renderMenu(data, '', menu);
+        const totalCategories = countTotalCategories(data);
+        document.getElementById('category-count').textContent = totalCategories;
         document.getElementById('emptyState').classList.toggle('hidden', data.length > 0);
     }
 
-    // 移动端抽屉不变
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileDrawer = document.getElementById('mobileDrawer');
     const drawerOverlay = document.getElementById('drawerOverlay');
@@ -339,14 +345,13 @@
         } else {
             drawerOverlay.classList.remove('opacity-100');
             mobileDrawer.classList.remove('open');
-            setTimeout(() => drawerOverlay.classList.add('hidden'), 300);
+            setTimeout(() => drawerOverlay.classList.add('hidden'), 30);
             document.body.style.overflow = '';
         }
     }
     mobileMenuBtn.onclick = () => toggleDrawer(true);
     drawerOverlay.onclick = () => toggleDrawer(false);
 
-    // 搜索不变
     document.getElementById('searchInput').addEventListener('input', e => {
         const q = e.target.value.toLowerCase();
         const f = (cats) => cats.map(c => {
@@ -357,7 +362,6 @@
         render(f(allData));
     });
 
-    // 加载 sites.txt 完全不变
     async function init() {
         lucide.createIcons();
         initTheme();
