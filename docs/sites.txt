@@ -11,3 +11,17 @@ SelinuxJ DPanel, http://www.zima.ccwu.cc:50027, Docker管理
 SelinuxJ ECS, http://123.60.132.209, 华为云ECS服务器
 Openwrt Router, http://www.zima.ccwu.cc:50028, 路由管理端
 Openwrt FrpWeb, http://www.zima.ccwu.cc:50029, FRPC管理端
+
+## 常用工具
+Markdown 编辑器, https://www.soer.ccwu.cc/Nav/md, 一款轻量化在线 Markdown 实时编辑工具。
+开源情报, https://github.com/soxoj/maigret/releases, 输入用户名即可批量检索数千个网站的同名账号，自动挖掘公开信息。
+文件重命名, https://webrename.cn, 纯浏览器端在线批量文件重命名工具。
+PDF在线扫描, https://lookscanned.io, 纯前端仿扫描效果工具，可将 PDF、图片、Office 文档一键转为逼真扫描件。
+在线效率工具集, https://tinywow.com, 一站式免费在线效率工具集，覆盖 PDF 处理、图片编辑、视频剪辑、格式转换、AI 写作等 200+ 实用工具。
+加解密与编码转换, https://tool.exmay.com/tool.html#/tool/hash?category=encryption,专注加解密与编码转换的在线工具站，提供哈希计算、Base64、URL 编解码、Unicode 转换、随机字符串等 。
+在线抠图, https://www.remove.bg/zh/, AI 全自动图片背景消除工具，5 秒快速抠图，支持生成透明背景 PNG。
+在线PS, https://tugaigai.com/online_ps, 网页版在线图片编辑工具，复刻 Photoshop 核心操作逻辑。
+在线绘图, https://www.soer.ccwu.cc/draw/src/main/webapp, 基于 Draw.io 封装的在线流程图 / 思维导图 / 架构图工具，支持中文界面。
+TVBox 配置生成器, https://www.soer.ccwu.cc/Nav/tv, TVBox 专用 JSON 配置可视化生成工具，支持视频源、解析接口、直播源、爬虫配置等编辑，实时预览效果。
+在线录屏, https://www.soer.ccwu.cc/Nav/recording, 一站式网页端录屏与截图工具，无需安装插件。
+GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data, GitHub 个人贡献数据检索工具，输入用户名可快速查询历史 Issue、PR、代码提交等开源贡献记录。
