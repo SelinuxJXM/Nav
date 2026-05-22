@@ -166,3 +166,25 @@ CSDN编程AI, https://inscode.net, CSDN 旗下 AI 在线 IDE，支持 30 + 语�
 在线代码编辑器, https://www.soer.ccwu.cc/Nav/code, 多语言在线代码编辑工具，支持 Shell、JS、Python、Java、C++、HTML 等主流语言。
 Android 开发, https://www.soer.ccwu.cc/Nav/android, 安卓一站式在线开发工具箱，支持图标生成、APK 签名密钥库生成，本地处理、配置导出。
 编程开发学习, https://ilovefishc.com, 小甲鱼主讲编程学习平台，零基础 Python/C/JS/Web 开发视频教程。
+
+## 代码仓库
+Gitcode, https://gitcode.com, CSDN 旗下 AI 开源托管平台，提供代码仓库、项目协作、模型数据集，适配国内开发者与信创环境。
+Github, https://github.com, 全球最大开源代码托管平台，支持版本管理、协作开发。
+Gitee, https://gitee.com, 国产开源代码托管与 DevOps 平台，高速稳定、支持私有化部署。
+
+## 破解工具
+VM破解版, https://www.xitmi.com/2417.html, VMware Workstation 下载页，提供虚拟机软件安装包与激活教程。
+雨糖科技WPS，https://raincandy.tech/wpsoffice_umrse, 雨糖定制 WPS 特别版，优化精简、去广告，提供多版本下载。
+CMY资源网, https://www.chenmoyidaohang.com, 综合资源导航站，聚合软件、影视、教程、工具、源码等资源。
+EW资源网, https://www.ewbang.com, 远程技术服务平台，提供软件安装、环境配置、故障排查、资源下载，7×24 小时技术支持。
+
+
+# 学习资料
+## 等保密评
+等保测评学习, https://www.modb.pro/u/480195, 墨天轮等保技术博客，含 Windows/Linux/ 数据库 / 安全设备等保测评要点、加固方案与整改指南。
+密评视频学习, https://space.bilibili.com/3546562967899104, B 站密评学习账号，提供密码应用测评相关视频教程。
+
+## 标准学习
+中国等保网, https://www.djbh.net, 网络安全等级保护官方资讯平台，发布等保政策、标准、测评机构、通知公告与行业动态。
+标准服务平台, https://std.samr.gov.cn, 全国标准信息公共服务平台，可查询国标、行标、地标、团体标准，提供标准公告与文本查阅。
+中国法律大全, https://www.justlaws.cn/constitution, 法律法规在线查阅站点，当前展示宪法全文，支持法律条文检索与学习。
