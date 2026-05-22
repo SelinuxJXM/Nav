@@ -1,5 +1,5 @@
 ## 自建平台
-SelinuxJ Site, https://www.soer.ccwu.cc, 个人自荐平台
+SelinuxJ Site, https://www.soer.ccwu.cc, 个人自荐平台111
 SelinuxJ Nav, https://www.soer.ccwu.cc/Nav
 SelinuxJ Zimaos, http://www.zima.ccwu.cc:50023
 SelinuxJ Wiki, http://www.zima.ccwu.cc:50024/blog/#/home
