@@ -1,4 +1,5 @@
-## 个人平台/自建平台
+# 个人平台
+## 自建平台
 SelinuxJ Site, https://www.soer.ccwu.cc, 主页访问
 SelinuxJ Nav, https://www.soer.ccwu.cc/Nav, 导航访问
 SelinuxJ Zimaos, http://www.zima.ccwu.cc:50023, Nas访问
@@ -11,7 +12,7 @@ SelinuxJ ECS, http://123.60.132.209, 华为云ECS服务器
 Openwrt Router, http://www.zima.ccwu.cc:50028, 路由管理端
 Openwrt FrpWeb, http://www.zima.ccwu.cc:50029, FRPC管理端
 
-## 个人平台/常用工具
+## 常用工具
 Markdown 编辑器, https://www.soer.ccwu.cc/Nav/md, 一款轻量化在线 Markdown 实时编辑工具。
 开源情报, https://github.com/soxoj/maigret/releases, 输入用户名即可批量检索数千个网站的同名账号，自动挖掘公开信息。
 文件重命名, https://webrename.cn, 纯浏览器端在线批量文件重命名工具。
@@ -26,14 +27,15 @@ TVBox 配置生成器, https://www.soer.ccwu.cc/Nav/tv, TVBox 专用 JSON 配置
 GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data, GitHub 个人贡献数据检索工具，输入用户名可快速查询历史 Issue、PR、代码提交等开源贡献记录。
 
 
-## AI工具/通用对话
+# AI工具
+## 通用对话
 AskManyAI, https://askmanyai.cn, 整合多款主流大模型，一键切换使用，一站式满足问答、创作、解题等多样 AI 需求。
 通问千义, https://www.qianwen.com, 全能智能对话平台，支持文案创作、知识解答、逻辑分析，日常办公学习均可高效使用。
 文心一言, https://chat.baidu.com, 百度自研大语言模型，擅长文案撰写、知识检索、方案构思，适配各类中文场景使用。
 豆包, https://www.doubao.com, 全能国产 AI 助手，可聊天问答、创作写作、答疑解惑、生活办公全场景辅助。
 开源学习社区与工具平台, https://www.waytoagi.com, 汇聚 AI 开源资源、学习教程与实用工具，适合技术爱好者学习交流、资源查阅。
 
-## AI工具/图像视频
+## 图像视频
 通义万相, https://tongyi.aliyun.com/wanxiang, 阿里 AI 绘图工具，文生图、图生图均可，主打创意设计、插画场景图制作。
 U钙网, https://www.uugai.com, 专注 AI 商标 logo 设计，快速生成多款商业标识图案，适配品牌标识创作需求。
 Imini, https://imini.com/, 多模态 AI 创作平台，文字生成图像，画风丰富，满足创意配图、艺术绘图需求。
@@ -44,22 +46,22 @@ Fly Cut Caption, https://caption.flycut.co/zh, 智能视频字幕自动生成工
 movieflow, https://www.movieflow.ai, AI 驱动短视频生成平台，输入文案即可自动剪辑成片，快速产出短视频。
 小云雀, https://xiaoyunque.jianying.com, 剪映短视频 AI 创作工具，智能化剪辑成片，适配自媒体日常短视频制作。
 
-## AI工具/效率办公
+## 效率办公
 飞书妙记, https://www.feishu.cn, 会议录音转文字，自动梳理提炼会议纪要，高效整理会议内容与谈话记录。
 AiPPT, https://www.aippt.cn, AI 一键生成演示文稿，自动排版配图，快速制作完整风格化 PPT 文档。
 Kimi, https://kimi.moonshot.cn, 支持超大文件读取解析，擅长长篇文案撰写、资料总结、深度内容梳理。
 腾讯元宝, https://yuanbao.tencent.com, 腾讯智能创作助手，适配公众号推文、软文文案，自媒体内容便捷创作。
 秘塔AI, https://metaso.cn, 论文写作、文献检索专用工具，辅助查阅资料、规整学术文稿内容。
 
-## AI工具/深度分析
+## 深度分析
 MolliClaw（电脑自动化/数字员工）, https://www.molili.com.cn, 数字自动化员工工具，模拟电脑手动操作，自动执行重复办公任务。
 AutoGPT（批量处理/自动干活）, https://agpt.co, 自主智能任务处理工具，可批量执行多项工作，全自动完成系列事务。
 
-## AI工具/彩票预测
+## 彩票预测
 双色球彩票, https://double-color-ball-ai.vercel.app, 彩票数据参考分析站点，依托往期数据做走势测算，仅作娱乐参考使用。
 
 
-## 日常办公
+# 日常办公
 Ima知识库, https://ima.qq.com, AI 智能工作台，支持多格式文档上传解析、私有知识库问答、智能写作与内容生成。
 钛投标, https://taitoubiao.com/filelist, AI 驱动的全流程标书制作平台，自动解析招标文件、生成标书、识别废标风险并合规校验。
 数字化平台, https://cqcdidmp.smartccs.cn:8000, 企业级数字化管理与协同平台，用于业务流程管控、数据集成与数字化运营支撑。
@@ -67,7 +69,7 @@ Ima知识库, https://ima.qq.com, AI 智能工作台，支持多格式文档上�
 等保能力评估系统, https://www.ciipc.gov110.cn:4430/jggl/index.html#/login, 测评师在线能力评估报名系统。
 
 
-## 技术论坛
+# 技术论坛
 黑海洋论坛, https://blog.upx8.com, 网络安全技术交流社区，聚焦渗透测试、漏洞分析、逆向工程与安全工具分享。
 TIDE安全论坛, http://case.tidesec.com, 专注网络安全案例与攻防实践的技术论坛，提供真实安全事件复盘、漏洞复现与方案交流。
 一飞开源论坛, https://code.exmay.com, 开源技术与工具交流社区，涵盖代码分享、工具发布、开发教程与技术问答。
@@ -75,19 +77,20 @@ TIDE安全论坛, http://case.tidesec.com, 专注网络安全案例与攻防实�
 程序员论坛, https://www.cnblogs.com, 知名开发者博客与技术社区，海量编程笔记、开发教程、架构经验与项目实战分享。
 
 
-## 招标投标
+# 招标投标
 中国中煤供应链平台, https://ego.chinacoal.com, 中煤集团官方供应链管理平台，涵盖采购招标、供应商管理、订单协同与物资交易。
 金蝉招标网, https://caigou.jcebid.com/zonghe/src/views/sys/user/login.html, 综合招标采购服务平台，提供招标信息查询、投标报名、文件下载与项目跟踪。
 煤婆网, https://bidtest.mp12345.com/bidweb/#/login/index, 煤炭及工业品采购招标平台，聚焦能源行业招投标信息发布与交易撮合。
 阳光采购网, https://caigou.chinatelecom.com.cn/ctscPortal, 中国电信官方阳光采购平台，面向供应商提供招标、询价、竞价、合同与履约管理。
 
 
-## 机场·穿透/内网穿透
+# 机场·穿透
+## 内网穿透
 MoFrp, https://console.mofrp.com, 免费内网穿透服务，支持公网访问内网应用、远程桌面与端口映射，适合个人与小型团队。
 ChmlFrp, https://panel.chmlfrp.net/home, 稳定易用的内网穿透平台，提供自定义域名、高速节点与可视化管理面板。
 liaison内网穿透, https://liaison.cloud, 轻量内网穿透工具，快速实现内网服务公网暴露，配置简单、延迟较低。
 
-## 机场·穿透/机场订阅
+## 机场订阅
 机场导航, https://ygpy.net, 网络代理节点导航站点，汇总各类订阅地址、节点信息与工具推荐。
 苏妲己的后宫, https://sudaji2.eepzau.org, 代理节点分享与交流站点，提供订阅链接、节点测试与使用指南。
 小火箭账号, https://proxy4all.github.io/FreeShadowrocket, Shadowrocket 相关账号与配置分享页面，便于 iOS 设备快速导入代理规则。
@@ -96,25 +99,28 @@ liaison内网穿透, https://liaison.cloud, 轻量内网穿透工具，快速实
 Clash工具, https://github.com/clash-verge-rev/clash-verge-rev/releases, 开源跨平台 Clash 客户端，支持多协议代理、规则分流、可视化配置，用于网络代理管理。
 
 
-## 网站相关/网盘解析
+## 网盘解析
 阿里云盘, https://www.aliyundrive.com/sign/in, 阿里官方大容量云存储服务，支持文件同步、在线预览、分享与高速下载。
 Kdown网盘解析, https://kdown.moiu.cn, 网盘资源解析工具，支持提取网盘直链，辅助高速下载。
 闪链网盘解析, https://kk.wpurl.cc, 多平台网盘直链解析站点，快速获取下载地址，提升文件获取效率。
 
-## 网站相关/免备案域名
+
+# 网站相关
+## 免备案域名
 DNSHE域名, https://my.dnshe.com/index.php?m=domain_hub, 域名注册与解析服务平台，提供域名查询、注册、DNS 管理与隐私保护。
 DigitalPlat域名, https://dash.domain.digitalplat.org/buy-slot, 海外域名注册与插槽购买平台，支持免备案域名选购与解析配置。
 二级域名（付费）, https://dns.qxnqc.cn, 付费二级域名申请平台，快速分配独立二级域名并提供 DNS 解析管理。
 
-## 网站相关/网站源码
+## 网站源码
 个人主页源码, https://www.gerenzhuye.com, 个人网站/主页源码集合，包含多种风格模板，支持快速搭建个人展示站。
 
 
-## 渗透相关/空间测绘
+# 渗透相关
+## 空间测绘
 Fofa测绘, https://fofa.info, 网络空间测绘引擎，通过规则检索全网在线资产、端口、服务与漏洞信息。
 360测绘, https://quake.360.net/quake/login#, 网络空间测绘平台，资产探测、漏洞测绘、威胁狩猎与攻防对抗支撑。
 
-## 渗透相关/渗透测试
+## 渗透测试
 棱镜X · 单兵渗透平台, https://prismx.io, 轻量跨平台单兵渗透系统，集成资产收集、漏洞扫描、远程管理、应急响应，支持多系统运行。
 Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file, 基于 Django 的 Web 渗透测试集成平台，含端口扫描、指纹识别、目录扫描、漏洞检测等模块。
 Sec-Tools部署教程, https://www.django.cn/article/show-40.html, Sec-Tools 渗透平台详细部署指南，含环境配置、依赖安装与运行步骤。
@@ -123,23 +129,24 @@ TryHackMe在线网安学习平台, https://tryhackme.com, 经典在线网络安�
 恶意软件扫描系统, https://virusscan.jotti.org, 免费多引擎在线病毒扫描工具，集成卡巴斯基、Avast、BitDefender 等近 20 款杀毒引擎。
 
 
-## 操作系统/iStoreOS
+# 操作系统
+## iStoreOS
 Openwrt构建, https://openwrt.ai, OpenWrt 在线定制固件平台，自选软件包、主题与驱动，一键生成适配路由器固件。
 iStoreOS官网, https://site.istoreos.com, 基于 OpenWrt 的路由+NAS一体化系统，易用界面、丰富插件，适合家庭与小型办公网络。
 iStoreOS论坛, https://www.koolcenter.com, iStoreOS 与 OpenWrt 玩家社区，固件交流、插件分享、问题解答与教程。
 iStoreOS下载, https://fw.koolcenter.com, iStoreOS 官方固件下载站，提供多版本、多设备镜像与历史版本归档。
 服务器安装iStoreOS, https://blog.csdn.net/weixin_74313592/article/details/136192062, CentOS 等服务器刷入 iStoreOS 教程，含 DD 脚本、网络配置与后台登录步骤。
 
-## 操作系统/Immortalwrt
+## Immortalwrt
 immortalwrt, https://firmware-selector.immortalwrt.org, ImmortalWrt 官方固件选择器，按设备型号快速查找与下载稳定版固件。
 
-## 操作系统/Windows·Linux·Docker
+## Windows·Linux·Docker
 系统迷, https://www.xitmi.com, 精品系统软件分享站，提供 Windows 工具、绿色软件、实用工具下载与教程。
 Linux学习教程, https://www.runoob.com, 一站式 Linux 基础与编程教程，适合入门学习命令、脚本与服务配置。
 毫秒镜像, https://1ms.run, 国内 Docker 镜像加速服务，解决拉取慢与超时问题，支持多平台镜像加速与一键配置。
 
 
-## 云计算平台
+# 云计算平台
 Hi168云计算平台, https://www.hi168.com/#/desktop, 一站式云计算服务平台，提供云服务器、虚拟主机、域名与建站等基础云服务。
 百度云平台, https://cloud.baidu.com, 百度智能云，提供云服务器、数据库、CDN、文心大模型与 AI 应用开发服务。
 阿里云平台, https://www.aliyun.com, 阿里巴巴云，全栈云计算与 AI 服务，包含 ECS、OSS、容器、大模型与企业级解决方案。
@@ -147,8 +154,8 @@ Hi168云计算平台, https://www.hi168.com/#/desktop, 一站式云计算服务�
 华为云平台, https://www.huaweicloud.com, 华为云，算力、存储、网络、数据库与盘古大模型一体，面向企业数字化与智能化升级。
 独角鲸云, https://dash.fuckip.me/deploy, 轻量云服务器与网络服务部署平台，提供快捷的 VPS / 云主机创建、内网穿透、代理节点部署等功能。
 
-
-## 编程开发/编程工具
+# 编程开发
+## 编程工具
 阿里秒悟编程AI, https://meoo.com, 阿里云出品零代码 AI 应用生成平台，自然语言描述即可快速生成网页 / H5 / 小程序。
 CSDN编程AI, https://inscode.net, CSDN 旗下 AI 在线 IDE，支持 30 + 语言实时编写运行，AI 辅助补全、纠错、生成代码。
 星图编程AI, https://ai.csdn.net, CSDN 大模型工坊，零代码一键微调主流大模型，适合快速搭建与上线 AI 应用。
@@ -158,32 +165,33 @@ Android 开发, https://www.soer.ccwu.cc/Nav/android, 安卓一站式在线开�
 Stitch（网站设计/应用开发）, https://stitch.withgoogle.com, 可视化网站与应用开发平台，拖拽式设计搭建，简化网页程序开发流程。
 编程开发学习, https://ilovefishc.com, 小甲鱼主讲编程学习平台，零基础 Python/C/JS/Web 开发视频教程。
 
-## 编程开发/代码仓库
+## 代码仓库
 Gitcode, https://gitcode.com, CSDN 旗下 AI 开源托管平台，提供代码仓库、项目协作、模型数据集，适配国内开发者与信创环境。
 Github, https://github.com, 全球最大开源代码托管平台，支持版本管理、协作开发。
 Gitee, https://gitee.com, 国产开源代码托管与 DevOps 平台，高速稳定、支持私有化部署。
 
-## 编程开发/破解工具
+## 破解工具
 VM破解版, https://www.xitmi.com/2417.html, VMware Workstation 下载页，提供虚拟机软件安装包与激活教程。
 雨糖科技WPS, https://raincandy.tech/wpsoffice_umrse, 雨糖定制 WPS 特别版，优化精简、去广告，提供多版本下载。
 CMY资源网, https://www.chenmoyidaohang.com, 综合资源导航站，聚合软件、影视、教程、工具、源码等资源。
 EW资源网, https://www.ewbang.com, 远程技术服务平台，提供软件安装、环境配置、故障排查、资源下载，7×24 小时技术支持。
 
-
-## 学习资料/等保密评
+# 学习资料
+## 等保密评
 等保测评学习, https://www.modb.pro/u/480195, 墨天轮等保技术博客，含 Windows/Linux/ 数据库 / 安全设备等保测评要点、加固方案与整改指南。
 密评视频学习, https://space.bilibili.com/3546562967899104, B 站密评学习账号，提供密码应用测评相关视频教程。
 
-## 学习资料/标准学习
+## 标准学习
 中国等保网, https://www.djbh.net, 网络安全等级保护官方资讯平台，发布等保政策、标准、测评机构、通知公告与行业动态。
 标准服务平台, https://std.samr.gov.cn, 全国标准信息公共服务平台，可查询国标、行标、地标、团体标准，提供标准公告与文本查阅。
 中国法律大全, https://www.justlaws.cn/constitution, 法律法规在线查阅站点，当前展示宪法全文，支持法律条文检索与学习。
 
 
-## 游戏·匿名/游戏资源
+# 游戏·匿名
+## 游戏资源
 全球盗版游戏, https://www.gamer520.com, 游戏资源下载站，提供 PC 单机游戏、修改器、DLC 整合包，解压即玩类型资源。
 
-## 游戏·匿名/匿名访问
+## 匿名访问
 SupayCard | 虚拟信用卡, https://www.supaycard.com/app/setting, 跨境支付虚拟卡平台，支持无限开卡，覆盖 ChatGPT、Steam、Netflix、Google 等 99% 海外订阅与消费场景。
 GPTMail临时邮箱, https://mail.chatgpt.org.uk/ahanson662@eycfhb.com, 一次性临时邮箱服务，千余域名可选，自动提取验证码，24 小时自动销毁，保护主邮箱隐私。
 GMail临时邮箱, https://www.emailtick.com/zh, 仿 Gmail 临时收件工具，打开即用、自动销毁，支持历史找回，用于注册验证防骚扰。
