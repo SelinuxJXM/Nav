@@ -179,6 +179,38 @@
         }
         /* --- End Dropdown Styles --- */
 
+        /* Token输入框样式 */
+        .token-input-container {
+            position: relative;
+            display: inline-block;
+        }
+        #githubTokenInput {
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background-color: var(--editor-bg);
+            color: var(--text-color);
+            font-size: 14px;
+            outline: none;
+            width: 200px;
+            margin-right: 5px;
+        }
+        .theme-dark #githubTokenInput {
+            border-color: #444;
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+        }
+        .theme-blue #githubTokenInput {
+            border-color: #bbdefb;
+            background-color: #f1f8fe;
+            color: #2c3e50;
+        }
+        .theme-cyberpunk #githubTokenInput {
+            border-color: #ff00ff;
+            background-color: #1a1a2e;
+            color: #f0f2f5;
+        }
+
         .theme-selector {
             margin-left: 10px;
         }
@@ -290,6 +322,15 @@
 
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 1rem; }
+            .toolbar {
+                justify-content: center;
+                width: 100%;
+            }
+            #githubTokenInput {
+                width: 100%;
+                margin-bottom: 5px;
+                margin-right: 0;
+            }
             main { flex-direction: column; }
             .editor-container, .preview-container { flex: none; height: 50%; width: 100%; }
             .editor-container { border-right: none; border-bottom: 1px solid var(--border-color); }
@@ -323,6 +364,18 @@
             <h1>Markdown 实时编辑器</h1>
             <div class="toolbar">
                 <button id="loadSitesBtn" style="background:#0071e3;color:white">加载 sites</button>
+                
+                <!-- 新增Token输入框（支持自动填充） -->
+                <div class="token-input-container">
+                    <input 
+                        type="password" 
+                        id="githubTokenInput" 
+                        placeholder="GitHub Token" 
+                        autocomplete="current-password"
+                        autocorrect="off"
+                        autocapitalize="off"
+                    >
+                </div>
                 <button id="saveToGithubBtn" style="background:#0071e3;color:white">保存到 Nav</button>
 
                 <button id="saveBtn">保存</button>
@@ -388,6 +441,8 @@
             const toggleEditorBtn = document.getElementById('toggleEditorBtn');
             const togglePreviewBtn = document.getElementById('togglePreviewBtn');
             const mdGuideBtn = document.getElementById('mdGuideBtn');
+            // 新增Token输入框DOM引用
+            const githubTokenInput = document.getElementById('githubTokenInput');
 
             let isShowingGuide = false;
             let userContentBeforeGuide = '';
@@ -630,22 +685,29 @@
 
             loadSitesBtn.onclick = async () => {
                 try {
-                    const res = await fetch("https://raw.githubusercontent.com/SelinuxJXM/Nav/main/docs/sites.txt");
-                    // 修复：检查HTTP状态码，确保请求成功
+                    // 最稳定、不缓存、不报错的官方标准写法
+                    const res = await fetch("https://raw.githubusercontent.com/SelinuxJXM/Nav/main/docs/sites.txt?t=" + new Date().getTime());
+            
                     if (!res.ok) throw new Error(`HTTP错误：${res.status}`);
                     const txt = await res.text();
                     editor.value = txt;
                     renderMarkdown();
-                    alert("✅ 加载成功");
+                    alert("✅ 加载成功（最新内容）");
                 } catch(e) {
-                    console.error("加载失败详情：", e);
+                    console.error("加载失败：", e);
                     alert("❌ 加载失败，请检查网络或文件路径");
                 }
             };
 
+            // 修改保存到Nav按钮逻辑：从输入框获取Token（支持自动填充）
             saveToGithubBtn.onclick = async () => {
-                let t = prompt("请输入 GitHub Token：");
-                if(!t) return;
+                // 从输入框获取Token，替代原prompt弹窗
+                let t = githubTokenInput.value.trim();
+                if(!t) {
+                    alert("请先输入GitHub Token！");
+                    githubTokenInput.focus();
+                    return;
+                }
                 
                 try {
                     // 步骤1：获取文件当前SHA（确保最新）
@@ -691,6 +753,16 @@
             
             // 初始化视图按钮文字
             updateViewButtonsText();
+
+            // 可选：从本地存储恢复Token（增强体验）
+            const savedToken = localStorage.getItem('github-token');
+            if (savedToken) {
+                githubTokenInput.value = savedToken;
+            }
+            // 监听Token输入框变化，自动保存到本地（可选）
+            githubTokenInput.addEventListener('change', function() {
+                localStorage.setItem('github-token', this.value);
+            });
         });
     </script>
 </body>
