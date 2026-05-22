@@ -155,7 +155,7 @@ Hi168云计算平台, https://www.hi168.com/#/desktop, 一站式云计算服务�
 
 
 # 编程开发
-## 编程器
+## 编程工具
 阿里秒悟编程AI, https://meoo.com, 阿里云出品零代码 AI 应用生成平台，自然语言描述即可快速生成网页 / H5 / 小程序。
 CSDN编程AI, https://inscode.net, CSDN 旗下 AI 在线 IDE，支持 30 + 语言实时编写运行，AI 辅助补全、纠错、生成代码。
 星图编程AI, https://ai.csdn.net, CSDN 大模型工坊，零代码一键微调主流大模型，适合快速搭建与上线 AI 应用。
