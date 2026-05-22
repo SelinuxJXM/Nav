@@ -45,3 +45,43 @@ Seede AI, https://seede.ai, 主打商业宣传海报制作，智能排版配图�
 Fly Cut Caption, https://caption.flycut.co/zh, 智能视频字幕自动生成工具，语音转文字，快速匹配字幕，省时高效。
 movieflow, https://www.movieflow.ai, AI 驱动短视频生成平台，输入文案即可自动剪辑成片，快速产出短视频。
 小云雀, https://xiaoyunque.jianying.com, 剪映短视频 AI 创作工具，智能化剪辑成片，适配自媒体日常短视频制作。
+
+## 办公
+飞书妙记, https://www.feishu.cn, 会议录音转文字，自动梳理提炼会议纪要，高效整理会议内容与谈话记录。
+AiPPT, https://www.aippt.cn, AI 一键生成演示文稿，自动排版配图，快速制作完整风格化 PPT 文档。
+Kimi, https://kimi.moonshot.cn, 支持超大文件读取解析，擅长长篇文案撰写、资料总结、深度内容梳理。
+腾讯元宝, https://yuanbao.tencent.com, 腾讯智能创作助手，适配公众号推文、软文文案，自媒体内容便捷创作。
+秘塔AI, https://metaso.cn, 论文写作、文献检索专用工具，辅助查阅资料、规整学术文稿内容。
+
+## AI深度分析
+MolliClaw（电脑自动化/数字员工）, https://www.molili.com.cn, 数字自动化员工工具，模拟电脑手动操作，自动执行重复办公任务。
+AutoGPT（批量处理/自动干活）, https://agpt.co, 自主智能任务处理工具，可批量执行多项工作，全自动完成系列事务。
+
+## 编程
+Stitch（网站设计/应用开发）, https://stitch.withgoogle.com, 可视化网站与应用开发平台，拖拽式设计搭建，简化网页程序开发流程。
+
+## 预测
+双色球彩票, https://double-color-ball-ai.vercel.app, 彩票数据参考分析站点，依托往期数据做走势测算，仅作娱乐参考使用。
+
+
+# 日常办公
+Ima知识库, https://ima.qq.com, AI 智能工作台，支持多格式文档上传解析、私有知识库问答、智能写作与内容生成。
+钛投标, https://taitoubiao.com/filelist, AI 驱动的全流程标书制作平台，自动解析招标文件、生成标书、识别废标风险并合规校验。
+数字化平台, https://cqcdidmp.smartccs.cn:8000, 企业级数字化管理与协同平台，用于业务流程管控、数据集成与数字化运营支撑。
+易投资质申请, https://cqccsyt.smartccs.cn:9900, 资质申请与投融资业务办理系统，提供线上申报、审核、进度查询等一站式办事服务。
+等保能力评估系统, https://www.ciipc.gov110.cn:4430/jggl/index.html#/login, 测评师在线能力评估报名系统。
+
+
+# 技术论坛
+黑海洋论坛, https://blog.upx8.com, 网络安全技术交流社区，聚焦渗透测试、漏洞分析、逆向工程与安全工具分享。
+TIDE安全论坛, http://case.tidesec.com, 专注网络安全案例与攻防实践的技术论坛，提供真实安全事件复盘、漏洞复现与方案交流。
+一飞开源论坛, https://code.exmay.com, 开源技术与工具交流社区，涵盖代码分享、工具发布、开发教程与技术问答。
+恩山无线论坛, https://www.right.com.cn, 老牌路由器、OpenWrt、无线组网与智能硬件玩家社区，固件教程、刷机资源丰富。
+程序员论坛, https://www.cnblogs.com, 知名开发者博客与技术社区，海量编程笔记、开发教程、架构经验与项目实战分享。
+
+
+# 招标投标
+中国中煤供应链平台, https://ego.chinacoal.com, 中煤集团官方供应链管理平台，涵盖采购招标、供应商管理、订单协同与物资交易。
+金蝉招标网, https://caigou.jcebid.com/zonghe/src/views/sys/user/login.html, 综合招标采购服务平台，提供招标信息查询、投标报名、文件下载与项目跟踪。
+煤婆网, https://bidtest.mp12345.com/bidweb/#/login/index, 煤炭及工业品采购招标平台，聚焦能源行业招投标信息发布与交易撮合。
+阳光采购网, https://caigou.chinatelecom.com.cn/ctscPortal, 中国电信官方阳光采购平台，面向供应商提供招标、询价、竞价、合同与履约管理。
