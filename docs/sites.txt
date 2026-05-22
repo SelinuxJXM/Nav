@@ -28,7 +28,7 @@ GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data, GitHub
 
 
 # AI工具
-## 通用
+## 通用对话
 AskManyAI, https://askmanyai.cn, 整合多款主流大模型，一键切换使用，一站式满足问答、创作、解题等多样 AI 需求。
 通问千义, https://www.qianwen.com, 全能智能对话平台，支持文案创作、知识解答、逻辑分析，日常办公学习均可高效使用。
 文心一言, https://chat.baidu.com, 百度自研大语言模型，擅长文案撰写、知识检索、方案构思，适配各类中文场景使用。
@@ -46,21 +46,18 @@ Fly Cut Caption, https://caption.flycut.co/zh, 智能视频字幕自动生成工
 movieflow, https://www.movieflow.ai, AI 驱动短视频生成平台，输入文案即可自动剪辑成片，快速产出短视频。
 小云雀, https://xiaoyunque.jianying.com, 剪映短视频 AI 创作工具，智能化剪辑成片，适配自媒体日常短视频制作。
 
-## 办公
+## 效率办公
 飞书妙记, https://www.feishu.cn, 会议录音转文字，自动梳理提炼会议纪要，高效整理会议内容与谈话记录。
 AiPPT, https://www.aippt.cn, AI 一键生成演示文稿，自动排版配图，快速制作完整风格化 PPT 文档。
 Kimi, https://kimi.moonshot.cn, 支持超大文件读取解析，擅长长篇文案撰写、资料总结、深度内容梳理。
 腾讯元宝, https://yuanbao.tencent.com, 腾讯智能创作助手，适配公众号推文、软文文案，自媒体内容便捷创作。
 秘塔AI, https://metaso.cn, 论文写作、文献检索专用工具，辅助查阅资料、规整学术文稿内容。
 
-## AI深度分析
+## 深度分析
 MolliClaw（电脑自动化/数字员工）, https://www.molili.com.cn, 数字自动化员工工具，模拟电脑手动操作，自动执行重复办公任务。
 AutoGPT（批量处理/自动干活）, https://agpt.co, 自主智能任务处理工具，可批量执行多项工作，全自动完成系列事务。
 
-## 编程
-Stitch（网站设计/应用开发）, https://stitch.withgoogle.com, 可视化网站与应用开发平台，拖拽式设计搭建，简化网页程序开发流程。
-
-## 预测
+## 彩票预测
 双色球彩票, https://double-color-ball-ai.vercel.app, 彩票数据参考分析站点，依托往期数据做走势测算，仅作娱乐参考使用。
 
 
@@ -165,16 +162,19 @@ CSDN编程AI, https://inscode.net, CSDN 旗下 AI 在线 IDE，支持 30 + 语�
 长亭编程AI, https://monkeycode-ai.com, 长亭科技企业级 AI 编程平台，覆盖需求→设计→开发→审查全流程，多模型免费畅用。
 在线代码编辑器, https://www.soer.ccwu.cc/Nav/code, 多语言在线代码编辑工具，支持 Shell、JS、Python、Java、C++、HTML 等主流语言。
 Android 开发, https://www.soer.ccwu.cc/Nav/android, 安卓一站式在线开发工具箱，支持图标生成、APK 签名密钥库生成，本地处理、配置导出。
+Stitch（网站设计/应用开发）, https://stitch.withgoogle.com, 可视化网站与应用开发平台，拖拽式设计搭建，简化网页程序开发流程。
 编程开发学习, https://ilovefishc.com, 小甲鱼主讲编程学习平台，零基础 Python/C/JS/Web 开发视频教程。
-
-## 等保密评
-等保测评学习, https://www.modb.pro/u/480195, 墨天轮等保技术博客，含 Windows/Linux/ 数据库 / 安全设备等保测评要点、加固方案与整改指南。
-密评视频学习, https://space.bilibili.com/3546562967899104, B 站密评学习账号，提供密码应用测评相关视频教程。
 
 ## 代码仓库
 Gitcode, https://gitcode.com, CSDN 旗下 AI 开源托管平台，提供代码仓库、项目协作、模型数据集，适配国内开发者与信创环境。
 Github, https://github.com, 全球最大开源代码托管平台，支持版本管理、协作开发。
 Gitee, https://gitee.com, 国产开源代码托管与 DevOps 平台，高速稳定、支持私有化部署。
+
+## 破解工具
+VM破解版, https://www.xitmi.com/2417.html, VMware Workstation 下载页，提供虚拟机软件安装包与激活教程。
+雨糖科技WPS, https://raincandy.tech/wpsoffice_umrse, 雨糖定制 WPS 特别版，优化精简、去广告，提供多版本下载。
+CMY资源网, https://www.chenmoyidaohang.com, 综合资源导航站，聚合软件、影视、教程、工具、源码等资源。
+EW资源网, https://www.ewbang.com, 远程技术服务平台，提供软件安装、环境配置、故障排查、资源下载，7×24 小时技术支持。
 
 
 # 学习资料
