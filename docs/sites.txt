@@ -25,3 +25,23 @@ PDF在线扫描, https://lookscanned.io, 纯前端仿扫描效果工具，可将
 TVBox 配置生成器, https://www.soer.ccwu.cc/Nav/tv, TVBox 专用 JSON 配置可视化生成工具，支持视频源、解析接口、直播源、爬虫配置等编辑，实时预览效果。
 在线录屏, https://www.soer.ccwu.cc/Nav/recording, 一站式网页端录屏与截图工具，无需安装插件。
 GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data, GitHub 个人贡献数据检索工具，输入用户名可快速查询历史 Issue、PR、代码提交等开源贡献记录。
+
+
+# AI工具
+## 通用
+AskManyAI, https://askmanyai.cn, 整合多款主流大模型，一键切换使用，一站式满足问答、创作、解题等多样 AI 需求。
+通问千义, https://www.qianwen.com, 全能智能对话平台，支持文案创作、知识解答、逻辑分析，日常办公学习均可高效使用。
+文心一言, https://chat.baidu.com, 百度自研大语言模型，擅长文案撰写、知识检索、方案构思，适配各类中文场景使用。
+豆包, https://www.doubao.com, 全能国产 AI 助手，可聊天问答、创作写作、答疑解惑、生活办公全场景辅助。
+开源学习社区与工具平台, https://www.waytoagi.com, 汇聚 AI 开源资源、学习教程与实用工具，适合技术爱好者学习交流、资源查阅。
+
+## 图像视频
+通义万相, https://tongyi.aliyun.com/wanxiang, 阿里 AI 绘图工具，文生图、图生图均可，主打创意设计、插画场景图制作。
+U钙网, https://www.uugai.com, 专注 AI 商标 logo 设计，快速生成多款商业标识图案，适配品牌标识创作需求。
+Imini, https://imini.com/, 多模态 AI 创作平台，文字生成图像，画风丰富，满足创意配图、艺术绘图需求。
+OpenCut, https://opencut.net, 智能修图工具，支持图片细节修改、局部调整、画面优化，简易在线 P 图。
+即梦, https://jimeng.jianying.com, 剪映旗下 AI 工具，一键生成海报、短视频素材，快速产出视觉影音内容。
+Seede AI, https://seede.ai, 主打商业宣传海报制作，智能排版配图，轻松打造精美营销视觉作品。
+Fly Cut Caption, https://caption.flycut.co/zh, 智能视频字幕自动生成工具，语音转文字，快速匹配字幕，省时高效。
+movieflow, https://www.movieflow.ai, AI 驱动短视频生成平台，输入文案即可自动剪辑成片，快速产出短视频。
+小云雀, https://xiaoyunque.jianying.com, 剪映短视频 AI 创作工具，智能化剪辑成片，适配自媒体日常短视频制作。
