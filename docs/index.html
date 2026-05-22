@@ -266,6 +266,10 @@
                     a.href = s.url;
                     a.target = '_blank';
                     a.className = 'brutal-card p-3 flex items-center gap-3 group';
+                    // 新增：如果有描述，就给链接加上title属性
+					if (s.desc) {
+					  a.title = s.desc;
+					}
                     const ico = getAvatar(s.name);
                     const domain = new URL(s.url).hostname;
                     a.innerHTML = `
