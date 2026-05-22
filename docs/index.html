@@ -58,8 +58,8 @@
             border-color: #333333;
         }
         @media (min-width: 1024px) {
-            .brutal-card:hover { transform: translateY(-2px); border-color: #0052cc; box-shadow: 0 10px 15px -3px rgba(0, 82, 204, 0.1); }
-            .dark .brutal-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 82, 204, 0.2); }
+            .brutal-card:hover { transform: translateY(-2px); border-color: #0052cc; box-shadow: 0 10px 15px -3px rgba(0, 82, 200, 0.1); }
+            .dark .brutal-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 82, 200, 0.2); }
         }
         .nav-item { border-radius: 10px; margin: 2px 8px; transition: all 0.2s; cursor: pointer; }
         .nav-item:hover, .nav-item.active { background-color: #0052cc; color: #fff; }
@@ -287,64 +287,53 @@
         function renderMultiLevelCategories(data, container, isMobile = false) {
             const frag = document.createDocumentFragment();
             const categoryMap = new Map();
-            
+            let currentLevel1 = null;
+
             data.forEach((item, idx) => {
-                const [level1, level2] = item.name.split('/').map(s => s.trim());
-                if (!level2) {
-                    categoryMap.set(level1, { 
-                        main: { ...item, index: idx }, 
-                        subs: [] 
-                    });
-                } else {
-                    if (!categoryMap.has(level1)) {
-                        categoryMap.set(level1, { main: null, subs: [] });
+                if (item.name.startsWith('#')) {
+                    const level1Name = item.name.replace(/^#\s*/, '').trim();
+                    currentLevel1 = level1Name;
+                    if (!categoryMap.has(currentLevel1)) {
+                        categoryMap.set(currentLevel1, { main: null, subs: [] });
                     }
-                    categoryMap.get(level1).subs.push({ ...item, index: idx, subName: level2 });
+                } else if (item.name.startsWith('##')) {
+                    const level2Name = item.name.replace(/^##\s*/, '').trim();
+                    if (!currentLevel1) currentLevel1 = '未分类';
+                    if (!categoryMap.has(currentLevel1)) {
+                        categoryMap.set(currentLevel1, { main: null, subs: [] });
+                    }
+                    categoryMap.get(currentLevel1).subs.push({
+                        ...item,
+                        index: idx,
+                        subName: level2Name,
+                        isSub: true
+                    });
                 }
             });
-            
+
             categoryMap.forEach((category, level1Name) => {
-                if (category.main) {
-                    const item = document.createElement('div');
-                    item.className = isMobile 
-                        ? "px-5 py-4 text-base font-medium border-b border-slate-50 active:bg-slate-100 rounded-xl category-level-1"
-                        : "nav-item px-5 py-2.5 text-xs font-bold truncate category-level-1";
-                    item.innerText = level1Name;
-                    const scrollTarget = () => document.getElementById(`section-${category.main.index}`).offsetTop - (isMobile ? 90 : 100);
-                    
-                    if (isMobile) {
-                        item.onclick = () => { 
-                            toggleDrawer(false); 
-                            setTimeout(() => window.scrollTo({ top: scrollTarget(), behavior: 'smooth' }), 350); 
-                        };
-                    } else {
-                        item.onclick = () => window.scrollTo({ top: scrollTarget(), behavior: 'smooth' });
-                    }
-                    frag.appendChild(item);
-                }
-                
-                if (category.subs.length > 0) {
-                    category.subs.forEach(sub => {
-                        const subItem = document.createElement('div');
-                        subItem.className = isMobile
-                            ? "px-5 py-3 text-sm font-medium border-b border-slate-50 active:bg-slate-100 rounded-xl category-level-2"
-                            : "nav-subitem px-5 py-2 text-xs truncate category-level-2";
-                        subItem.innerText = sub.subName;
-                        const scrollTarget = () => document.getElementById(`section-${sub.index}`).offsetTop - (isMobile ? 90 : 100);
-                        
-                        if (isMobile) {
-                            subItem.onclick = () => { 
-                                toggleDrawer(false); 
-                                setTimeout(() => window.scrollTo({ top: scrollTarget(), behavior: 'smooth' }), 350); 
-                            };
-                        } else {
-                            subItem.onclick = () => window.scrollTo({ top: scrollTarget(), behavior: 'smooth' });
-                        }
-                        frag.appendChild(subItem);
-                    });
-                }
+                const item = document.createElement('div');
+                item.className = isMobile 
+                    ? "px-5 py-4 text-base font-medium border-b border-slate-50 active:bg-slate-100 rounded-xl category-level-1"
+                    : "nav-item px-5 py-2.5 text-xs font-bold truncate category-level-1";
+                item.innerText = level1Name;
+                frag.appendChild(item);
+
+                category.subs.forEach(sub => {
+                    const subItem = document.createElement('div');
+                    subItem.className = isMobile
+                        ? "px-5 py-3 text-sm font-medium border-b border-slate-50 active:bg-slate-100 rounded-xl category-level-2"
+                        : "nav-subitem px-5 py-2 text-xs truncate category-level-2";
+                    subItem.innerText = sub.subName;
+                    const scrollTarget = () => document.getElementById(`section-${sub.index}`).offsetTop - (isMobile ? 90 : 100);
+                    subItem.onclick = () => {
+                        if (isMobile) toggleDrawer(false);
+                        setTimeout(() => window.scrollTo({ top: scrollTarget(), behavior: 'smooth' }), isMobile ? 350 : 0);
+                    };
+                    frag.appendChild(subItem);
+                });
             });
-            
+
             container.innerHTML = '';
             container.appendChild(frag);
         }
@@ -354,27 +343,30 @@
             const deskMenu = document.getElementById('categoryMenuList');
             const mobMenu = document.getElementById('mobileCategoryList');
             const gridFrag = document.createDocumentFragment();
+            const filtered = data.filter(i => !i.name.startsWith('#'));
 
-            document.getElementById('category-count').innerText = data.length;
-
+            document.getElementById('category-count').innerText = filtered.length;
             renderMultiLevelCategories(data, deskMenu, false);
             renderMultiLevelCategories(data, mobMenu, true);
 
+            let currentLevel1 = '';
             data.forEach((cat, idx) => {
-                const [level1, level2] = cat.name.split('/').map(s => s.trim());
+                if (cat.name.startsWith('#')) {
+                    currentLevel1 = cat.name.replace(/^#\s*/, '').trim();
+                    return;
+                }
+                if (!cat.name.startsWith('##')) return;
+
+                const level2Name = cat.name.replace(/^##\s*/, '').trim();
                 const section = document.createElement('section');
                 section.id = `section-${idx}`;
                 section.className = "space-y-4";
-                
-                if (!level2) {
-                    section.innerHTML = `<div class="flex items-center gap-3"><h2 class="font-black text-sm uppercase tracking-tighter text-slate-800">${level1}</h2><div class="h-px bg-slate-200 flex-grow"></div></div>`;
-                } else {
-                    section.innerHTML = `
-                        <div class="subcategory-section">
-                            <div class="subcategory-title">${level1} / ${level2}</div>
-                        </div>
-                    `;
-                }
+
+                section.innerHTML = `
+                    <div class="subcategory-section">
+                        <div class="subcategory-title">${currentLevel1} / ${level2Name}</div>
+                    </div>
+                `;
 
                 const cardGrid = document.createElement('div');
                 cardGrid.className = "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-4";
@@ -386,7 +378,7 @@
                     
                     const a = document.createElement('a');
                     a.href = site.url;
-                    a.target = "_blank";
+                    a.target="_blank";
                     a.className = "brutal-card p-3 flex items-center gap-3 group active:scale-[0.98] lg:active:scale-100 transition-transform";
                     a.innerHTML = `
                         <div class="w-10 h-10 rounded-xl overflow-hidden shrink-0 bg-slate-50 flex items-center justify-center border border-slate-100 site-icon-container">
@@ -406,7 +398,7 @@
 
             grid.innerHTML = '';
             grid.appendChild(gridFrag);
-            document.getElementById('emptyState').classList.toggle('hidden', data.length > 0);
+            document.getElementById('emptyState').classList.toggle('hidden', filtered.length > 0);
         }
 
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -440,21 +432,25 @@
 
         function parseM3U(text) {
             const categories = [];
-            let current = { name: '默认', sites: [] };
+            let current = null;
             text.split('\n').forEach(line => {
                 line = line.trim();
-                if (!line || (line.startsWith('#') && !line.startsWith('##'))) return;
-                if (line.startsWith('##')) {
-                    if (current.sites.length > 0) categories.push(current);
-                    current = { name: line.replace(/^##\s*/, '').trim(), sites: [] };
+                if (!line) return;
+                if (line.startsWith('#')) {
+                    if (current && current.sites.length > 0) categories.push(current);
+                    current = { name: line, sites: [] };
                 } else {
+                    if (!current) current = { name: '默认', sites: [] };
                     const parts = line.split(/[,|]/);
                     if (parts.length >= 2) {
-                        current.sites.push({ name: parts[0].trim(), url: parts[1].trim().startsWith('http') ? parts[1].trim() : 'https://' + parts[1].trim() });
+                        current.sites.push({
+                            name: parts[0].trim(),
+                            url: parts[1].trim().startsWith('http') ? parts[1].trim() : 'https://' + parts[1].trim()
+                        });
                     }
                 }
             });
-            if (current.sites.length > 0) categories.push(current);
+            if (current && current.sites.length > 0) categories.push(current);
             return categories;
         }
 
@@ -472,7 +468,6 @@
 
         window.onload = init;
 
-        // 内置：折叠/展开功能（源代码完全不变）
         document.addEventListener('DOMContentLoaded', () => {
             function addCategoryToggle() {
                 const deskCats = document.querySelectorAll('#categoryMenuList .category-level-1');
@@ -515,7 +510,6 @@
                         }
                     });
                 }
-
                 bindToggle(deskCats, false);
                 bindToggle(mobCats, true);
             }
