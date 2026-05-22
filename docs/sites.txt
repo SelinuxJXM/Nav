@@ -14,11 +14,11 @@ Openwrt FrpWeb, http://www.zima.ccwu.cc:50029, FRPC管理端
 
 ## 常用工具
 Markdown 编辑器, https://www.soer.ccwu.cc/Nav/md, 一款轻量化在线 Markdown 实时编辑工具。
-开源情报（根据用户名全网收集信息）, https://github.com/soxoj/maigret/releases, 输入用户名即可批量检索数千个网站的同名账号，自动挖掘公开信息。
+开源情报, https://github.com/soxoj/maigret/releases, 输入用户名即可批量检索数千个网站的同名账号，自动挖掘公开信息。
 文件重命名, https://webrename.cn, 纯浏览器端在线批量文件重命名工具。
 PDF在线扫描, https://lookscanned.io, 纯前端仿扫描效果工具，可将 PDF、图片、Office 文档一键转为逼真扫描件。
-免费在线工具箱（各种转换）, https://tinywow.com, 一站式免费在线效率工具集，覆盖 PDF 处理、图片编辑、视频剪辑、格式转换、AI 写作等 200+ 实用工具。
-免费在线工具箱（代码转换）, https://tool.exmay.com/tool.html#/tool/hash?category=encryption,专注加解密与编码转换的在线工具站，提供哈希计算、Base64、URL 编解码、Unicode 转换、随机字符串等 。
+在线效率工具集, https://tinywow.com, 一站式免费在线效率工具集，覆盖 PDF 处理、图片编辑、视频剪辑、格式转换、AI 写作等 200+ 实用工具。
+加解密与编码转换, https://tool.exmay.com/tool.html#/tool/hash?category=encryption,专注加解密与编码转换的在线工具站，提供哈希计算、Base64、URL 编解码、Unicode 转换、随机字符串等 。
 在线抠图, https://www.remove.bg/zh/, AI 全自动图片背景消除工具，5 秒快速抠图，支持生成透明背景 PNG。
 在线PS, https://tugaigai.com/online_ps, 网页版在线图片编辑工具，复刻 Photoshop 核心操作逻辑。
 在线绘图, https://www.soer.ccwu.cc/draw/src/main/webapp, 基于 Draw.io 封装的在线流程图 / 思维导图 / 架构图工具，支持中文界面。
@@ -128,7 +128,7 @@ Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file, 
 Sec-Tools部署教程, https://www.django.cn/article/show-40.html, Sec-Tools 渗透平台详细部署指南，含环境配置、依赖安装与运行步骤。
 流影态势感知, https://abyssalfish-os.github.io, 开源网络流量可视化分析平台，实时监控异常流量、挖矿、隧道通信等威胁，支持可视化研判。
 TryHackMe在线网安学习平台, https://tryhackme.com, 经典在线网络安全实训平台，通过闯关式靶场学习渗透测试、红蓝对抗与安全运维技能。
-恶意软件扫描系统, https://virusscan.jotti.org, 
+恶意软件扫描系统, https://virusscan.jotti.org, 免费多引擎在线病毒扫描工具，集成卡巴斯基、Avast、BitDefender 等近 20 款杀毒引擎。
 
 -----------------------------------------------------------------------------------------
 # 操作系统
@@ -154,6 +154,7 @@ Hi168云计算平台, https://www.hi168.com/#/desktop, 一站式云计算服务�
 阿里云平台, https://www.aliyun.com, 阿里巴巴云，全栈云计算与 AI 服务，包含 ECS、OSS、容器、大模型与企业级解决方案。
 腾讯云平台, https://cloud.tencent.com, 腾讯云，提供云服务器、对象存储、音视频、混元大模型与开发者生态服务。
 华为云平台, https://www.huaweicloud.com, 华为云，算力、存储、网络、数据库与盘古大模型一体，面向企业数字化与智能化升级。
+独角鲸云, https://dash.fuckip.me/deploy, 轻量云服务器与网络服务部署平台，提供快捷的 VPS / 云主机创建、内网穿透、代理节点部署等功能。
 
 -----------------------------------------------------------------------------------------
 # 编程开发
@@ -194,6 +195,7 @@ EW资源网, https://www.ewbang.com, 远程技术服务平台，提供软件安�
 全球盗版游戏, https://www.gamer520.com, 游戏资源下载站，提供 PC 单机游戏、修改器、DLC 整合包，解压即玩类型资源。
 
 ## 匿名访问
+SupayCard | 虚拟信用卡, https://www.supaycard.com/app/setting, 跨境支付虚拟卡平台，支持无限开卡，覆盖 ChatGPT、Steam、Netflix、Google 等 99% 海外订阅与消费场景。
 GPTMail临时邮箱, https://mail.chatgpt.org.uk/ahanson662@eycfhb.com, 一次性临时邮箱服务，千余域名可选，自动提取验证码，24 小时自动销毁，保护主邮箱隐私。
 GMail临时邮箱, https://www.emailtick.com/zh, 仿 Gmail 临时收件工具，打开即用、自动销毁，支持历史找回，用于注册验证防骚扰。
 DuckMail临时邮箱, https://www.duckmail.sbs/zh, 免费匿名临时邮箱，密码保护、即时收信，自建后端稳定可靠，用于匿名注册与测试。
