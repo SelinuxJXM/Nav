@@ -45,6 +45,7 @@ Seede AI, https://seede.ai, 主打商业宣传海报制作，智能排版配图�
 Fly Cut Caption, https://caption.flycut.co/zh, 智能视频字幕自动生成工具，语音转文字，快速匹配字幕，省时高效。
 movieflow, https://www.movieflow.ai, AI 驱动短视频生成平台，输入文案即可自动剪辑成片，快速产出短视频。
 小云雀, https://xiaoyunque.jianying.com, 剪映短视频 AI 创作工具，智能化剪辑成片，适配自媒体日常短视频制作。
+Pixelle Video, https://aidc-ai.github.io/Pixelle-Video/zh, 只需输入一个主题就能自动完成：撰写视频文案、生成 AI 配图、合成语音解说、添加背景音乐、一键合成视频。
 
 ## 效率办公
 飞书妙记, https://www.feishu.cn, 会议录音转文字，自动梳理提炼会议纪要，高效整理会议内容与谈话记录。
@@ -146,7 +147,7 @@ immortalwrt, https://firmware-selector.immortalwrt.org, ImmortalWrt 官方固件
 系统迷, https://www.xitmi.com, 精品系统软件分享站，提供 Windows 工具、绿色软件、实用工具下载与教程。
 Linux学习教程, https://www.runoob.com, 一站式 Linux 基础与编程教程，适合入门学习命令、脚本与服务配置。
 毫秒镜像, https://1ms.run, 国内 Docker 镜像加速服务，解决拉取慢与超时问题，支持多平台镜像加速与一键配置。
-
+KMS在线激活, https://kms.cx, 一键激活 windows/office。
 
 # 云计算平台
 Hi168云计算平台, https://www.hi168.com/#/desktop, 一站式云计算服务平台，提供云服务器、虚拟主机、域名与建站等基础云服务。
