@@ -89,6 +89,8 @@ TIDE安全论坛, http://case.tidesec.com, 专注网络安全案例与攻防实�
 MoFrp, https://console.mofrp.com, 免费内网穿透服务，支持公网访问内网应用、远程桌面与端口映射，适合个人与小型团队。
 ChmlFrp, https://panel.chmlfrp.net/home, 稳定易用的内网穿透平台，提供自定义域名、高速节点与可视化管理面板。
 liaison内网穿透, https://liaison.cloud, 轻量内网穿透工具，快速实现内网服务公网暴露，配置简单、延迟较低。
+LoCyanFrp内网穿透, https://dashboard.locyanfrp.cn, 开源、免费内网穿透服务‌，无限隧道数（需实名签到解锁不限速）。
+
 
 ## 机场订阅
 机场导航, https://ygpy.net, 网络代理节点导航站点，汇总各类订阅地址、节点信息与工具推荐。
