@@ -8,7 +8,6 @@ SelinuxJ Immich, https://www.zima.ccwu.cc:50025, immich相册
 SelinuxJ OSS, https://www.zima.ccwu.cc:50026, openlist网盘
 SelinuxJ TV, http://www.zima.ccwu.cc:50030, 影视资源
 SelinuxJ DPanel, http://www.zima.ccwu.cc:50027, Docker管理
-SelinuxJ ECS, http://123.60.132.209, 华为云ECS服务器
 Openwrt Router, http://www.zima.ccwu.cc:50028, 路由管理端
 Openwrt FrpWeb, http://www.zima.ccwu.cc:50029, FRPC管理端
 
@@ -29,6 +28,7 @@ GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data, GitHub
 
 # AI工具
 ## 通用对话
+Deepseek, https://chat.deepseek.com, 全能智能对话平台，支持文案创作、知识解答、逻辑分析，日常办公学习均可高效使用。
 AskManyAI, https://askmanyai.cn, 整合多款主流大模型，一键切换使用，一站式满足问答、创作、解题等多样 AI 需求。
 通问千义, https://www.qianwen.com, 全能智能对话平台，支持文案创作、知识解答、逻辑分析，日常办公学习均可高效使用。
 文心一言, https://chat.baidu.com, 百度自研大语言模型，擅长文案撰写、知识检索、方案构思，适配各类中文场景使用。
@@ -173,6 +173,10 @@ Gitcode, https://gitcode.com, CSDN 旗下 AI 开源托管平台，提供代码�
 Github, https://github.com, 全球最大开源代码托管平台，支持版本管理、协作开发。
 Gitee, https://gitee.com, 国产开源代码托管与 DevOps 平台，高速稳定、支持私有化部署。
 
+## 开源项目
+Awesome-NAS-Docker, https://github.com/TWO-ICE/Awesome-NAS-Docker, 一个专注于 NAS 和 Docker 部署的开源项目合集，覆盖 AI、开发、数据管理、多媒体、运维等场景，提供一键式部署指南和实用教程，让 NAS 变身全能生产力工具！
+xmky-exam, https://gitee.com/qq1247/xmky-exam, 小猫开源-在线考试系统适用于中小型企业。
+
 ## 破解工具
 VM破解版, https://www.xitmi.com/2417.html, VMware Workstation 下载页，提供虚拟机软件安装包与激活教程。
 雨糖科技WPS, https://raincandy.tech/wpsoffice_umrse, 雨糖定制 WPS 特别版，优化精简、去广告，提供多版本下载。
@@ -189,6 +193,11 @@ EW资源网, https://www.ewbang.com, 远程技术服务平台，提供软件安�
 标准服务平台, https://std.samr.gov.cn, 全国标准信息公共服务平台，可查询国标、行标、地标、团体标准，提供标准公告与文本查阅。
 中国法律大全, https://www.justlaws.cn/constitution, 法律法规在线查阅站点，当前展示宪法全文，支持法律条文检索与学习。
 
+## 证书考试
+软考达人, https://ruankaodaren.com, 免费专业高效的软考刷题工具,刷题备考更轻松。
+CISSP, https://pgfsw.xetlk.com/s/311AwB, 在爱思考报名培训CISSP。
+SelinuxJ 卷王, http://www.zima.ccwu.cc:50032/home, 卷王问卷
+SelinuxJ 考试, http://www.zima.ccwu.cc:50033, 小猫考试
 
 # 游戏·匿名
 ## 游戏资源
