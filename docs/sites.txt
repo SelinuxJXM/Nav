@@ -5,7 +5,7 @@ SelinuxJ Nav, https://www.soer.ccwu.cc/Nav, 导航访问
 SelinuxJ Zimaos, http://www.zima.ccwu.cc:50023, Nas访问
 SelinuxJ Wiki, http://www.zima.ccwu.cc:50024/blog/#/home, 博客访问
 SelinuxJ Immich, https://www.zima.ccwu.cc:50025, immich相册
-SelinuxJ OSS, https://www.zima.ccwu.cc:50026, openlist网盘
+SelinuxJ OSS, https://www.zima.ccwu.cc:50026, Cloudreve网盘
 SelinuxJ TV, http://www.zima.ccwu.cc:50030, 影视资源
 SelinuxJ DPanel, http://www.zima.ccwu.cc:50027, Docker管理
 Openwrt Router, http://www.zima.ccwu.cc:50028, 路由管理端
@@ -196,8 +196,8 @@ EW资源网, https://www.ewbang.com, 远程技术服务平台，提供软件安�
 ## 证书考试
 软考达人, https://ruankaodaren.com, 免费专业高效的软考刷题工具,刷题备考更轻松。
 CISSP, https://pgfsw.xetlk.com/s/311AwB, 在爱思考报名培训CISSP。
-SelinuxJ 卷王, http://www.zima.ccwu.cc:50032/home, 卷王问卷
-SelinuxJ 考试, http://www.zima.ccwu.cc:50033, 小猫考试
+SelinuxJ 卷王, http://www.zima.ccwu.cc:50033/home, 卷王问卷
+SelinuxJ 考试, http://www.zima.ccwu.cc:50032, 小猫考试
 
 # 游戏·匿名
 ## 游戏资源
