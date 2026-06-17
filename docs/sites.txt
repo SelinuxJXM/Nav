@@ -48,6 +48,7 @@ movieflow, https://www.movieflow.ai, AI 驱动短视频生成平台，输入文�
 Pixelle Video, https://aidc-ai.github.io/Pixelle-Video/zh, 只需输入一个主题就能自动完成：撰写视频文案、生成 AI 配图、合成语音解说、添加背景音乐、一键合成视频。
 
 ## 效率办公
+AgnesAI, https://platform.agnes-ai.com/settings/apiKeys, 免费的AI大模型API提供者。
 飞书妙记, https://www.feishu.cn, 会议录音转文字，自动梳理提炼会议纪要，高效整理会议内容与谈话记录。
 AiPPT, https://www.aippt.cn, AI 一键生成演示文稿，自动排版配图，快速制作完整风格化 PPT 文档。
 Kimi, https://kimi.moonshot.cn, 支持超大文件读取解析，擅长长篇文案撰写、资料总结、深度内容梳理。
@@ -129,6 +130,7 @@ Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file, 
 Sec-Tools部署教程, https://www.django.cn/article/show-40.html, Sec-Tools 渗透平台详细部署指南，含环境配置、依赖安装与运行步骤。
 流影态势感知, https://abyssalfish-os.github.io, 开源网络流量可视化分析平台，实时监控异常流量、挖矿、隧道通信等威胁，支持可视化研判。
 TryHackMe在线网安学习平台, https://tryhackme.com, 经典在线网络安全实训平台，通过闯关式靶场学习渗透测试、红蓝对抗与安全运维技能。
+LabEx在线网安学习平台, https://labex.io/zh/learn, 经典在线网络安全实训平台，通过闯关式靶场学习渗透测试、红蓝对抗与安全运维技能。
 恶意软件扫描系统, https://virusscan.jotti.org, 免费多引擎在线病毒扫描工具，集成卡巴斯基、Avast、BitDefender 等近 20 款杀毒引擎。
 
 
@@ -139,6 +141,7 @@ iStoreOS官网, https://site.istoreos.com, 基于 OpenWrt 的路由+NAS一体化
 iStoreOS论坛, https://www.koolcenter.com, iStoreOS 与 OpenWrt 玩家社区，固件交流、插件分享、问题解答与教程。
 iStoreOS下载, https://fw.koolcenter.com, iStoreOS 官方固件下载站，提供多版本、多设备镜像与历史版本归档。
 服务器安装iStoreOS, https://blog.csdn.net/weixin_74313592/article/details/136192062, CentOS 等服务器刷入 iStoreOS 教程，含 DD 脚本、网络配置与后台登录步骤。
+RAX3000M更换U-Boot, https://www.right.com.cn/forum/thread-8417494-1-1.html, 支持OpenWrt官方 & immortalwrt itb 格式固件-OPENWRT专版。
 
 ## Immortalwrt
 immortalwrt, https://firmware-selector.immortalwrt.org, ImmortalWrt 官方固件选择器，按设备型号快速查找与下载稳定版固件。
@@ -147,6 +150,7 @@ immortalwrt, https://firmware-selector.immortalwrt.org, ImmortalWrt 官方固件
 系统迷, https://www.xitmi.com, 精品系统软件分享站，提供 Windows 工具、绿色软件、实用工具下载与教程。
 Linux学习教程, https://www.runoob.com, 一站式 Linux 基础与编程教程，适合入门学习命令、脚本与服务配置。
 毫秒镜像, https://1ms.run, 国内 Docker 镜像加速服务，解决拉取慢与超时问题，支持多平台镜像加速与一键配置。
+MSDN, https://next.itellyou.cn, MSDN我告诉你，原版操作系统提供方，链接是新网站。
 KMS在线激活, https://kms.cx, 一键激活 windows/office。
 
 # 云计算平台
@@ -172,9 +176,14 @@ Stitch（网站设计/应用开发）, https://stitch.withgoogle.com, 可视化�
 Gitcode, https://gitcode.com, CSDN 旗下 AI 开源托管平台，提供代码仓库、项目协作、模型数据集，适配国内开发者与信创环境。
 Github, https://github.com, 全球最大开源代码托管平台，支持版本管理、协作开发。
 Gitee, https://gitee.com, 国产开源代码托管与 DevOps 平台，高速稳定、支持私有化部署。
+Github镜像加速, https://mirrors.git-zh.com, Github镜像加速。
 
 ## 开源项目
 Awesome-NAS-Docker, https://github.com/TWO-ICE/Awesome-NAS-Docker, 一个专注于 NAS 和 Docker 部署的开源项目合集，覆盖 AI、开发、数据管理、多媒体、运维等场景，提供一键式部署指南和实用教程，让 NAS 变身全能生产力工具！
+xmky-exam, https://gitee.com/qq1247/xmky-exam, 小猫开源-在线考试系统适用于中小型企业。
+Docker Desktop中文, https://github.com/asxez/DockerDesktop-CN, GitHub - asxez/DockerDesktop-CN: Docker汉化 Docker中文版 Docker汉化包 DockerDesktop汉化 Docker Windows Docker MAC · GitHub。
+开源知识库系统, https://gitee.com/macplus, 好几个开源的系统（含考试、知识库），知识库官网访问 www.wcpdoc.com/home/Pubindex.html。
+xmky-exam, https://gitee.com/qq1247/xmky-exam, 小猫开源-在线考试系统适用于中小型企业。
 xmky-exam, https://gitee.com/qq1247/xmky-exam, 小猫开源-在线考试系统适用于中小型企业。
 
 ## 破解工具
