@@ -10,6 +10,7 @@ SelinuxJ TV, http://www.zima.ccwu.cc:50030, 影视资源
 SelinuxJ DPanel, http://www.zima.ccwu.cc:50027, Docker管理
 Openwrt Router, http://www.zima.ccwu.cc:50028, 路由管理端
 Openwrt FrpWeb, http://www.zima.ccwu.cc:50029, FRPC管理端
+Cloudflare, https://dash.cloudflare.com, 域名管理及OSS存储
 
 ## 常用工具
 Markdown 编辑器, https://www.soer.ccwu.cc/Nav/md, 一款轻量化在线 Markdown 实时编辑工具。
@@ -27,6 +28,14 @@ GitHub 用户历程回顾, https://www.soer.ccwu.cc/Nav/github-user-data, GitHub
 
 
 # AI工具
+## 大模型API
+Agnes, https://platform.agnes-ai.cn, 新加坡官宣一直免费的大模型Agnes。
+BAI, https://chat.b.ai/chat, 限时免费大模型hy3、qwen-3.8：官方随时会调整限免策略，且用且珍惜。
+OrcaRouter, https://www.orcarouter.ai/zh-CN, 提供GLM5.3-flash、deepseek 4 flash、Hy3等模型免费使用。
+Tokenrouter, https://www.tokenrouter.com, 提供GLM5.3-flash模型免费试用。
+商汤日日新, https://www.sensenova.cn/models, 国内商汤科技公测期间提供多种免费大模型详见官网。
+美团龙猫, https://longcat.chat, 新用户免费一千万token，额外9.9五千万token。
+
 ## 通用对话
 Deepseek, https://chat.deepseek.com, 全能智能对话平台，支持文案创作、知识解答、逻辑分析，日常办公学习均可高效使用。
 AskManyAI, https://askmanyai.cn, 整合多款主流大模型，一键切换使用，一站式满足问答、创作、解题等多样 AI 需求。
@@ -127,6 +136,7 @@ Fofa测绘, https://fofa.info, 网络空间测绘引擎，通过规则检索全�
 360测绘, https://quake.360.net/quake/login#, 网络空间测绘平台，资产探测、漏洞测绘、威胁狩猎与攻防对抗支撑。
 
 ## 渗透测试
+蛙池AI自动化渗透, https://www.digpool.cn, 支持对话式半自动化渗透测试，需官方邀请码。
 棱镜X · 单兵渗透平台, https://prismx.io, 轻量跨平台单兵渗透系统，集成资产收集、漏洞扫描、远程管理、应急响应，支持多系统运行。
 Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file, 基于 Django 的 Web 渗透测试集成平台，含端口扫描、指纹识别、目录扫描、漏洞检测等模块。
 Sec-Tools部署教程, https://www.django.cn/article/show-40.html, Sec-Tools 渗透平台详细部署指南，含环境配置、依赖安装与运行步骤。
