@@ -33,8 +33,11 @@ Agnes, https://platform.agnes-ai.cn, 新加坡官宣一直免费的大模型Agne
 BAI, https://chat.b.ai/chat, 限时免费大模型hy3、qwen-3.8：官方随时会调整限免策略，且用且珍惜。
 OrcaRouter, https://www.orcarouter.ai/zh-CN, 提供GLM5.3-flash、deepseek 4 flash、Hy3等模型免费使用。
 Tokenrouter, https://www.tokenrouter.com, 提供GLM5.3-flash模型免费试用。
+Agentrouter,https://agentrouter.org/register?aff=rcrt, 公益大模型API，注册送150￥。
+AMD模型,https://developer.amd.com.cn/radeon/tokenfactory, 多种免费大模型API接入，人太多容易429。
 商汤日日新, https://www.sensenova.cn/models, 国内商汤科技公测期间提供多种免费大模型详见官网。
 美团龙猫, https://longcat.chat, 新用户免费一千万token，额外9.9五千万token。
+
 
 ## 通用对话
 Deepseek, https://chat.deepseek.com, 全能智能对话平台，支持文案创作、知识解答、逻辑分析，日常办公学习均可高效使用。
