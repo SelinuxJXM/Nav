@@ -8,6 +8,7 @@ SelinuxJ Immich, https://www.zima.ccwu.cc:50025, immich相册
 SelinuxJ OSS, https://www.zima.ccwu.cc:50026, Cloudreve网盘
 SelinuxJ TV, http://www.zima.ccwu.cc:50030, 影视资源
 SelinuxJ DPanel, http://www.zima.ccwu.cc:50027, Docker管理
+SelinuxJ JSecTopo, https://www.soer.ccwu.cc/JSecTopo, 拓扑图绘制
 Openwrt Router, http://www.zima.ccwu.cc:50028, 路由管理端
 Openwrt FrpWeb, http://www.zima.ccwu.cc:50029, FRPC管理端
 Cloudflare, https://dash.cloudflare.com, 域名管理及OSS存储
@@ -33,10 +34,12 @@ Agnes, https://platform.agnes-ai.cn, 新加坡官宣一直免费的大模型Agne
 BAI, https://chat.b.ai/chat, 限时免费大模型hy3、qwen-3.8：官方随时会调整限免策略，且用且珍惜。
 OrcaRouter, https://www.orcarouter.ai/zh-CN, 提供GLM5.3-flash、deepseek 4 flash、Hy3等模型免费使用。
 Tokenrouter, https://www.tokenrouter.com, 提供GLM5.3-flash模型免费试用。
-Agentrouter,https://agentrouter.org/register?aff=rcrt, 公益大模型API，注册送150￥。
 AMD模型,https://developer.amd.com.cn/radeon/tokenfactory, 多种免费大模型API接入，人太多容易429。
 商汤日日新, https://www.sensenova.cn/models, 国内商汤科技公测期间提供多种免费大模型详见官网。
 美团龙猫, https://longcat.chat, 新用户免费一千万token，额外9.9五千万token。
+上海人工智能实验室, https://sso.openxlab.org.cn, 新用户有免费额度。
+书生科研模型, https://internlm.intern-ai.org.cn, 新用户有免费额度。
+Models, https://huggingface.co/models, 模型下载。
 
 
 ## 通用对话
@@ -50,14 +53,12 @@ AskManyAI, https://askmanyai.cn, 整合多款主流大模型，一键切换使�
 ## 图像视频
 通义万相, https://tongyi.aliyun.com/wanxiang, 阿里 AI 绘图工具，文生图、图生图均可，主打创意设计、插画场景图制作。
 U钙网, https://www.uugai.com, 专注 AI 商标 logo 设计，快速生成多款商业标识图案，适配品牌标识创作需求。
-Imini, https://imini.com/, 多模态 AI 创作平台，文字生成图像，画风丰富，满足创意配图、艺术绘图需求。
 OpenCut, https://opencut.net, 智能修图工具，支持图片细节修改、局部调整、画面优化，简易在线 P 图。
 即梦, https://jimeng.jianying.com, 剪映旗下 AI 工具，一键生成海报、短视频素材，快速产出视觉影音内容。
 Seede AI, https://seede.ai, 主打商业宣传海报制作，智能排版配图，轻松打造精美营销视觉作品。
 Fly Cut Caption, https://caption.flycut.co/zh, 智能视频字幕自动生成工具，语音转文字，快速匹配字幕，省时高效。
 movieflow, https://www.movieflow.ai, AI 驱动短视频生成平台，输入文案即可自动剪辑成片，快速产出短视频。
 小云雀, https://xiaoyunque.jianying.com, 剪映短视频 AI 创作工具，智能化剪辑成片，适配自媒体日常短视频制作。
-Pixelle Video, https://aidc-ai.github.io/Pixelle-Video/zh, 只需输入一个主题就能自动完成：撰写视频文案、生成 AI 配图、合成语音解说、添加背景音乐、一键合成视频。
 
 ## 效率办公
 AgnesAI, https://platform.agnes-ai.com/settings/apiKeys, 免费的AI大模型API提供者。
@@ -78,8 +79,6 @@ AutoGPT（批量处理/自动干活）, https://agpt.co, 自主智能任务处�
 # 日常办公
 Ima知识库, https://ima.qq.com, AI 智能工作台，支持多格式文档上传解析、私有知识库问答、智能写作与内容生成。
 钛投标, https://taitoubiao.com/filelist, AI 驱动的全流程标书制作平台，自动解析招标文件、生成标书、识别废标风险并合规校验。
-数字化平台, https://cqcdidmp.smartccs.cn:8000, 企业级数字化管理与协同平台，用于业务流程管控、数据集成与数字化运营支撑。
-易投资质申请, https://cqccsyt.smartccs.cn:9900, 资质申请与投融资业务办理系统，提供线上申报、审核、进度查询等一站式办事服务。
 等保能力评估系统, https://www.ciipc.gov110.cn:4430/jggl/index.html#/login, 测评师在线能力评估报名系统。
 
 
@@ -103,17 +102,14 @@ TIDE安全论坛, http://case.tidesec.com, 专注网络安全案例与攻防实�
 MoFrp, https://console.mofrp.com, 免费内网穿透服务，支持公网访问内网应用、远程桌面与端口映射，适合个人与小型团队。
 ChmlFrp, https://panel.chmlfrp.net/home, 稳定易用的内网穿透平台，提供自定义域名、高速节点与可视化管理面板。
 liaison内网穿透, https://liaison.cloud, 轻量内网穿透工具，快速实现内网服务公网暴露，配置简单、延迟较低。
-LoCyanFrp内网穿透, https://dashboard.locyanfrp.cn, 开源、免费内网穿透服务‌，无限隧道数（需实名签到解锁不限速）。
 
 
 ## 机场订阅
 机场导航, https://ygpy.net, 网络代理节点导航站点，汇总各类订阅地址、节点信息与工具推荐。
 小火箭账号, https://proxy4all.github.io/FreeShadowrocket, Shadowrocket 相关账号与配置分享页面，便于 iOS 设备快速导入代理规则。
-杜卡迪机场, https://sub.dukadi.shop, 网络代理订阅服务站点，提供节点订阅、流量套餐与线路管理。
+一元机场, https://xn--4gq62f52gdss.com/#/login, 网络代理订阅服务站点，提供节点订阅、流量套餐与线路管理。
 蛙爪云机场, https://my.wazhua.org, 网络代理订阅服务站点，提供节点订阅、流量套餐与线路管理。
 Onelight机场, https://onelighter.site, 网络代理订阅服务站点，提供节点订阅、流量套餐与线路管理。
-牢大云机场, https://main.laoda666.com, 代理节点分享与交流站点，提供订阅链接、节点测试与使用指南。
-机场订阅加速, https://keli.blog, 代理订阅优化与加速指南，分享节点优选、配置优化与使用技巧。
 Clash工具, https://github.com/clash-verge-rev/clash-verge-rev/releases, 开源跨平台 Clash 客户端，支持多协议代理、规则分流、可视化配置，用于网络代理管理。
 
 
@@ -140,7 +136,6 @@ Fofa测绘, https://fofa.info, 网络空间测绘引擎，通过规则检索全�
 
 ## 渗透测试
 蛙池AI自动化渗透, https://www.digpool.cn, 支持对话式半自动化渗透测试，需官方邀请码。
-棱镜X · 单兵渗透平台, https://prismx.io, 轻量跨平台单兵渗透系统，集成资产收集、漏洞扫描、远程管理、应急响应，支持多系统运行。
 Sec-Tools渗透平台, https://github.com/jwt1399/sec-Tools?tab=readme-ov-file, 基于 Django 的 Web 渗透测试集成平台，含端口扫描、指纹识别、目录扫描、漏洞检测等模块。
 Sec-Tools部署教程, https://www.django.cn/article/show-40.html, Sec-Tools 渗透平台详细部署指南，含环境配置、依赖安装与运行步骤。
 流影态势感知, https://abyssalfish-os.github.io, 开源网络流量可视化分析平台，实时监控异常流量、挖矿、隧道通信等威胁，支持可视化研判。
@@ -184,7 +179,6 @@ CSDN编程AI, https://inscode.net, CSDN 旗下 AI 在线 IDE，支持 30 + 语�
 长亭编程AI, https://monkeycode-ai.com, 长亭科技企业级 AI 编程平台，覆盖需求→设计→开发→审查全流程，多模型免费畅用。
 在线代码编辑器, https://www.soer.ccwu.cc/Nav/code, 多语言在线代码编辑工具，支持 Shell、JS、Python、Java、C++、HTML 等主流语言。
 Android 开发, https://www.soer.ccwu.cc/Nav/android, 安卓一站式在线开发工具箱，支持图标生成、APK 签名密钥库生成，本地处理、配置导出。
-Stitch（网站设计/应用开发）, https://stitch.withgoogle.com, 可视化网站与应用开发平台，拖拽式设计搭建，简化网页程序开发流程。
 编程开发学习, https://ilovefishc.com, 小甲鱼主讲编程学习平台，零基础 Python/C/JS/Web 开发视频教程。
 
 ## 代码仓库
@@ -220,7 +214,6 @@ EW资源网, https://www.ewbang.com, 远程技术服务平台，提供软件安�
 ## 证书考试
 软考达人, https://ruankaodaren.com, 免费专业高效的软考刷题工具,刷题备考更轻松。
 CISSP, https://pgfsw.xetlk.com/s/311AwB, 在爱思考报名培训CISSP。
-SelinuxJ 卷王, http://www.zima.ccwu.cc:50033/home, 卷王问卷
 SelinuxJ 考试, http://www.zima.ccwu.cc:50032, 小猫考试
 
 # 游戏·匿名
